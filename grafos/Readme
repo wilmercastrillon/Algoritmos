@@ -1,0 +1,10 @@
+#Algoritmos para grafos
+
+BFS: recorre un grafo en complejidad O(m).
+codigo en el ejemplo: en un grafo no dirigido muestrar los "nodos de distancia" entre un nodo y los demas
+
+DFS:recorre un grafo en complejidad O(m), similar al BFS pero recursivo.
+codigo en el ejemplo: verifica si un grafo no dirigido es un arbol, un grafo no dirigido es arbol si no tiene ciclos y ademas es conexo
+
+Dijkstra: encuentra la ruta mas corta de un grafo ponderado, pero pesos negativos pueden provocar respuestas incorrectas
+codigo en el ejemplo: construye la matriz de adyacencia de un grafo dirigido.
