@@ -1,2 +1,2 @@
 # Algoritmos
-implementacion de algoritmos
+implementacion de diferentes algoritmos en c++
