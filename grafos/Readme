@@ -8,3 +8,12 @@ codigo en el ejemplo: verifica si un grafo no dirigido es un arbol, un grafo no 
 
 Dijkstra: encuentra la ruta mas corta de un grafo ponderado, pero pesos negativos pueden provocar respuestas incorrectas
 codigo en el ejemplo: construye la matriz de adyacencia de un grafo dirigido.
+
+BellmanFord: encuentra la ruta mas corta de un grafo ponderado, soporta pesos negativos y encientra ciclos infinitos.
+codigo en el ejemplo: encuentra la matriz de adyacencia, ademas dice si el grafo forma un bucle.
+
+Floyd: construye matriz de adyacencia, funciona con pesos negativos.
+codigo en el ejemplo: recive una matriz de adyacencia y la llena con las rutas minimas.
+
+union find: agrupa un conjunto de elementos, los agrupa en forma de arbol.
+codigo en el ejemplo: agrupa 10 elementos en varios grupos y muestra el padre de cada uno.
