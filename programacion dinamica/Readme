@@ -1,0 +1,9 @@
+#programacion dinamica
+
+codigos de ejemplo:
+
+conceptos: resuleve la serie fibonacci de varias formas.
+           memorizacion: llena un arreglo con todas las posibles respuestas.
+           butom_up: calcula la respuesta deacuerdo a lo que se necesite.
+
+optimalidad: resuleve el problema del recorrido maximo de una matriz comenzando de 0, 0, hasta f - 1, c - 1
