@@ -2,7 +2,8 @@
 
 codigos de ejemplo:
 
-conceptos: resuleve la serie fibonacci de varias formas, recursivo normal, con memorizacion: llena un arreglo con todas
-las posibles respuestas y butom_up: calcula la respuesta deacuerdo a lo que se necesite.
+conceptos: resuleve la serie fibonacci de varias formas, recursivo normal, con memorizacion: llena un arreglo con todas las posibles respuestas y butom_up: calcula la respuesta deacuerdo a lo que se necesite.
 
 optimalidad: resuleve el problema del recorrido maximo de una matriz comenzando de 0, 0, hasta f - 1, c - 1
+
+mascara de bits: resuleve el ejercicio uva 10911, se usa una mascara bits para encontrar todas las posibles parejas e ir guardar en una tabla las distancias minimas
