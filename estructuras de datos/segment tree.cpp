@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <math.h>
 
 using namespace std;
 typedef vector<int> vi;
@@ -17,21 +18,18 @@ struct segment_tree{
     }
 
     void construir(int pos, int izq, int der){
-        //cout << "llamado para pos " << pos << " en rango " << izq << " , " << der << endl;
         if(izq == der){
-            st[pos] = der;
-            //cout << "iguales" << endl;
+            st[pos] = A[der];
             return;
         }
 
         construir(mov_izq(pos), izq, (izq + der) >> 1);
         construir(mov_der(pos), ((izq + der) >> 1) + 1, der);
-        int aux1 = st[mov_izq(pos)], aux2 = st[mov_der(pos)];
-        st[pos] = (A[aux1] < A[aux2])? aux1: aux2;
-        //cout << "en pos " << pos << " en rango " << izq << " , " << der << " se guarda " << st[pos] << endl;
+        int aux1 = mov_izq(pos), aux2 = mov_der(pos);
+        st[pos] = min(st[aux1], st[aux2]);
     }
 
-    void iniciar(vi arr){
+    void iniciar(vi arr){//metodo a invocar
         A = arr;
         n = A.size();
         st.assign(n*4, 0);
@@ -47,10 +45,10 @@ struct segment_tree{
         if(aux1 == -1) return aux2;
         if(aux2 == -1) return aux1;
 
-        return (A[aux1] < A[aux2])? aux1: aux2;
+        return min(aux1, aux2);
     }
 
-    int RMQ(int i, int j){
+    int RMQ(int i, int j){//metodo a invocar
         return rmq(1, 0, n-1, i, j);
     }
 
@@ -58,15 +56,15 @@ struct segment_tree{
         if(index > der || index < izq) return st[pos];
         if(der == index && izq == index){
             A[index] =  nuevo;
-            return st[pos] = index;
+            return st[pos] = nuevo;
         }
 
         int aux1 = cambiar(mov_izq(pos), izq, (izq + der) >> 1, index, nuevo);
         int aux2 = cambiar(mov_der(pos), ((izq + der) >> 1) + 1, der, index, nuevo);
-        return st[pos] = (A[aux1] < A[aux2])? aux1: aux2;
+        return st[pos] = min(aux1, aux2);
     }
 
-    int update(int index, int num){
+    int update(int index, int num){//metodo a invocar
         return cambiar(1, 0, n-1, index, num);
     }
 };
@@ -86,6 +84,9 @@ int main(){
     tree.iniciar(vec);
 
     cout << tree.RMQ(4, 6) << endl;
+    for(int i = 0; i < tree.st.size(); i++) cout << tree.st[i] << " ";
+    cout << endl;
+
     tree.update(5, 100);
     cout << tree.RMQ(4, 6) << endl;
 
