@@ -1,0 +1,181 @@
+\documentclass[10pt,landscape,twocolumn,a4paper,notitlepage]{article}
+
+\usepackage{hyperref}
+\usepackage[spanish, activeacute]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{makeidx}
+
+%%%%%%%%%%%%%%%%%%%%%importar codigo desde archivos cpp
+\lstloadlanguages{C++}
+\lstnewenvironment{code}
+	{%\lstset{	numbers=none, frame=lines, basicstyle=\small\ttfamily, }%
+	 \csname lst@SetFirstLabel\endcsname}
+	{\csname lst@SaveFirstLabel\endcsname}
+\lstset{% general command to set parameter(s)
+	language=C++, basicstyle=\small\ttfamily, keywordstyle=\slshape,
+	emph=[1]{tipo,usa}, emphstyle={[1]\sffamily\bfseries},
+	morekeywords={tint,forn,forsn},
+	basewidth={0.47em,0.40em},
+	columns=fixed, fontadjust, resetmargins, xrightmargin=5pt, xleftmargin=15pt,
+	flexiblecolumns=false, tabsize=2, breaklines,	breakatwhitespace=false, extendedchars=true,
+	numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=9pt,
+	frame=l, framesep=3pt,
+    basicstyle=\ttfamily,
+    keywordstyle=\color{blue}\ttfamily,
+    stringstyle=\color{magenta}\ttfamily,
+    commentstyle=\color{RedOrange}\ttfamily,
+    morecomment=[l][\color{OliveGreen}]{\#}
+}
+
+\lstdefinestyle{C++}{
+	language=C++, basicstyle=\small\ttfamily, keywordstyle=\slshape,
+	emph=[1]{tipo,usa,tipo2}, emphstyle={[1]\sffamily\bfseries},
+	morekeywords={tint,forn,forsn},
+	basewidth={0.47em,0.40em},
+	columns=fixed, fontadjust, resetmargins, xrightmargin=5pt, xleftmargin=15pt,
+	flexiblecolumns=false, tabsize=2, breaklines,	breakatwhitespace=false, extendedchars=true,
+	numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=9pt,
+	frame=l, framesep=3pt,
+    basicstyle=\ttfamily,
+    keywordstyle=\color{blue}\ttfamily,
+    stringstyle=\color{magenta}\ttfamily,
+    commentstyle=\color{RedOrange}\ttfamily,
+    morecomment=[l][\color{OliveGreen}]{\#}
+}
+ 
+%%% Macros
+\def\nbtitle#1{\begin{Large}\begin{center}\textbf{#1}\end{center}\end{Large}}
+\def\nbsection#1{\section{#1}}
+\def\nbsubsection#1{\subsection{#1}}
+\def\nbcoment#1{\begin{small}\textbf{#1}\end{small}}
+\newcommand{\comb}[2]{\left( \begin{array}{c} #1 \\ #2 \end{array}\right)}
+\def\complexity#1{\texorpdfstring{$\mathcal{O}(#1)$}{O(#1)}}
+ \newcommand\cppfile[2][]{
+\lstinputlisting[style=C++,linerange={#1}]{#2}
+}
+
+\begin{document}
+	
+	\title{Repositorio en c++}
+	\author{Universidad de la amazonia}
+	\maketitle
+	
+	\tableofcontents\newpage
+	
+		\section{Estructuras de datos}
+			\subsection{tablas aditivas}
+			Construccion O(n)
+			\cppfile[16-28]{estructuras_de_datos/tablas_aditivas.cpp}
+			\subsection{disjoint set union find}
+			Construccion O(n)
+			\cppfile[7-56]{estructuras_de_datos/union_find.cpp}
+			\subsection{union find con compresion de caminos}
+			\cppfile[7-40]{estructuras_de_datos/union_find-compresion_de_caminos.cpp}
+			\subsection{segment tree}
+			Ejemplo de RMQ (Range Minium Query)\\
+			Contruccion O(n)\\Consulta O(log n)\\Update O(log n)
+			\cppfile[8-70]{estructuras_de_datos/segment_tree.cpp}
+			
+		\section{Grafos}
+			\subsection{Dijkstra}
+			Ruta minima
+			O((n + m)log n)
+			\cppfile[7-38]{grafos/dijkstra_con_priority_queue.cpp}
+			\subsection{Bellman-Ford}
+			Ruta minima con pesos negativos
+			O($n^{2}$)
+			\cppfile[5-41]{grafos/bellman-Ford.cpp}
+			\subsection{Floyd Warshall}
+			Ruta minima de toda la matriz, recomendable si n $\leq$ 100\\	
+			O($n^{3}$)
+			\cppfile[4-19]{grafos/floyd.cpp}
+			\subsection{Kosaraju}
+			Componentes fuertemente conexas grafos si y no dirigidos\\
+			O(2(n + m))
+			\cppfile[9-47]{grafos/kosaraju.cpp}
+			\subsection{Kruskal}
+			Arbol generador minimo, se necesita de un union-find\\
+			O(m log n), sin contar el ordenamiento.
+			\cppfile[44-70]{grafos/kruskal.cpp}
+			\subsection{Topological sort}
+			O(m + n)
+			\cppfile[7-31]{grafos/topological_sort_para_grafos_ciclicos.cpp}
+			
+		\section{Matematicas}
+			\subsection{MCD y MCM}
+			Maximo comun divisor(MCD) y minimo comun multiplo(MCM)
+			\cppfile[5-11]{matematicas/MCD_y_MCM.cpp}
+			\subsection{Exponenciacion binaria}
+			O(log n)
+			\cppfile[4-15]{matematicas/exponenciacion_binaria.cpp}
+			\subsection{Multiplicacion modular}
+			Encuentra (a*b) mod c, la operacion puede generar overflow
+				si se realiza directamente, el metodo mulmod evita el overflow usando un
+				ciclo, pero se puede usar el tipo de dato int128 de c++11 para poder calcular
+				de manera directa, pero el int128 no se puede leer o imprimir directamente.
+			\cppfile[5-26]{matematicas/mulmod.cpp}
+			\subsection{Exponenciacion modular}
+			Encuentra $(a^b)$ mod c, se nesecita implementar previamente multiplicacion modular.
+			\cppfile[16-20]{matematicas/exp_modular.cpp}
+			\subsection{Algoritmo extendido de euclides}
+			Encuentra dos numeros x e y tal que: MCD(a, b) = ax + by
+			\cppfile[5-24]{matematicas/algoritmo_extendido_de_euclides.cpp}
+			\subsection{Inverso multiplicativo modular}
+			Encuentra un x tal que (a * x) es congruente a 1 con modulo p,
+				entonces:\\ (a * x) mod p = 1 mod p\\
+				necesita del algoritmo extendido de euclides\\
+			O(log m)
+			\cppfile[17-27]{matematicas/inverso_multiplicativo_modular.cpp}
+			\subsection{Phi de euler}
+			Devuelve la cantidad de coprimos de un numero n\\
+			O($\sqrt{n}$)
+			\cppfile[5-16]{matematicas/phi_de_euler.cpp}
+			\subsection{Rho de pollard}
+			Factorizacion rapida, requiere de implementar previamente exponenciacion modular,
+				multiplicacion modular y el MCD\\
+			O($\sqrt[4]{n}$)
+			\cppfile[26-89]{matematicas/rho_de_pollard.cpp}
+			\subsection{BigInteger c++}
+			\cppfile[1-161]{matematicas/biginteger.cpp}
+		
+		\section{Otros}
+			\subsection{Busqueda binaria}
+			O(log n)
+			\cppfile[7-22]{otros/busqueda_binaria.cpp}
+			
+		\section{Programacion dinamica}
+			\subsection{Subconjuntos de un conjunto}
+			O($2^{n}$)
+			\cppfile[6-17]{programacion_dinamica/bitmask.cpp}
+			\subsection{Problema de la mochila}
+			\cppfile[8-23]{programacion_dinamica/knapsack.cpp}
+			\subsection{Longest Increment Subsecuence}
+			Subsecuencia creciente mas larga\\
+			O(n log n)
+			\cppfile[8-19]{programacion_dinamica/LIS.cpp}
+			\subsection{Max Range Sum}
+			O(n)
+			\cppfile[6-22]{programacion_dinamica/Max_Range_Sum.cpp}
+			\subsection{Subset Sum}
+			\cppfile[8-20]{programacion_dinamica/Subset_Sum.cpp}
+	
+	%\tableofcontents
+	%	\chapter{estructuras de datos}
+	%		\section{segment tree}
+	%		\section{tablas aditivas}
+	%		\section{union find}
+	
+	
+	
+	
+	
+\end{document}
+
