@@ -120,7 +120,7 @@ struct biginteger{
             else{
                  for(int i = num.size() - 1; i > -1; i--){
                     if(num[i] > b.num[i]) return 1;
-                    else if(num[i] > b.num[i]) return -1;
+                    else if(num[i] < b.num[i]) return -1;
                 }
             }
         return 0;
