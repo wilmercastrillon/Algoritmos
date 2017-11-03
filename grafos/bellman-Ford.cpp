@@ -10,23 +10,19 @@ typedef vector<int> vi;
 #define inf 1000000000
 
 vector<iii> grafo; //lista de incidencia
-int padre[10];//opcional
+vi padre;//opcional
 
 bool BellmanFord(vector<iii> &lista, int nodos, int inicio, vector<int> &dis){
 
-	for(int i = 0; i < nodos; i++){
-		dis[i] = inf;
-		padre[i] = i;
-	}
+    dis.assign(nodos, inf);
+	for(int i = 0; i < nodos; i++) padre[i] = i;
 	dis[inicio] = 0;
 	int aux;
 
 	for (int i = 0; i < nodos; i++)
-		for (int j = 0; j < lista.size(); j++)
-		{
+		for (int j = 0; j < lista.size(); j++) {
 			aux = dis[lista[j].second.first] + lista[j].first;
-			if (dis[lista[j].second.second] > aux)
-			{
+			if (dis[lista[j].second.second] > aux){
 				dis[lista[j].second.second] = aux;
 				padre[lista[j].second.second] = lista[j].second.first;
 			}
@@ -43,7 +39,6 @@ bool BellmanFord(vector<iii> &lista, int nodos, int inicio, vector<int> &dis){
 vector<vi> matriz(10);
 
 int main(){
-
 	grafo.push_back(mpdii(2, 0, 1));
 	grafo.push_back(mpdii(2, 1, 0));
 	grafo.push_back(mpdii(4, 1, 2));
@@ -60,6 +55,8 @@ int main(){
 	grafo.push_back(mpdii(10, 8, 3));
 	grafo.push_back(mpdii(1, 9, 4));
 	grafo.push_back(mpdii(9, 9, 7));
+
+	padre.assign(15, 0);
 
 	for(int j = 0; j < 10; j++){
 		vector<int> vec(10);

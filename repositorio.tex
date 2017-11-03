@@ -85,7 +85,7 @@
 			\cppfile[16-28]{estructuras_de_datos/tablas_aditivas.cpp}
 			\subsection{disjoint set union find}
 			Construccion O(n)\\asocia elementos en conjuntos de arboles.
-			\cppfile[6-53]{estructuras_de_datos/union_find.cpp}
+			\cppfile[6-53]{estructuras_de_datos/disjoint_set_union_find.cpp}
 			\subsection{union find con compresion de caminos}
 			asocia elementos de manera simple.
 			\cppfile[7-40]{estructuras_de_datos/union_find-compresion_de_caminos.cpp}
@@ -98,11 +98,11 @@
 			\subsection{Dijkstra}
 			Ruta minima
 			O((n + m)log n)
-			\cppfile[6-38]{grafos/dijkstra_con_priority_queue.cpp}
+			\cppfile[7-50]{grafos/dijkstra.cpp}
 			\subsection{Bellman-Ford}
 			Ruta minima con pesos negativos
 			O($n^{2}$)
-			\cppfile[5-39]{grafos/bellman-Ford.cpp}
+			\cppfile[5-37]{grafos/bellman-Ford.cpp}
 			\subsection{Floyd Warshall}
 			Ruta minima de toda la matriz, recomendable si n $\leq$ 100\\	
 			O($n^{3}$)
@@ -117,7 +117,7 @@
 			\cppfile[43-67]{grafos/kruskal.cpp}
 			\subsection{Topological sort}
 			O(m + n)
-			\cppfile[7-31]{grafos/topological_sort_para_grafos_ciclicos.cpp}
+			\cppfile[7-30]{grafos/topological_sort_para_grafos_ciclicos.cpp}
 			
 		\section{Matematicas}
 			\subsection{MCD y MCM}
@@ -131,7 +131,7 @@
 				si se realiza directamente, el metodo mulmod evita el overflow usando un
 				ciclo, pero se puede usar el tipo de dato int128 de c++11 para poder calcular
 				de manera directa, pero el int128 no se puede leer o imprimir directamente.
-			\cppfile[5-26]{matematicas/mulmod.cpp}
+			\cppfile[5-26]{matematicas/multiplicacion_modular.cpp}
 			\subsection{Exponenciacion modular}
 			Encuentra $(a^b)$ mod c, se nesecita implementar previamente multiplicacion modular.
 			\cppfile[16-20]{matematicas/exp_modular.cpp}
@@ -148,13 +148,19 @@
 			Devuelve la cantidad de coprimos de un numero n\\
 			O($\sqrt{n}$)
 			\cppfile[5-16]{matematicas/phi_de_euler.cpp}
+			\subsection{Test de Rabin Miller}
+			Devuelve si un numero es primo, requiere de implementar previamente MCD, multiplicacion
+			modular y exponenciacion modular.
+			\cppfile[29-52]{matematicas/test_de_rabin_miller.cpp}
 			\subsection{Rho de pollard}
-			Factorizacion rapida, requiere de implementar previamente exponenciacion modular,
-				multiplicacion modular y el MCD\\
+			Factorizacion rapida, requiere de implementar previamente el MCD, multiplicacion modular,
+			exponenciacion modular y el test de Rabin Miller.\\
 			O($\sqrt[4]{n}$)
-			\cppfile[26-89]{matematicas/rho_de_pollard.cpp}
+			\cppfile[54-92]{matematicas/rho_de_pollard.cpp}
 			\subsection{BigInteger c++}
 			\cppfile[1-161]{matematicas/biginteger.cpp}
+			\subsection{Fraccion}
+			\cppfile[5-79]{matematicas/fraccion.cpp}
 		
 		\section{Otros}
 			\subsection{Busqueda binaria}
@@ -162,7 +168,7 @@
 			\cppfile[7-22]{otros/busqueda_binaria.cpp}
 			\subsection{Raiz babilonica}
 			Encuentra la raiz cuadrada de un numero
-			\cppfile[4-12]{matematicas/raiz_babilonica.cpp}
+			\cppfile[4-12]{otros/raiz_babilonica.cpp}
 			
 		\section{Programacion dinamica}
 			\subsection{Subconjuntos de un conjunto}
@@ -173,7 +179,7 @@
 			\subsection{Longest Increment Subsecuence}
 			Subsecuencia creciente mas larga\\
 			O(n log n)
-			\cppfile[8-19]{programacion_dinamica/LIS.cpp}
+			\cppfile[8-19]{programacion_dinamica/longest_increasing_subsequence.cpp}
 			\subsection{Max Range Sum}
 			O(n)
 			\cppfile[6-22]{programacion_dinamica/Max_Range_Sum.cpp}

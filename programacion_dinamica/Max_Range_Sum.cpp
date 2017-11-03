@@ -18,6 +18,5 @@ int main(){
         if(res > 0) printf("MRS = %d\n", res);
         else printf("negativo.\n");
     }
-
     return 0;
 }

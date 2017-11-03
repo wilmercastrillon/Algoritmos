@@ -1,62 +1,77 @@
 #include <iostream>
+#include <queue>
 #include <vector>
-#include <string.h>
-
-#define inf 1000
 
 using namespace std;
-typedef vector<pair<int, int>> vii;
+
+typedef pair<int, int> ii;//peso, nodo
+typedef vector<ii> vii;
+typedef vector<vii> vvii;
 typedef vector<int> vi;
+#define inf 1000000000
+vi padre;//opcional, usar cuando se necesite el camino.
 
-vector<vii> grafo(10);
+vi dijkstra(vvii &grafo, int nodo, int tam){
+    padre.assign(tam + 1, -1);
+    vi dis(tam + 1, inf);
+    priority_queue<ii> cola;
+    cola.push(ii(-0, nodo));
+    int peso, aux;
+    ii par, par2;
 
-vi dijkstra(vector<vii> lista, int nodo){
-	
-	bool vis[lista.size()];
-	memset(vis, false, sizeof(vis));
-	vi dis(lista.size(), inf);
-	dis[nodo] = 0;
-	int aux;
-	
-	for(int i = 0; i < lista.size(); i++){
-		vis[nodo] = true;
-		
-		for(int j = 0; j < lista[nodo].size(); j++)
-			dis[lista[nodo][j].first] = min(dis[lista[nodo][j].first], 
-				dis[nodo] + lista[nodo][j].second);
-		
-		for(int j = 0; j < lista.size(); j++)
-			if(vis[nodo] || (!vis[j] && dis[j] < dis[nodo])) nodo = j;
-	}
-	
-	return dis;
+    while(cola.size()){
+        par = cola.top();
+        cola.pop();
+        peso = -par.first;
+        nodo = par.second;
+
+        if(dis[nodo] <= peso) continue;
+        dis[nodo] = peso;
+
+        for(int i = 0; i < grafo[nodo].size(); i++){
+            par2 = grafo[nodo][i];
+            aux = dis[nodo] + par2.first;
+            if(dis[par2.second] > aux){
+                cola.push(ii(-aux, par2.second));
+                padre[par2.second] = nodo;
+            }
+        }
+    }
+
+    return dis;
+}
+
+void camino(int n){//imprimir el camino
+    if(padre[n] == -1) printf("%d", n);
+    else{
+        camino(padre[n]);
+        printf(" %d", n);
+    }
 }
 
 int main(){
-	grafo[0].push_back(pair<int, int>(1,2));
-	grafo[1].push_back(pair<int, int>(0,2));
-	grafo[1].push_back(pair<int, int>(2,4));
-	grafo[2].push_back(pair<int, int>(3,12));
-	grafo[2].push_back(pair<int, int>(6,6));
-	grafo[3].push_back(pair<int, int>(2,12));
-	grafo[3].push_back(pair<int, int>(4,7));
-	grafo[4].push_back(pair<int, int>(9,1));
-	grafo[5].push_back(pair<int, int>(7,5));
-	grafo[6].push_back(pair<int, int>(1,8));
-	grafo[6].push_back(pair<int, int>(2,6));
-	grafo[6].push_back(pair<int, int>(5,11));
-	grafo[7].push_back(pair<int, int>(8,3));
-	grafo[8].push_back(pair<int, int>(3,10));
-	grafo[9].push_back(pair<int, int>(4,1));
-	grafo[9].push_back(pair<int, int>(7,9));
-	
-	vector<vi> matriz;
-	for(int k = 0; k < 10; k++) matriz.push_back(dijkstra(grafo, k));
-	
-	for(int i = 0; i < 10; i++){
-		for(int j = 0; j < 10; j++) cout << matriz[i][j] << " ";
-		cout << endl;
-	}
-	
-	return 0;
+    int n, m, x, y, z;
+    cin >> n >> m;
+    vvii grafo(n + 1);
+
+    for(int i = 0; i < m; i++){
+        cin >> x >> y >> z;
+        grafo[x].push_back(ii(z, y));
+        grafo[y].push_back(ii(z, x));
+    }
+
+    vector<vi> matriz;
+    for(int i = 0; i < n; i++) matriz.push_back(dijkstra(grafo, i, n));
+
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            printf("%3d ", matriz[i][j]);
+        }
+        cout << endl;
+    }
+    cout << endl;
+
+    return 0;
 }
+
+
