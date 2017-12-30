@@ -5,13 +5,13 @@ using namespace std;
 typedef vector<int> vi;
 
 struct union_find{
-	int padre[100];
-	int rango[100];
+	vector<int> padre;
+	vector<int> rango;
 
 	void iniciar(int n){
+	    padre.clear(); rango.assign(n, 0);
 		for (int i = 0; i < n; i++) {
-			padre[i] = i;
-			rango[i] = 0;
+			padre.push_back(i);
 		}
 	}
 

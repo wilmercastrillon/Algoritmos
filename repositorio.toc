@@ -4,41 +4,42 @@
 \contentsline {subsection}{\numberline {1.2}disjoint set union find}{2}{subsection.1.2}
 \contentsline {subsection}{\numberline {1.3}union find con compresion de caminos}{2}{subsection.1.3}
 \contentsline {subsection}{\numberline {1.4}segment tree}{3}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Arbol binario indexado}{4}{subsection.1.5}
 \contentsline {section}{\numberline {2}Grafos}{4}{section.2}
 \contentsline {subsection}{\numberline {2.1}Dijkstra}{4}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Bellman-Ford}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Bellman-Ford}{5}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Floyd Warshall}{5}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Kosaraju}{5}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}Kosaraju}{6}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Kruskal}{6}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Topological sort}{6}{subsection.2.6}
-\contentsline {section}{\numberline {3}Matematicas}{6}{section.3}
-\contentsline {subsection}{\numberline {3.1}MCD y MCM}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {2.6}Topological sort}{7}{subsection.2.6}
+\contentsline {section}{\numberline {3}Matematicas}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}MCD y MCM}{7}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Exponenciacion binaria}{7}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Multiplicacion modular}{7}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Exponenciacion modular}{7}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Algoritmo extendido de euclides}{7}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.4}Exponenciacion modular}{8}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Algoritmo extendido de euclides}{8}{subsection.3.5}
 \contentsline {subsection}{\numberline {3.6}Inverso multiplicativo modular}{8}{subsection.3.6}
 \contentsline {subsection}{\numberline {3.7}Phi de euler}{8}{subsection.3.7}
-\contentsline {subsection}{\numberline {3.8}Test de Rabin Miller}{8}{subsection.3.8}
-\contentsline {subsection}{\numberline {3.9}Rho de pollard}{8}{subsection.3.9}
+\contentsline {subsection}{\numberline {3.8}Test de Rabin Miller}{9}{subsection.3.8}
+\contentsline {subsection}{\numberline {3.9}Rho de pollard}{9}{subsection.3.9}
 \contentsline {subsection}{\numberline {3.10}BigInteger c++}{9}{subsection.3.10}
-\contentsline {subsection}{\numberline {3.11}Fraccion}{11}{subsection.3.11}
-\contentsline {section}{\numberline {4}Otros}{12}{section.4}
-\contentsline {subsection}{\numberline {4.1}Busqueda binaria}{12}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Raiz babilonica}{12}{subsection.4.2}
-\contentsline {section}{\numberline {5}Programacion dinamica}{12}{section.5}
-\contentsline {subsection}{\numberline {5.1}Subconjuntos de un conjunto}{12}{subsection.5.1}
+\contentsline {subsection}{\numberline {3.11}Fraccion}{12}{subsection.3.11}
+\contentsline {section}{\numberline {4}Otros}{13}{section.4}
+\contentsline {subsection}{\numberline {4.1}Busqueda binaria}{13}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Raiz babilonica}{13}{subsection.4.2}
+\contentsline {section}{\numberline {5}Programacion dinamica}{13}{section.5}
+\contentsline {subsection}{\numberline {5.1}Subconjuntos de un conjunto}{13}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}Problema de la mochila}{13}{subsection.5.2}
 \contentsline {subsection}{\numberline {5.3}Longest Increment Subsecuence}{13}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Max Range Sum}{13}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Subset Sum}{13}{subsection.5.5}
-\contentsline {section}{\numberline {6}Cadenas}{13}{section.6}
-\contentsline {subsection}{\numberline {6.1}KMP}{13}{subsection.6.1}
-\contentsline {section}{\numberline {7}Tips and formulas(ufps)}{14}{section.7}
-\contentsline {subsection}{\numberline {7.1}ASCII Table}{14}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Formulas}{15}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Sequences}{17}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Time Complexities}{18}{subsection.7.4}
+\contentsline {subsection}{\numberline {5.4}Max Range Sum}{14}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Subset Sum}{14}{subsection.5.5}
+\contentsline {section}{\numberline {6}Cadenas}{14}{section.6}
+\contentsline {subsection}{\numberline {6.1}KMP}{14}{subsection.6.1}
+\contentsline {section}{\numberline {7}Tips and formulas(ufps)}{15}{section.7}
+\contentsline {subsection}{\numberline {7.1}ASCII Table}{15}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Formulas}{16}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Sequences}{18}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Time Complexities}{19}{subsection.7.4}
 \contentsline {section}{\numberline {8}Extras}{19}{section.8}
 \contentsline {subsection}{\numberline {8.1}Formulas extra}{19}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Secuencias}{19}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.2}Secuencias}{20}{subsection.8.2}
