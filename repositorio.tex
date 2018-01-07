@@ -87,12 +87,18 @@
 			Construccion O(n)\\asocia elementos en conjuntos de arboles.
 			\cppfile[6-53]{estructuras_de_datos/disjoint_set_union_find.cpp}
 			\subsection{union find con compresion de caminos}
-			asocia elementos de manera simple.
-			\cppfile[7-40]{estructuras_de_datos/union_find-compresion_de_caminos.cpp}
+			asocia elementos de manera simple\\
+			metodo mismoGrupo es el mismo del union-find normal.
+			\cppfile[9-37]{estructuras_de_datos/union_find-compresion_de_caminos.cpp}
 			\subsection{segment tree}
 			Ejemplo de RMQ (Range Minium Query)\\
 			Contruccion O(n)\\Consulta O(log n)\\Update O(log n)
-			\cppfile[8-70]{estructuras_de_datos/segment_tree.cpp}
+			\cppfile[8-68]{estructuras_de_datos/segment_tree.cpp}%29-84
+			\subsection{segment tree con lazy propagation}
+			Permite actualizar rangos del arbol en O(log n).\\
+			solo estan los metodos nuevos y los que hay que actualizar, 
+			lo demas es lo mismo del segment tree normal.
+			\cppfile[29-84]{estructuras_de_datos/segment_tree_lazy_propagation.cpp}
 			\subsection{Arbol binario indexado}
 			Arbol de Fenwick, estructura para el RSM(Range Sum Query)\\
 			Construccion O(n log n) \\Consulta O(log k)\\Update O(log n)
@@ -357,7 +363,9 @@ Longitud de un arco    & $L = \displaystyle\frac{2*\pi*r*\alpha}{360}$  \\ \hlin
 \multicolumn{2}{|c|}{} \\
 \multicolumn{2}{|c|}{RAZONES TRIGONOMÉTRICAS} \\
 \multicolumn{2}{|c|}{} \\ \hline
-\multicolumn{2}{|p{12cm}|}{Considerando un triangulo rectángulo de lados $a, b$ y $c$, con vértices $A, B$ y $C$ (cada vértice opuesto al lado cuya letra minuscula coincide con el) y un ángulo $\alpha$ con centro en el vertice $A$. a y b son catetos, c es la hipotenusa:}
+\multicolumn{2}{|p{12cm}|}{Considerando un triangulo rectángulo de lados $a, b$ y $c$, con vértices
+$A, B$ y $C$ (cada vértice opuesto al lado cuya letra minuscula coincide con el) y un ángulo $\alpha$ con
+centro en el vertice $A$. a y b son catetos, c es la hipotenusa:}
 \\ \hline
 \multicolumn{2}{|p{12cm}|}{
 $sin(\alpha) = \displaystyle\frac{cateto\ opuesto}{hipotenusa} = \displaystyle\frac{a}{c}$ 
@@ -641,6 +649,7 @@ $O(1)$ \> -\\
 	0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 10946 17711 28657 46368 75025 121393 196418 317811
 	514229 832040 1346269 2178309 3524578 5702887 9227465 14930352 24157817 39088169 63245986 102334155 165580141 267914296
 	433494437 701408733 1134903170 1836311903
+	\newpage
 	
 	\vspace{8mm}
 	\textbf{Factoriales:}\\

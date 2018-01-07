@@ -15,7 +15,21 @@ struct segment_tree{
     int mov_izq(int index){ return index << 1; }
     int mov_der(int index){ return (index << 1) + 1; }
 
+    void iniciar(vi arr){//metodo a invocar
+        A = arr;
+        n = A.size();
+        tamst = n << 2;
+        construir(1, 0, n - 1);
+    }
+
+    int RMQ(int i, int j){//metodo a invocar
+        return query(1, 0, n-1, i, j);
+    }
+
+    int lazy[MAX];
+
     void construir(int pos, int izq, int der){
+        lazy[pos] = -1;//reiniciar lazy
         if(izq == der){
             st[pos] = A[der];
             return;
@@ -27,15 +41,9 @@ struct segment_tree{
         st[pos] = min(st[aux1], st[aux2]);
     }
 
-    void iniciar(vi arr){//metodo a invocar
-        A = arr;
-        n = A.size();
-        tamst = n << 2;
-        construir(1, 0, n - 1);
-    }
-
     int query(int pos, int izq, int der, int i, int j){
         if(i > der || j < izq) return -1;
+        solve_lazy(pos, izq, der);//resolver algun lazy pendiente
         if(i <= izq && j >= der) return st[pos];
 
         int aux1 = query(mov_izq(pos), izq, (izq + der) >> 1, i, j);
@@ -46,24 +54,33 @@ struct segment_tree{
         return min(aux1, aux2);
     }
 
-    int RMQ(int i, int j){//metodo a invocar
-        return query(1, 0, n-1, i, j);
+    void solve_lazy(int pos, int izq, int der){//resolver lazy
+        if(lazy[pos] == -1) return;
+
+        st[pos] = lazy[pos];
+        if(izq != der){
+            lazy[mov_izq(pos)] = lazy[mov_der(pos)] = lazy[pos];
+        }
+        lazy[pos] = -1;
     }
 
-    int cambiar(int pos, int izq, int der, int index, int nuevo){
-        if(index > der || index < izq) return st[pos];
-        if(der == index && izq == index){
-            A[index] =  nuevo;
-            return st[pos] = nuevo;
+    int lazy_propagation(int pos, int izq, int der, int i, int j, int nuevo){
+        solve_lazy(pos, izq, der);
+        if(i > der || j < izq) return st[pos];
+
+        if(i <= izq && j >= der){
+            lazy[pos] = nuevo;
+            solve_lazy(pos, izq, der);
+            return st[pos];
         }
 
-        int aux1 = cambiar(mov_izq(pos), izq, (izq + der) >> 1, index, nuevo);
-        int aux2 = cambiar(mov_der(pos), ((izq + der) >> 1) + 1, der, index, nuevo);
+        int aux1 = lazy_propagation(mov_izq(pos), izq, (izq + der) >> 1, i, j, nuevo);
+        int aux2 = lazy_propagation(mov_der(pos), ((izq + der) >> 1) + 1, der, i, j, nuevo);
         return st[pos] = min(aux1, aux2);
     }
 
-    int update(int index, int num){//metodo a invocar
-        return cambiar(1, 0, n-1, index, num);
+    int update(int i, int j, int nuevo){//metodo a invocar
+        return lazy_propagation(1, 0, n-1, i, j, nuevo);//propagar lazy
     }
 };
 
@@ -82,13 +99,7 @@ int main(){
     tree.iniciar(vec);
 
     cout << tree.RMQ(4, 6) << endl;
-    for(int i = 0; i < tree.tamst; i++) cout << tree.st[i] << " ";
-    cout << endl;
-
-    tree.update(5, 100);
-    cout << tree.RMQ(4, 6) << endl;
-
-    for(int i = 0; i < tree.tamst; i++) cout << tree.st[i] << " ";
-    cout << endl;
+    tree.update(3, 6, 100);
+    cout << tree.RMQ(2, 6) << endl;
     return 0;
 }

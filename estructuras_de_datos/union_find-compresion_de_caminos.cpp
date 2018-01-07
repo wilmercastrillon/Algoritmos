@@ -4,14 +4,15 @@
 using namespace std;
 typedef vector<int> vi;
 
+const int MAX = 100;
+
 struct union_find{
-	vector<int> padre;
-	vector<int> rango;
+	int padre[MAX], rango[MAX];
 
 	void iniciar(int n){
-	    padre.clear(); rango.assign(n, 0);
 		for (int i = 0; i < n; i++) {
-			padre.push_back(i);
+			padre[i] = i;
+			rango[i] = 0;
 		}
 	}
 
@@ -32,10 +33,6 @@ struct union_find{
 
 		padre[x] = y;
 		if(rango[y] == rango[x]) rango[y]++;
-	}
-
-	bool MismoGrupo(int x, int y){
-		return raiz(x) == raiz(y);
 	}
 };
 

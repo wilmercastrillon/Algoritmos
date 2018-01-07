@@ -8,17 +8,17 @@ int f(int a, int b){
     return ar[a] > b;
 }
 
-int busqueda_binaria(int min, int max, int v){
+int busqueda_binaria(int men, int may, int v){
     int epsilon = 1, med = 0;
 
-    while(max-min > epsilon){
-        med = (max+min)/2;
+    while(may-men > epsilon){
+        med = (may+men)/2;
         if(f(med,v))
-            max = med;
+            may = med;
         else
-            min = med;
+            men = med;
     }
-    return min;
+    return men;
 }
 
 int main(){
