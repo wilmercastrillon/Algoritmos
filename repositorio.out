@@ -12,34 +12,35 @@
 \BOOKMARK [2][-]{subsection.2.4}{Kosaraju}{section.2}% 12
 \BOOKMARK [2][-]{subsection.2.5}{Kruskal}{section.2}% 13
 \BOOKMARK [2][-]{subsection.2.6}{Topological sort}{section.2}% 14
-\BOOKMARK [1][-]{section.3}{Matematicas}{}% 15
-\BOOKMARK [2][-]{subsection.3.1}{MCD y MCM}{section.3}% 16
-\BOOKMARK [2][-]{subsection.3.2}{Exponenciacion binaria}{section.3}% 17
-\BOOKMARK [2][-]{subsection.3.3}{Multiplicacion modular}{section.3}% 18
-\BOOKMARK [2][-]{subsection.3.4}{Exponenciacion modular}{section.3}% 19
-\BOOKMARK [2][-]{subsection.3.5}{Algoritmo extendido de euclides}{section.3}% 20
-\BOOKMARK [2][-]{subsection.3.6}{Inverso multiplicativo modular}{section.3}% 21
-\BOOKMARK [2][-]{subsection.3.7}{Phi de euler}{section.3}% 22
-\BOOKMARK [2][-]{subsection.3.8}{Test de Rabin Miller}{section.3}% 23
-\BOOKMARK [2][-]{subsection.3.9}{Rho de pollard}{section.3}% 24
-\BOOKMARK [2][-]{subsection.3.10}{BigInteger c++}{section.3}% 25
-\BOOKMARK [2][-]{subsection.3.11}{Fraccion}{section.3}% 26
-\BOOKMARK [1][-]{section.4}{Otros}{}% 27
-\BOOKMARK [2][-]{subsection.4.1}{Busqueda binaria}{section.4}% 28
-\BOOKMARK [2][-]{subsection.4.2}{Raiz babilonica}{section.4}% 29
-\BOOKMARK [1][-]{section.5}{Programacion dinamica}{}% 30
-\BOOKMARK [2][-]{subsection.5.1}{Subconjuntos de un conjunto}{section.5}% 31
-\BOOKMARK [2][-]{subsection.5.2}{Problema de la mochila}{section.5}% 32
-\BOOKMARK [2][-]{subsection.5.3}{Longest Increment Subsecuence}{section.5}% 33
-\BOOKMARK [2][-]{subsection.5.4}{Max Range Sum}{section.5}% 34
-\BOOKMARK [2][-]{subsection.5.5}{Subset Sum}{section.5}% 35
-\BOOKMARK [1][-]{section.6}{Cadenas}{}% 36
-\BOOKMARK [2][-]{subsection.6.1}{KMP}{section.6}% 37
-\BOOKMARK [1][-]{section.7}{Tips and formulas\(ufps\)}{}% 38
-\BOOKMARK [2][-]{subsection.7.1}{ASCII Table}{section.7}% 39
-\BOOKMARK [2][-]{subsection.7.2}{Formulas}{section.7}% 40
-\BOOKMARK [2][-]{subsection.7.3}{Sequences}{section.7}% 41
-\BOOKMARK [2][-]{subsection.7.4}{Time Complexities}{section.7}% 42
-\BOOKMARK [1][-]{section.8}{Extras}{}% 43
-\BOOKMARK [2][-]{subsection.8.1}{Formulas extra}{section.8}% 44
-\BOOKMARK [2][-]{subsection.8.2}{Secuencias}{section.8}% 45
+\BOOKMARK [1][-]{section.3}{Programacion dinamica}{}% 15
+\BOOKMARK [2][-]{subsection.3.1}{Subconjuntos de un conjunto}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.2}{Problema de la mochila}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.3}{Longest Increment Subsecuence}{section.3}% 18
+\BOOKMARK [2][-]{subsection.3.4}{Max Range Sum}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.5}{Subset Sum}{section.3}% 20
+\BOOKMARK [1][-]{section.4}{Otros}{}% 21
+\BOOKMARK [2][-]{subsection.4.1}{Busqueda binaria}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.2}{Raiz babilonica}{section.4}% 23
+\BOOKMARK [1][-]{section.5}{Matematicas}{}% 24
+\BOOKMARK [2][-]{subsection.5.1}{MCD y MCM}{section.5}% 25
+\BOOKMARK [2][-]{subsection.5.2}{Exponenciacion binaria}{section.5}% 26
+\BOOKMARK [2][-]{subsection.5.3}{Algoritmo extendido de euclides}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.4}{Inverso multiplicativo modular}{section.5}% 28
+\BOOKMARK [2][-]{subsection.5.5}{Phi de euler}{section.5}% 29
+\BOOKMARK [2][-]{subsection.5.6}{Multiplicacion modular}{section.5}% 30
+\BOOKMARK [2][-]{subsection.5.7}{Exponenciacion modular}{section.5}% 31
+\BOOKMARK [2][-]{subsection.5.8}{Test de Rabin Miller}{section.5}% 32
+\BOOKMARK [2][-]{subsection.5.9}{Rho de pollard}{section.5}% 33
+\BOOKMARK [2][-]{subsection.5.10}{factorizacion con criba}{section.5}% 34
+\BOOKMARK [2][-]{subsection.5.11}{BigInteger c++}{section.5}% 35
+\BOOKMARK [2][-]{subsection.5.12}{Fraccion}{section.5}% 36
+\BOOKMARK [1][-]{section.6}{Cadenas}{}% 37
+\BOOKMARK [2][-]{subsection.6.1}{KMP}{section.6}% 38
+\BOOKMARK [1][-]{section.7}{Tips and formulas\(ufps\)}{}% 39
+\BOOKMARK [2][-]{subsection.7.1}{ASCII Table}{section.7}% 40
+\BOOKMARK [2][-]{subsection.7.2}{Formulas}{section.7}% 41
+\BOOKMARK [2][-]{subsection.7.3}{Sequences}{section.7}% 42
+\BOOKMARK [2][-]{subsection.7.4}{Time Complexities}{section.7}% 43
+\BOOKMARK [1][-]{section.8}{Extras}{}% 44
+\BOOKMARK [2][-]{subsection.8.1}{Formulas extra}{section.8}% 45
+\BOOKMARK [2][-]{subsection.8.2}{Secuencias}{section.8}% 46

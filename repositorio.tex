@@ -129,57 +129,6 @@
 			O(m + n)
 			\cppfile[7-30]{grafos/topological_sort_para_grafos_ciclicos.cpp}
 			
-		\section{Matematicas}
-			\subsection{MCD y MCM}
-			Maximo comun divisor(MCD) y minimo comun multiplo(MCM)
-			\cppfile[5-11]{matematicas/MCD_y_MCM.cpp}
-			\subsection{Exponenciacion binaria}
-			O(log n)
-			\cppfile[4-15]{matematicas/exponenciacion_binaria.cpp}
-			\subsection{Multiplicacion modular}
-			Encuentra (a*b) mod c, la operacion puede generar overflow
-				si se realiza directamente, el metodo mulmod evita el overflow usando un
-				ciclo, pero se puede usar el tipo de dato int128 de c++11 para poder calcular
-				de manera directa, pero el int128 no se puede leer o imprimir directamente.
-			\cppfile[5-26]{matematicas/multiplicacion_modular.cpp}
-			\subsection{Exponenciacion modular}
-			Encuentra $(a^b)$ mod c, se nesecita implementar previamente multiplicacion modular.
-			\cppfile[16-20]{matematicas/exp_modular.cpp}
-			\subsection{Algoritmo extendido de euclides}
-			Encuentra dos numeros x e y tal que: MCD(a, b) = ax + by
-			\cppfile[5-24]{matematicas/algoritmo_extendido_de_euclides.cpp}
-			\subsection{Inverso multiplicativo modular}
-			Encuentra un x tal que (a * x) es congruente a 1 con modulo p,
-				entonces:\\ (a * x) mod p = 1 mod p\\
-				necesita del algoritmo extendido de euclides\\
-			O(log m)
-			\cppfile[17-27]{matematicas/inverso_multiplicativo_modular.cpp}
-			\subsection{Phi de euler}
-			Devuelve la cantidad de coprimos de un numero n\\
-			O($\sqrt{n}$)
-			\cppfile[5-16]{matematicas/phi_de_euler.cpp}
-			\subsection{Test de Rabin Miller}
-			Devuelve si un numero es primo, requiere de implementar previamente MCD, multiplicacion
-			modular y exponenciacion modular.
-			\cppfile[29-52]{matematicas/test_de_rabin_miller.cpp}
-			\subsection{Rho de pollard}
-			Factorizacion rapida, requiere de implementar previamente el MCD, multiplicacion modular,
-			exponenciacion modular y el test de Rabin Miller.\\
-			O($\sqrt[4]{n}$)
-			\cppfile[54-92]{matematicas/rho_de_pollard.cpp}
-			\subsection{BigInteger c++}
-			\cppfile[1-161]{matematicas/biginteger.cpp}
-			\subsection{Fraccion}
-			\cppfile[5-79]{matematicas/fraccion.cpp}
-		
-		\section{Otros}
-			\subsection{Busqueda binaria}
-			O(log n)
-			\cppfile[7-22]{otros/busqueda_binaria.cpp}
-			\subsection{Raiz babilonica}
-			Encuentra la raiz cuadrada de un numero
-			\cppfile[4-12]{otros/raiz_babilonica.cpp}
-			
 		\section{Programacion dinamica}
 			\subsection{Subconjuntos de un conjunto}
 			O($2^{n}$)
@@ -195,6 +144,63 @@
 			\cppfile[6-22]{programacion_dinamica/Max_Range_Sum.cpp}
 			\subsection{Subset Sum}
 			\cppfile[8-20]{programacion_dinamica/Subset_Sum.cpp}
+		
+		\section{Otros}
+			\subsection{Busqueda binaria}
+			O(log n)
+			\cppfile[7-22]{otros/busqueda_binaria.cpp}
+			\subsection{Raiz babilonica}
+			Encuentra la raiz cuadrada de un numero
+			\cppfile[4-12]{otros/raiz_babilonica.cpp}
+			
+		\section{Matematicas}
+			\subsection{MCD y MCM}
+			Maximo comun divisor(MCD) y minimo comun multiplo(MCM)
+			\cppfile[5-11]{matematicas/MCD_y_MCM.cpp}
+			\subsection{Exponenciacion binaria}
+			O(log n)
+			\cppfile[4-15]{matematicas/exponenciacion_binaria.cpp}
+			\subsection{Algoritmo extendido de euclides}
+			Encuentra dos numeros x e y tal que: MCD(a, b) = ax + by
+			\cppfile[5-24]{matematicas/algoritmo_extendido_de_euclides.cpp}
+			\subsection{Inverso multiplicativo modular}
+			Encuentra un x tal que (a * x) es congruente a 1 con modulo p,
+				entonces:\\ (a * x) mod p = 1 mod p\\
+				necesita del algoritmo extendido de euclides\\
+			O(log m)
+			\cppfile[17-27]{matematicas/inverso_multiplicativo_modular.cpp}
+			\subsection{Phi de euler}
+			Devuelve la cantidad de coprimos de un numero n\\
+			O($\sqrt{n}$)
+			\cppfile[5-16]{matematicas/phi_de_euler.cpp}
+			\subsection{Multiplicacion modular}
+			Encuentra (a*b) mod c, la operacion puede generar overflow
+				si se realiza directamente, el metodo mulmod evita el overflow usando un
+				ciclo, pero se puede usar el tipo de dato int128 de c++11 para poder calcular
+				de manera directa, pero el int128 no se puede leer o imprimir directamente.
+			\cppfile[5-26]{matematicas/multiplicacion_modular.cpp}
+			\subsection{Exponenciacion modular}
+			Encuentra $(a^b)$ mod c, se nesecita implementar previamente multiplicacion modular.
+			\cppfile[16-20]{matematicas/exp_modular.cpp}
+			\subsection{Test de Rabin Miller}
+			Devuelve si un numero es primo, requiere de implementar previamente MCD, multiplicacion
+			modular y exponenciacion modular.
+			\cppfile[29-52]{matematicas/test_de_rabin_miller.cpp}
+			\subsection{Rho de pollard}
+			Factorizacion rapida, usar para $n > 10^{12}$ , requiere de implementar previamente el MCD, 
+			multiplicacion modular,	exponenciacion modular y el test de Rabin Miller.\\
+			O($\sqrt[4]{n}$)
+			\cppfile[54-92]{matematicas/rho_de_pollard.cpp}
+			\subsection{factorizacion con criba}
+			Factorizacion usando la criba, mas corto de escribir que rho de pollard, usar
+			para $n \leq 10^12$, guarda los factores en un mapa similar a rho de pollard.
+			\cppfile[10-54]{matematicas/factorizacion_criba.cpp}
+			\subsection{BigInteger c++}
+			\cppfile[4-106]{matematicas/biginteger.cpp}
+			\subsection{Fraccion}
+			\cppfile[5-79]{matematicas/fraccion.cpp}
+			
+			
 	
 	%Tomado de notebook c++ de la ufps
 		\section{Cadenas}
@@ -617,9 +623,29 @@ $O(1)$ \> -\\
 			\vspace{8mm}
 			\textbf{Formula de numeros fibonacci:}\\
 			\vspace{3mm}
-			{\Large $f(n) = \frac{1}{\sqrt{5}} * [ (\frac{1 + \sqrt{5}}{2})^{2}  - (\frac{1 - \sqrt{5}}{2})^{2}]$ }
+			{\Large $f(n) = \frac{1}{\sqrt{5}} * [ (\frac{1 + \sqrt{5}}{2})^{n}  - (\frac{1 - \sqrt{5}}{2})^{n}]$ }
 			
-		\newpage		
+			\vspace{8mm}
+			\textbf{Determinante de Gauss:}\\ 
+			Encontrar el area de un poligono en el plano cartesiano a partir de sus vertices\\
+			\vspace{3mm}
+			\newpage			
+			
+			{\large$A = \frac{1}{2} $}
+			{\large $ \begin{bmatrix}
+				x_{1} & y_{1} \\ 
+				x_{2} & y_{2} \\ 
+				x_{3} & y_{3} \\ 
+				x_{1} & y_{1} 
+			\end{bmatrix}$ } \\ 
+			\vspace{3mm}
+			{\large $S = x_{1}y_{2} + x_{2}y_{3} +...+ x_{n}y_{1}$} \\ 
+			\vspace{3mm}
+			{\large $D = x_{2}y_{1} + x_{3}y_{2} +...+ x_{1}y_{n}$} \\ 
+			\vspace{3mm}
+			{\large $A = \frac{1}{2} |S - D|$}
+			\vspace{3mm}
+			
 		\subsection{Secuencias}
 		
 		\textbf{Primos:}\\
@@ -649,7 +675,6 @@ $O(1)$ \> -\\
 	0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 10946 17711 28657 46368 75025 121393 196418 317811
 	514229 832040 1346269 2178309 3524578 5702887 9227465 14930352 24157817 39088169 63245986 102334155 165580141 267914296
 	433494437 701408733 1134903170 1836311903
-	\newpage
 	
 	\vspace{8mm}
 	\textbf{Factoriales:}\\

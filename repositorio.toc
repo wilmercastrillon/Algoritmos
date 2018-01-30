@@ -13,27 +13,28 @@
 \contentsline {subsection}{\numberline {2.4}Kosaraju}{7}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Kruskal}{7}{subsection.2.5}
 \contentsline {subsection}{\numberline {2.6}Topological sort}{7}{subsection.2.6}
-\contentsline {section}{\numberline {3}Matematicas}{8}{section.3}
-\contentsline {subsection}{\numberline {3.1}MCD y MCM}{8}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Exponenciacion binaria}{8}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Multiplicacion modular}{8}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Exponenciacion modular}{9}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Algoritmo extendido de euclides}{9}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}Inverso multiplicativo modular}{9}{subsection.3.6}
-\contentsline {subsection}{\numberline {3.7}Phi de euler}{9}{subsection.3.7}
-\contentsline {subsection}{\numberline {3.8}Test de Rabin Miller}{9}{subsection.3.8}
-\contentsline {subsection}{\numberline {3.9}Rho de pollard}{10}{subsection.3.9}
-\contentsline {subsection}{\numberline {3.10}BigInteger c++}{10}{subsection.3.10}
-\contentsline {subsection}{\numberline {3.11}Fraccion}{12}{subsection.3.11}
-\contentsline {section}{\numberline {4}Otros}{13}{section.4}
-\contentsline {subsection}{\numberline {4.1}Busqueda binaria}{13}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Raiz babilonica}{14}{subsection.4.2}
-\contentsline {section}{\numberline {5}Programacion dinamica}{14}{section.5}
-\contentsline {subsection}{\numberline {5.1}Subconjuntos de un conjunto}{14}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Problema de la mochila}{14}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Longest Increment Subsecuence}{14}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Max Range Sum}{14}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Subset Sum}{15}{subsection.5.5}
+\contentsline {section}{\numberline {3}Programacion dinamica}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Subconjuntos de un conjunto}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Problema de la mochila}{8}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Longest Increment Subsecuence}{8}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Max Range Sum}{8}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Subset Sum}{9}{subsection.3.5}
+\contentsline {section}{\numberline {4}Otros}{9}{section.4}
+\contentsline {subsection}{\numberline {4.1}Busqueda binaria}{9}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Raiz babilonica}{9}{subsection.4.2}
+\contentsline {section}{\numberline {5}Matematicas}{9}{section.5}
+\contentsline {subsection}{\numberline {5.1}MCD y MCM}{9}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Exponenciacion binaria}{10}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Algoritmo extendido de euclides}{10}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Inverso multiplicativo modular}{10}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Phi de euler}{10}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}Multiplicacion modular}{10}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}Exponenciacion modular}{11}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}Test de Rabin Miller}{11}{subsection.5.8}
+\contentsline {subsection}{\numberline {5.9}Rho de pollard}{11}{subsection.5.9}
+\contentsline {subsection}{\numberline {5.10}factorizacion con criba}{12}{subsection.5.10}
+\contentsline {subsection}{\numberline {5.11}BigInteger c++}{12}{subsection.5.11}
+\contentsline {subsection}{\numberline {5.12}Fraccion}{14}{subsection.5.12}
 \contentsline {section}{\numberline {6}Cadenas}{15}{section.6}
 \contentsline {subsection}{\numberline {6.1}KMP}{15}{subsection.6.1}
 \contentsline {section}{\numberline {7}Tips and formulas(ufps)}{16}{section.7}
