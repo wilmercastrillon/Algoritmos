@@ -23,17 +23,16 @@ void dfs(int n, vector<vi> lista, bool f, vi &grupo){
 void kosaraju(){
 	memset(vis, false, sizeof(vis));
 	vi no_se_utiliza;
+
 	for (int i = 0; i < 5; i++)
 		if(!vis[i]) dfs(i, grafo, true, no_se_utiliza);
 
 	memset(vis, false, sizeof(vis));
 	int n;
-	while(pila.size())
-	{
+	while(pila.size()){
 		n = pila.top();
 		pila.pop();
-		if (!vis[n])
-		{
+		if (!vis[n]){
 			vi vec;
 			dfs(n, transpuesto, false, vec);
 			comp.push_back(vec);
@@ -48,17 +47,12 @@ void kosaraju(){
 
 int main() {
 
-	grafo[0].push_back(1);
-	grafo[1].push_back(2);
-	grafo[2].push_back(4);
-	grafo[1].push_back(3);
-	grafo[3].push_back(0);
-
-	transpuesto[1].push_back(0);
-	transpuesto[2].push_back(1);
-	transpuesto[4].push_back(2);
-	transpuesto[3].push_back(1);
-	transpuesto[0].push_back(3);
+    int x, y;
+    for(int i = 0; i < 6; i++){
+        scanf("%d %d", &x, &y);
+        grafo[x-1].push_back(y-1);
+        transpuesto[y-1].push_back(x-1);
+    }
 
 	kosaraju();
 
