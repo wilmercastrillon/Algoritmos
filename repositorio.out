@@ -21,27 +21,28 @@
 \BOOKMARK [1][-]{section.4}{Otros}{}% 21
 \BOOKMARK [2][-]{subsection.4.1}{Busqueda binaria}{section.4}% 22
 \BOOKMARK [2][-]{subsection.4.2}{Raiz babilonica}{section.4}% 23
-\BOOKMARK [1][-]{section.5}{Matematicas}{}% 24
-\BOOKMARK [2][-]{subsection.5.1}{MCD y MCM}{section.5}% 25
-\BOOKMARK [2][-]{subsection.5.2}{Exponenciacion binaria}{section.5}% 26
-\BOOKMARK [2][-]{subsection.5.3}{Algoritmo extendido de euclides}{section.5}% 27
-\BOOKMARK [2][-]{subsection.5.4}{Inverso multiplicativo modular}{section.5}% 28
-\BOOKMARK [2][-]{subsection.5.5}{Phi de euler}{section.5}% 29
-\BOOKMARK [2][-]{subsection.5.6}{Multiplicacion modular}{section.5}% 30
-\BOOKMARK [2][-]{subsection.5.7}{Exponenciacion modular}{section.5}% 31
-\BOOKMARK [2][-]{subsection.5.8}{Test de Rabin Miller}{section.5}% 32
-\BOOKMARK [2][-]{subsection.5.9}{Rho de pollard}{section.5}% 33
-\BOOKMARK [2][-]{subsection.5.10}{factorizacion con criba}{section.5}% 34
-\BOOKMARK [2][-]{subsection.5.11}{BigInteger c++}{section.5}% 35
-\BOOKMARK [2][-]{subsection.5.12}{Fraccion}{section.5}% 36
-\BOOKMARK [1][-]{section.6}{Cadenas}{}% 37
-\BOOKMARK [2][-]{subsection.6.1}{Algoritmo de bordes}{section.6}% 38
-\BOOKMARK [2][-]{subsection.6.2}{KMP}{section.6}% 39
-\BOOKMARK [1][-]{section.7}{Tips and formulas\(ufps\)}{}% 40
-\BOOKMARK [2][-]{subsection.7.1}{ASCII Table}{section.7}% 41
-\BOOKMARK [2][-]{subsection.7.2}{Formulas}{section.7}% 42
-\BOOKMARK [2][-]{subsection.7.3}{Sequences}{section.7}% 43
-\BOOKMARK [2][-]{subsection.7.4}{Time Complexities}{section.7}% 44
-\BOOKMARK [1][-]{section.8}{Extras}{}% 45
-\BOOKMARK [2][-]{subsection.8.1}{Formulas extra}{section.8}% 46
-\BOOKMARK [2][-]{subsection.8.2}{Secuencias}{section.8}% 47
+\BOOKMARK [2][-]{subsection.4.3}{Codigo gray}{section.4}% 24
+\BOOKMARK [1][-]{section.5}{Matematicas}{}% 25
+\BOOKMARK [2][-]{subsection.5.1}{MCD y MCM}{section.5}% 26
+\BOOKMARK [2][-]{subsection.5.2}{Exponenciacion binaria}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.3}{Algoritmo extendido de euclides}{section.5}% 28
+\BOOKMARK [2][-]{subsection.5.4}{Inverso multiplicativo modular}{section.5}% 29
+\BOOKMARK [2][-]{subsection.5.5}{Phi de euler}{section.5}% 30
+\BOOKMARK [2][-]{subsection.5.6}{Multiplicacion modular}{section.5}% 31
+\BOOKMARK [2][-]{subsection.5.7}{Exponenciacion modular}{section.5}% 32
+\BOOKMARK [2][-]{subsection.5.8}{Test de Rabin Miller}{section.5}% 33
+\BOOKMARK [2][-]{subsection.5.9}{Rho de pollard}{section.5}% 34
+\BOOKMARK [2][-]{subsection.5.10}{factorizacion con criba}{section.5}% 35
+\BOOKMARK [2][-]{subsection.5.11}{BigInteger c++}{section.5}% 36
+\BOOKMARK [2][-]{subsection.5.12}{Fraccion}{section.5}% 37
+\BOOKMARK [1][-]{section.6}{Cadenas}{}% 38
+\BOOKMARK [2][-]{subsection.6.1}{Algoritmo de bordes}{section.6}% 39
+\BOOKMARK [2][-]{subsection.6.2}{KMP}{section.6}% 40
+\BOOKMARK [1][-]{section.7}{Tips and formulas\(ufps\)}{}% 41
+\BOOKMARK [2][-]{subsection.7.1}{ASCII Table}{section.7}% 42
+\BOOKMARK [2][-]{subsection.7.2}{Formulas}{section.7}% 43
+\BOOKMARK [2][-]{subsection.7.3}{Sequences}{section.7}% 44
+\BOOKMARK [2][-]{subsection.7.4}{Time Complexities}{section.7}% 45
+\BOOKMARK [1][-]{section.8}{Extras}{}% 46
+\BOOKMARK [2][-]{subsection.8.1}{Formulas extra}{section.8}% 47
+\BOOKMARK [2][-]{subsection.8.2}{Secuencias}{section.8}% 48

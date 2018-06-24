@@ -77,7 +77,13 @@
 	\author{Universidad de la amazonia}
 	\maketitle
 	
-	\tableofcontents\newpage
+	\begin{center}
+		\includegraphics[scale=0.9]{dijkstra}
+		\Huge{I2}
+	\end{center}
+	\normalsize
+	\tableofcontents
+	\hfill
 	
 		\section{Estructuras de datos}
 			\subsection{tablas aditivas}
@@ -152,6 +158,8 @@
 			\subsection{Raiz babilonica}
 			Encuentra la raiz cuadrada de un numero
 			\cppfile[4-12]{otros/raiz_babilonica.cpp}
+			\subsection{Codigo gray}
+			\cppfile[5-14]{otros/codigo_gray.cpp}
 			
 		\section{Matematicas}
 			\subsection{MCD y MCM}
@@ -196,9 +204,9 @@
 			para $n \leq 10^12$, guarda los factores en un mapa similar a rho de pollard.
 			\cppfile[10-54]{matematicas/factorizacion_criba.cpp}
 			\subsection{BigInteger c++}
-			\cppfile[4-106]{matematicas/biginteger.cpp}
+			\cppfile[4-207]{matematicas/biginteger.cpp}
 			\subsection{Fraccion}
-			\cppfile[5-79]{matematicas/fraccion.cpp}
+			\cppfile[5-72]{matematicas/fraccion.cpp}
 			
 		\section{Cadenas}
 			\subsection{Algoritmo de bordes}
@@ -362,7 +370,8 @@ Longitud de un arco    & $L = \displaystyle\frac{2*\pi*r*\alpha}{360}$  \\ \hlin
 \multicolumn{2}{|c|}{} \\
 \multicolumn{2}{|c|}{TRIÁNGULO} \\ 
 \multicolumn{2}{|c|}{} \\ \hline
-\multicolumn{2}{|p{12cm}|}{Considerando $b$ como la longitud de la base, $h$ como la altura, letras minúsculas como la longitud de los lados, letras mayúsculas como los ángulos, y $r$ como el radio de círcunferencias asociadas.} \\ \hline
+%--------------------------------------------------
+\multicolumn{2}{|p{11cm}|}{Considerando $b$ como la longitud de la base, $h$ como la altura, letras minúsculas como la longitud de los lados, letras mayúsculas como los ángulos, y $r$ como el radio de círcunferencias asociadas.} \\ \hline
 Área conociendo base y altura & $A = \displaystyle\frac{1}{2}b * h$ \\ \hline
 Área conociendo 2 lados y el ángulo que forman & $A = \displaystyle\frac{1}{2}b*a*sin(C)$ \\ \hline
 Área conociendo los 3 lados & $ A = \sqrt{p(p - a)(p - b)(p - c)}$ con $p = \displaystyle\frac{a + b + c}{2}$ \\ \hline
@@ -372,36 +381,38 @@ Longitud de un arco    & $L = \displaystyle\frac{2*\pi*r*\alpha}{360}$  \\ \hlin
 \multicolumn{2}{|c|}{} \\
 \multicolumn{2}{|c|}{RAZONES TRIGONOMÉTRICAS} \\
 \multicolumn{2}{|c|}{} \\ \hline
-\multicolumn{2}{|p{12cm}|}{Considerando un triangulo rectángulo de lados $a, b$ y $c$, con vértices
+%-----------------------------------------------------
+\multicolumn{2}{|p{11cm}|}{Considerando un triangulo rectángulo de lados $a, b$ y $c$, con vértices
 $A, B$ y $C$ (cada vértice opuesto al lado cuya letra minuscula coincide con el) y un ángulo $\alpha$ con
 centro en el vertice $A$. a y b son catetos, c es la hipotenusa:}
 \\ \hline
-\multicolumn{2}{|p{12cm}|}{
+%-----------------------------------------------------
+\multicolumn{2}{|p{11cm}|}{
 $sin(\alpha) = \displaystyle\frac{cateto\ opuesto}{hipotenusa} = \displaystyle\frac{a}{c}$ 
 
 } 
 \\ \hline
-\multicolumn{2}{|p{12cm}|}{
+\multicolumn{2}{|p{11cm}|}{
 $cos(\alpha) = \displaystyle\frac{cateto\ adyacente}{hipotenusa} = \frac{b}{c}$ 
 
 } 
 \\ \hline
-\multicolumn{2}{|p{12cm}|}{
+\multicolumn{2}{|p{11cm}|}{
 $tan(\alpha) = \displaystyle\frac{cateto\ opuesto}{cateto\ adyacente} = \frac{a}{b}$ 
 
 } 
 \\ \hline
-\multicolumn{2}{|p{12cm}|}{
+\multicolumn{2}{|p{11cm}|}{
 $sec(\alpha) = \displaystyle\frac{1}{cos(\alpha)} = \frac{c}{b}$ 
 
 }
 \\ \hline
-\multicolumn{2}{|p{12cm}|}{
+\multicolumn{2}{|p{11cm}|}{
 $csc(\alpha) = \displaystyle\frac{1}{sin(\alpha)} = \frac{c}{a}$ 
 
 } 
 \\ \hline
-\multicolumn{2}{|p{12cm}|}{
+\multicolumn{2}{|p{11cm}|}{
 $cot(\alpha) = \displaystyle\frac{1}{tan(\alpha)} = \frac{b}{a}$ 
 
 }

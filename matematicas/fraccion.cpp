@@ -6,11 +6,9 @@ struct fraccion {
     int num, den;
 
     void iniciar(int x, int y) {
-        num = x;
-        den = y;
+        num = x; den = y;
         fraccion c = simplificar();
-        num = c.num;
-        den = c.den;
+        num = c.num; den = c.den;
     }
 
     fraccion sumar(fraccion b) {
@@ -50,15 +48,12 @@ struct fraccion {
 
     fraccion simplificar() {
         fraccion c;
-        c.num = num;
-        c.den = den;
+        c.num = num; c.den = den;
         if (c.den < 0) {
-            c.num *= -1;
-            c.den *= -1;
+            c.num *= -1; c.den *= -1;
         }
-        if (c.num == 0) {
-            c.den = 1;
-        } else {
+        if (c.num == 0) c.den = 1;
+        else {
             int dividir = mcd(c.num, c.den);
             c.num /= dividir;
             c.den /= dividir;
@@ -69,9 +64,7 @@ struct fraccion {
     string toString() {
         stringstream ss;
         ss << num;
-        if (den == 1) {
-            return ss.str();
-        }
+        if (den == 1) return ss.str();
         ss << "/";
         ss << den;
         return ss.str();
