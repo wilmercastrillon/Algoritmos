@@ -73,8 +73,8 @@
 
 \begin{document}
 	
-	\title{Repositorio en c++}
-	\author{Universidad de la amazonia}
+	\title{Repositorio en C++}
+	\author{Universidad de la Amazonia, Colombia.}
 	\maketitle
 	
 	\begin{center}
@@ -86,21 +86,21 @@
 	\hfill
 	
 		\section{Estructuras de datos}
-			\subsection{tablas aditivas}
+			\subsection{Tablas aditivas}
 			Construccion O(n)
 			\cppfile[16-28]{estructuras_de_datos/tablas_aditivas.cpp}
-			\subsection{disjoint set union find}
+			\subsection{Disjoint set union find}
 			Construccion O(n)\\asocia elementos en conjuntos de arboles.
 			\cppfile[6-53]{estructuras_de_datos/disjoint_set_union_find.cpp}
-			\subsection{union find con compresion de caminos}
+			\subsection{Union find con compresion de caminos}
 			asocia elementos de manera simple\\
 			metodo mismoGrupo es el mismo del union-find normal.
 			\cppfile[9-37]{estructuras_de_datos/union_find-compresion_de_caminos.cpp}
-			\subsection{segment tree}
+			\subsection{Segment tree}
 			Ejemplo de RMQ (Range Minium Query)\\
 			Contruccion O(n)\\Consulta O(log n)\\Update O(log n)
 			\cppfile[8-68]{estructuras_de_datos/segment_tree.cpp}%29-84
-			\subsection{segment tree con lazy propagation}
+			\subsection{Segment tree con lazy propagation}
 			Permite actualizar rangos del arbol en O(log n).\\
 			solo estan los metodos nuevos y los que hay que actualizar, 
 			lo demas es lo mismo del segment tree normal.
@@ -132,8 +132,11 @@
 			O(m log n), sin contar el ordenamiento.
 			\cppfile[43-67]{grafos/kruskal.cpp}
 			\subsection{Topological sort}
-			O(m + n)
+			O(n + m), algoritmo de kahn.
 			\cppfile[7-30]{grafos/topological_sort_para_grafos_ciclicos.cpp}
+			\subsection{Puntos de articulación y puentes}
+			O(n + m).
+			\cppfile[9-33]{grafos/puntos_de_articulacion_y_puentes.cpp}
 			
 		\section{Programacion dinamica}
 			\subsection{Subconjuntos de un conjunto}
@@ -142,14 +145,19 @@
 			\subsection{Problema de la mochila}
 			\cppfile[8-23]{programacion_dinamica/knapsack.cpp}
 			\subsection{Longest Increment Subsecuence}
-			Subsecuencia creciente mas larga\\
-			O(n log n)
-			\cppfile[8-19]{programacion_dinamica/longest_increasing_subsequence.cpp}
+			Subsecuencia creciente mas larga, solución corta con dp\\
+			O( (n*(n+1))/2 )
+			\cppfile[40-51]{programacion_dinamica/longest_increasing_subsequence.cpp}
+			Solución D{\&}C con gredy, O(n log n)
+			\cppfile[7-38]{programacion_dinamica/longest_increasing_subsequence.cpp}
 			\subsection{Max Range Sum}
-			O(n)
+			Algoritmo de Kadane, O(n)
 			\cppfile[6-22]{programacion_dinamica/Max_Range_Sum.cpp}
 			\subsection{Subset Sum}
 			\cppfile[8-20]{programacion_dinamica/Subset_Sum.cpp}
+			\subsection{Traveling salesman problem}
+			O($2^{n}*n^{2}$), para la respuesta llamar: tsp(0,1)
+			\cppfile[7-22]{programacion_dinamica/traveling_salesman_problem.cpp}
 		
 		\section{Otros}
 			\subsection{Busqueda binaria}
@@ -201,7 +209,7 @@
 			\cppfile[54-92]{matematicas/rho_de_pollard.cpp}
 			\subsection{factorizacion con criba}
 			Factorizacion usando la criba, mas corto de escribir que rho de pollard, usar
-			para $n \leq 10^12$, guarda los factores en un mapa similar a rho de pollard.
+			para $n \leq 10^{12}$, guarda los factores en un mapa similar a rho de pollard.
 			\cppfile[10-54]{matematicas/factorizacion_criba.cpp}
 			\subsection{BigInteger c++}
 			\cppfile[4-207]{matematicas/biginteger.cpp}

@@ -5,37 +5,41 @@
 using namespace std;
 typedef vector<int> vi;
 
-vi ben;//beneficio
-vi cos;//costo
-int knapsack(int cap, vi &cos, vi &ben, int n) {
-    int dp[n+1][cap+1];
+int ganancia[100] = {100, 70, 50, 10};
+int peso[100] = {10, 4, 6, 12};
 
-    for(int i = 0; i <= n; i++){
+int knapsack(int cap, int n) {//capacidad y cantidad.
+    int dp[n+1][cap+1];
+    for(int i = 0; i <= n; i++)//recorrer objetos
         for(int j = 0; j <= cap; j++){
-            if(i == 0 || j == 0) dp[i][j] = 0;
-            else if(cos[i - 1] <= j)
-                dp[i][j] = max(ben[i - 1] + dp[i - 1][j - cos[i - 1]], dp[i - 1][j]);
+            if(i == 0 || j == 0) dp[i][j] = 0;//caso base
+            else if(peso[i - 1] <= j)
+                dp[i][j] = max(dp[i - 1][j],
+                            ganancia[i - 1] + dp[i - 1][j - peso[i - 1]]);
             else
                 dp[i][j] = dp[i - 1][j];
         }
-    }
     return dp[n][cap];
 }
 
+int N = 4;
+int memo[100][50];//objetos-capacidad
+
+int mochila(int obj, int cap){//Top-Down
+    if(cap == 0 || obj == N) return 0;
+    if(memo[obj][cap] != -1) return memo[obj][cap];
+
+    if(peso[obj] > cap)
+        return mochila(obj + 1, cap);
+    else
+        return max(mochila(obj + 1, cap), ganancia[obj]
+                + mochila(obj + 1, cap - peso[obj]));
+}
+
 int main(){
-    ben.push_back(8);
-    ben.push_back(6);
-    ben.push_back(5);
-    ben.push_back(9);
-    ben.push_back(7);
-
-    cos.push_back(2);
-    cos.push_back(3);
-    cos.push_back(2);
-    cos.push_back(1);
-    cos.push_back(2);
-
-    cout << knapsack(4, cos, ben, 5) << endl;
+    //memset(memo, -1, sizeof(memo));
+    //cout << mochila(0, 12);
+    cout << knapsack(12, 4) << endl;
 }
 
 
