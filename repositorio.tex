@@ -126,17 +126,26 @@
 			\subsection{Kosaraju}
 			Componentes fuertemente conexas grafos si y no dirigidos\\
 			O(2(n + m))
-			\cppfile[7-45]{grafos/kosaraju.cpp}
+			\cppfile[9-44]{grafos/kosaraju.cpp}
+			\subsection{Tarjan}
+			Componentes fuertemente conexas grafos si y no dirigidos, requiere menos
+			espacio que Kosajaru\\
+			O(n + m)
+			\cppfile[9-39]{grafos/tarjan.cpp}
 			\subsection{Kruskal}
-			Arbol generador minimo, se necesita de un union-find\\
+			Arbol generador minimo(MST), se necesita de un union-find\\
 			O(m log n), sin contar el ordenamiento.
-			\cppfile[43-67]{grafos/kruskal.cpp}
+			\cppfile[44-67]{grafos/kruskal.cpp}
+			\subsection{Prim}
+			Arbol generador minimo (MST)\\
+			O(m log n) 
+			\cppfile[10-34]{grafos/prim.cpp}
 			\subsection{Topological sort}
 			O(n + m), algoritmo de kahn.
 			\cppfile[7-30]{grafos/topological_sort_para_grafos_ciclicos.cpp}
 			\subsection{Puntos de articulación y puentes}
 			O(n + m).
-			\cppfile[9-33]{grafos/puntos_de_articulacion_y_puentes.cpp}
+			\cppfile[10-48]{grafos/puntos_de_articulacion_y_puentes.cpp}
 			
 		\section{Programacion dinamica}
 			\subsection{Subconjuntos de un conjunto}
