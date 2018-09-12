@@ -5,11 +5,12 @@ typedef unsigned long long int ulli;
 typedef long long int tdato; //no debe ser unsigned para la resta!!!
 tdato base = 1000000000;
 
-struct biginteger{
+struct bigint{
     vector<tdato> num;
     bool signo;
 
-    void iniciar(int n){
+    bigint(){ signo = true; }
+    bigint(int n){
         num.clear();
         signo = n >= 0; n = abs(n);
         while(n){
@@ -17,8 +18,7 @@ struct biginteger{
             n /= base;
         }
     }
-
-    void iniciar(string n){
+    bigint(string n){
         num.clear();
         signo = n[0] != '-';
         if(n[0] == '-') n = n.substr(1);
@@ -32,7 +32,6 @@ struct biginteger{
     void quitar_zeros_izq(){
         while(num.size() && !num.back()) num.pop_back();
     }
-
     void imprimir(){
         if(!signo && num.size()) printf("-");
         printf("%d", ((num.size())? num.back(): 0));
@@ -41,10 +40,10 @@ struct biginteger{
         printf("\n");
     }
 
-    biginteger suma(biginteger b){
+    bigint suma(bigint b){
         ulli carry = 0, aux;
         int l = max(b.num.size(), num.size());
-        biginteger c;
+        bigint c;
 
         for(int i = 0; i < l || carry; i++){
             aux = carry;
@@ -55,32 +54,30 @@ struct biginteger{
                 c.num.push_back(aux % base);
                 carry = aux / base;
             }else{
-                c.num.push_back(aux);
-                carry = 0;
+                c.num.push_back(aux);  carry = 0;
             }
         }
         return c;
     }
 
-    biginteger resta(biginteger b){//asumimos que b es menor
+    bigint resta(bigint b){//asumimos que b es menor
         tdato carry = 0;//no debe ser unsigned
-        biginteger c;
+        bigint c;
 
         for(int i = 0; i < num.size(); i++){
             c.num.push_back(num[i]);
             c.num[i] -= ((i < b.num.size())? b.num[i]: 0) + carry;
             if(c.num[i] < 0){
-                c.num[i] += base;
-                carry = 1;
+                c.num[i] += base;  carry = 1;
             }else carry = 0;
         }
         c.quitar_zeros_izq();
         return c;
     }
 
-    biginteger multiplicar(biginteger b){
+    bigint multiplicar(bigint b){
         ulli aux = 0, carry;
-        biginteger c;
+        bigint c;
         c.num.assign(num.size() + b.num.size(), 0);
 
         for(int i = 0; i < num.size(); i++){
@@ -100,21 +97,15 @@ struct biginteger{
         ulli aux;
         for (int i = num.size() - 1; i >= 0; --i) {
             aux = num[i] + carry * base;
-            num[i] = aux / 2;
-            carry = aux % 2;
+            num[i] = aux / 2;  carry = aux % 2;
         }
         quitar_zeros_izq();
     }
 
-    biginteger dividir(biginteger b){//busqueda binaria
-        if(comparar(b) < 0){
-            biginteger cero; cero.iniciar(0);
-            return cero;
-        }
-        biginteger may, men, med, m;
-        m.iniciar(1);
+    bigint dividir(bigint b){//busqueda binaria
+        if(comparar(b) < 0) return bigint(0);
+        bigint may, men(0), med, m(1);
         may = suma(m); may.signo = true;
-        men.iniciar(0);
         int cmp;
 
         while(true){
@@ -133,7 +124,7 @@ struct biginteger{
         return med;
     }
 
-    int comparar(biginteger b){//este es: 1 mayor, 0 igual, -1 menor
+    int comparar(bigint b){//este es: 1 mayor, 0 igual, -1 menor
         if(num.size() > b.num.size()) return 1;
         else if(num.size() < b.num.size()) return -1;
         else{
@@ -146,7 +137,6 @@ struct biginteger{
     }
 };
 
-typedef biginteger bigint;
 bool operator>(bigint &a, bigint &b){
     if(a.signo == b.signo){
         if(a.signo) return a.comparar(b) > 0;
@@ -212,9 +202,9 @@ int main(){
     bigint a, b;
 
     while(cin >> n){
-        a.iniciar(1);
+        a = bigint(1);
         for(int i = 1; i <= n; i++){
-            b.iniciar(i);
+            b = bigint(i);
             a = a * b;
         }
         a.imprimir();    }

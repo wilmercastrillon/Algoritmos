@@ -42,11 +42,15 @@
 \BOOKMARK [1][-]{section.6}{Cadenas}{}% 42
 \BOOKMARK [2][-]{subsection.6.1}{Algoritmo de bordes}{section.6}% 43
 \BOOKMARK [2][-]{subsection.6.2}{KMP}{section.6}% 44
-\BOOKMARK [1][-]{section.7}{Tips and formulas\(ufps\)}{}% 45
-\BOOKMARK [2][-]{subsection.7.1}{ASCII Table}{section.7}% 46
-\BOOKMARK [2][-]{subsection.7.2}{Formulas}{section.7}% 47
-\BOOKMARK [2][-]{subsection.7.3}{Sequences}{section.7}% 48
-\BOOKMARK [2][-]{subsection.7.4}{Time Complexities}{section.7}% 49
-\BOOKMARK [1][-]{section.8}{Extras}{}% 50
-\BOOKMARK [2][-]{subsection.8.1}{Formulas extra}{section.8}% 51
-\BOOKMARK [2][-]{subsection.8.2}{Secuencias}{section.8}% 52
+\BOOKMARK [1][-]{section.7}{Geometria}{}% 45
+\BOOKMARK [2][-]{subsection.7.1}{Punto}{section.7}% 46
+\BOOKMARK [2][-]{subsection.7.2}{Linea}{section.7}% 47
+\BOOKMARK [2][-]{subsection.7.3}{Vector}{section.7}% 48
+\BOOKMARK [1][-]{section.8}{Tips and formulas\(ufps\)}{}% 49
+\BOOKMARK [2][-]{subsection.8.1}{ASCII Table}{section.8}% 50
+\BOOKMARK [2][-]{subsection.8.2}{Formulas}{section.8}% 51
+\BOOKMARK [2][-]{subsection.8.3}{Sequences}{section.8}% 52
+\BOOKMARK [2][-]{subsection.8.4}{Time Complexities}{section.8}% 53
+\BOOKMARK [1][-]{section.9}{Extras}{}% 54
+\BOOKMARK [2][-]{subsection.9.1}{Formulas extra}{section.9}% 55
+\BOOKMARK [2][-]{subsection.9.2}{Secuencias}{section.9}% 56

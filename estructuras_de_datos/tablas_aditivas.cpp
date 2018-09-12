@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int tab[10][10], tab2[10][10];
+int tab[20][20], memo[20][20], fila, col;
 
 /*
 1 9 6 3 7
@@ -14,20 +14,26 @@ int tab[10][10], tab2[10][10];
 */
 
 void build(){
-    memset(tab2, 0, sizeof(tab2));
-    //en tab2 se guarda tabla aditiva de tab
-    tab2[1][1] = tab[0][0];
-    for (int i = 2; i < 6; i++) tab2[i][1] = tab2[i-1][1] + tab[i - 1][0];
-    for (int j = 2; j < 6; j++) tab2[1][j] = tab2[1][j-1] + tab[0][j - 1];
+    memset(memo, 0, sizeof(memo));
+    memo[1][1] = tab[0][0];
+    for (int i = 2; i <= fila; i++)
+        memo[i][1] = memo[i-1][1] + tab[i - 1][0];
+    for (int j = 2; j <= col; j++)
+        memo[1][j] = memo[1][j-1] + tab[0][j - 1];
 
-    for (int i = 2; i < 6; i++)
-		for (int j = 2; j < 6; j++)
-            tab2[i][j] = tab2[i][j - 1] + tab2[i - 1][j] + tab[i - 1][j - 1] - tab2[i - 1][j - 1];
-    //ejemplo en matriz de 5X5 buscar acumulado de 2,2 hasta 5,5
-    //tab2[5][5] - tab2[2][5] - tab2[5][2] + tab2[2][2]
+    for (int i = 2; i <= col; i++)
+		for (int j = 2; j <= col; j++)
+            memo[i][j] = memo[i][j - 1] + memo[i - 1][j] +
+                    tab[i - 1][j - 1] - memo[i - 1][j - 1];
+}
+//indexando desde 1
+int query(int f1, int c1, int f2, int c2){
+    return memo[f2][c2] - memo[f1-1][c2] -
+                memo[f2][c1-1] + memo[f1-1][c1-1];
 }
 
 int main(){
+    fila = col = 5;
     for (int i = 0; i < 5; i++)
 		for (int j = 0; j < 5; j++)
 			cin >> tab[i][j];
@@ -36,11 +42,10 @@ int main(){
     cout << "tabla aditiva:" << endl;
     for (int i = 0; i < 6; i++){
 		for (int j = 0; j < 6; j++)
-			cout << tab2[i][j] << "   ";
+			cout << memo[i][j] << "   ";
         cout << endl;
     }
 
-    cout << "acumulado de 2,2 hasta 5,5" << endl;
-    cout << tab2[5][5] - tab2[2][5] - tab2[5][2] + tab2[2][2] << endl;
+    cout << query(2, 2, 5, 5) << endl;
     return 0;
 }

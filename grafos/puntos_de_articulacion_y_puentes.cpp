@@ -9,7 +9,7 @@ typedef pair<int, int> ii;
 vector<vi> lista;
 vi puntos, dfs_num, dfs_low, padre;
 int n, m, dfsCont, root, dfsRoot;
-vector<ii> puentes;//guardaa los puentes
+vector<ii> puentes;//guarda los puentes
 
 void dfs(int u){
     dfs_low[u] = dfs_num[u] = dfsCont++;

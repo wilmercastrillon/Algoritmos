@@ -2,79 +2,54 @@
 
 using namespace std;
 
+int MCD(int a, int b){
+    return  a? MCD(b %a, a): b;
+}
+
 struct fraccion {
     int num, den;
 
-    void iniciar(int x, int y) {
+    fraccion(int x, int y) {
         num = x; den = y;
-        fraccion c = simplificar();
-        num = c.num; den = c.den;
-    }
-
-    fraccion sumar(fraccion b) {
-        fraccion c;
-        c.num = num * b.den + b.num * den;
-        c.den = den * b.den;
-        return c.simplificar();
-    }
-
-    fraccion restar(fraccion b) {
-        fraccion c;
-        c.num = num * b.den - b.num * den;
-        c.den = den * b.den;
-        return c.simplificar();
-    }
-
-    fraccion multiplicar(fraccion b) {
-        fraccion c;
-        c.num = num * b.num;
-        c.den = den * b.den;
-        return c.simplificar();
-    }
-
-    fraccion inversa() {
-        fraccion c;
-        c.iniciar(den, num);
-        return c;
-    }
-
-    fraccion dividir(fraccion b) {
-        return multiplicar(b.inversa()).simplificar();
-    }
-
-    int mcd(int a, int b){
-        return  a? mcd(b %a, a): b;
-    }
-
-    fraccion simplificar() {
-        fraccion c;
-        c.num = num; c.den = den;
-        if (c.den < 0) {
-            c.num *= -1; c.den *= -1;
-        }
-        if (c.num == 0) c.den = 1;
+        if (den < 0){ num *= -1;  den *= -1; }
+        if (num == 0) den = 1;
         else {
-            int dividir = mcd(c.num, c.den);
-            c.num /= dividir;
-            c.den /= dividir;
+            int dividir = MCD(num, den);
+            num /= dividir;
+            den /= dividir;
         }
-        return c;
     }
 
+    fraccion operator+(fraccion b) {//suma
+        return fraccion(num*b.den + b.num*den,
+                         den*b.den);
+    }
+    fraccion operator-(fraccion b) {//resta
+        return fraccion(num*b.den - b.num*den,
+                         den*b.den);
+    }
+    fraccion operator*(fraccion b) {//multiplicar
+        return fraccion(num*b.num, den*b.den);
+    }
+    fraccion inversa() {
+        return fraccion(num, den);
+    }
+    fraccion operator/(fraccion b) {//dividir
+        return fraccion(num*b.den, b.num*den);
+    }
     string toString() {
         stringstream ss;
         ss << num;
         if (den == 1) return ss.str();
-        ss << "/";
-        ss << den;
+        ss << "/"; ss << den;
         return ss.str();
     }
 };
 
 int main(){
 
-    fraccion c;
-    c.iniciar(2, 4);
+    fraccion c(2, 4);
+    c = c + fraccion(1,10);
     cout << c.toString() << endl;
 
     return 0;

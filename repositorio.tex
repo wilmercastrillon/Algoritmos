@@ -88,14 +88,14 @@
 		\section{Estructuras de datos}
 			\subsection{Tablas aditivas}
 			Construccion O(n)
-			\cppfile[16-28]{estructuras_de_datos/tablas_aditivas.cpp}
+			\cppfile[16-33]{estructuras_de_datos/tablas_aditivas.cpp}
 			\subsection{Disjoint set union find}
 			Construccion O(n)\\asocia elementos en conjuntos de arboles.
 			\cppfile[6-53]{estructuras_de_datos/disjoint_set_union_find.cpp}
 			\subsection{Union find con compresion de caminos}
 			asocia elementos de manera simple\\
 			metodo mismoGrupo es el mismo del union-find normal.
-			\cppfile[9-37]{estructuras_de_datos/union_find-compresion_de_caminos.cpp}
+			\cppfile[9-27]{estructuras_de_datos/union_find-compresion_de_caminos.cpp}
 			\subsection{Segment tree}
 			Ejemplo de RMQ (Range Minium Query)\\
 			Contruccion O(n)\\Consulta O(log n)\\Update O(log n)
@@ -208,12 +208,12 @@
 			Encuentra $(a^b)$ mod c, se nesecita implementar previamente multiplicacion modular.
 			\cppfile[16-20]{matematicas/exp_modular.cpp}
 			\subsection{Test de Rabin Miller}
-			Devuelve si un numero es primo, requiere de implementar previamente MCD, multiplicacion
-			modular y exponenciacion modular.
+			Devuelve si un numero es primo, requiere de implementar previamente GCD(maximo común divisor),
+			multiplicacion modular y exponenciacion modular.
 			\cppfile[29-52]{matematicas/test_de_rabin_miller.cpp}
 			\subsection{Rho de pollard}
-			Factorizacion rapida, usar para $n > 10^{12}$ , requiere de implementar previamente el MCD, 
-			multiplicacion modular,	exponenciacion modular y el test de Rabin Miller.\\
+			Factorizacion rapida, usar para $n > 10^{12}$ , requiere de implementar previamente el GCD
+			(maximo común divisor), multiplicacion modular,	exponenciacion modular y el test de Rabin Miller.\\
 			O($\sqrt[4]{n}$)
 			\cppfile[54-92]{matematicas/rho_de_pollard.cpp}
 			\subsection{factorizacion con criba}
@@ -221,9 +221,9 @@
 			para $n \leq 10^{12}$, guarda los factores en un mapa similar a rho de pollard.
 			\cppfile[10-54]{matematicas/factorizacion_criba.cpp}
 			\subsection{BigInteger c++}
-			\cppfile[4-207]{matematicas/biginteger.cpp}
+			\cppfile[4-197]{matematicas/biginteger.cpp}
 			\subsection{Fraccion}
-			\cppfile[5-72]{matematicas/fraccion.cpp}
+			\cppfile[9-47]{matematicas/fraccion.cpp}
 			
 		\section{Cadenas}
 			\subsection{Algoritmo de bordes}
@@ -234,6 +234,15 @@
 			y ejecutar previamente el algoritmo de bordes\\
 			O(n+m)
 			\cppfile[18-29]{cadenas/kmp.cpp}
+			
+		\section{Geometria}
+			\subsection{Punto}
+			\cppfile[19-53]{geometria/punto.cpp}
+			\subsection{Linea}
+			Linea de la forma $ax + by + c = 0$.
+			\cppfile[42-94]{geometria/linea.cpp}
+			\subsection{Vector}
+			\cppfile[39-67]{geometria/vector.cpp}
 	
 	%Tomado de notebook c++ de la ufps
 	\newpage
@@ -606,6 +615,16 @@ $f(n) = \displaystyle\frac{n(n+1)}{2} + 1$
 $f(n) = \displaystyle\frac{p_{1}^{a_{1} + 1} - 1}{p_{1} - 1} * \frac{p_{2}^{a_{2} + 1} - 1}{p_{2} - 1} * ... * \frac{p_{k}^{a_{k} + 1} - 1}{p_{k} - 1}$ 
 
 \\ \hline
+
+\multirow{2}{2cm}{Schroeder numbers (aporte propio)} 
+& 1, 1, 3, 11, 45, 197, 903, 4279, 20793, 103049, 518859, ...
+\\ \cline{2-2} 
+& El número de formas de insertar paréntesis en una secuencia y el número de formas de partir un polígono convexo en polígonos más pequeños mediante la inserción de diagonales. f(1)=f(2)=1;
+
+$f(n) = \displaystyle\frac{3(2n-3)*f(n-1) - (n-3)*f(n-2)}{n}$
+
+\\ \hline
+
 \end{supertabular}
 }
 \end{center}
@@ -646,10 +665,9 @@ $O(1)$ \> -\\
 			\vspace{8mm}
 			\textbf{Distancia de un punto a una recta:}\\
 			Teniendo una recta con formula de la forma: $ax + by + c$ la distancia minima
-			a un punto p de la forma $(x, y)$ la distancia minima esta dada por la formula:\\
+			a un punto p de la forma $(px, py)$ la distancia minima esta dada por la formula:\\
 			\vspace{3mm}
-			{\Large $d = \frac{ax + by + c}{\sqrt{a^{2} + b^{2}}}$}
-			\vspace{3mm}
+			{\Large $d = \frac{a*px + b*py + c}{\sqrt{a^{2} + b^{2}}}$}
 			
 			\vspace{8mm}
 			\textbf{Formula de numeros fibonacci:}\\
@@ -659,8 +677,7 @@ $O(1)$ \> -\\
 			\vspace{8mm}
 			\textbf{Determinante de Gauss:}\\ 
 			Encontrar el area de un poligono en el plano cartesiano a partir de sus vertices\\
-			\vspace{3mm}
-			\newpage			
+			\vspace{3mm}		
 			
 			{\large$A = \frac{1}{2} $}
 			{\large $ \begin{bmatrix}
@@ -675,7 +692,28 @@ $O(1)$ \> -\\
 			{\large $D = x_{2}y_{1} + x_{3}y_{2} +...+ x_{1}y_{n}$} \\ 
 			\vspace{3mm}
 			{\large $A = \frac{1}{2} |S - D|$}
-			\vspace{3mm}
+			
+			\vspace{8mm}
+			\textbf{Coeficientes binomiales:}\\
+			Encuentra $n$ combinado $k$, para construir el triangulo de pascal solo poner
+			en $n$ la fila y en $k$ la columna.\\
+			$C(n, k) = 	
+			\begin{cases}
+				0 & \text{si $k = 0, $ $ n = k$}\\
+				C(n-1,k-1)+C(n-1,k) & \text{c.c.}
+			\end{cases}
+			$\\
+			
+			\vspace{8mm}
+			\textbf{Numeros de catalan:}\\
+			Formula recursiva, encontrar numero de arboles binarios de n nodos, numero de formas de
+			emparejar parentesis.\\
+			$Cat(n) = 	
+			\begin{cases}
+				1 & \text{si $n = 0$}\\
+				\frac{2n*(2n-1) * Cat(n-1)}{(n+1)*n} & \text{c.c.}
+			\end{cases}
+			$\\
 			
 		\subsection{Secuencias}
 		
