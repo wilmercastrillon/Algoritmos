@@ -1,16 +1,15 @@
 #include <iostream>
 #include <vector>
 
-#define inf 1000
-
 using namespace std;
 
+#define inf 1000000000 //10^9
 vector<vector<int>> matriz(10, vector<int>(10, inf));
 
 void FloydWarshall(vector<vector<int>> &grafo, int nodos){
     int aux;
     for(int i = 0; i < nodos; i++) grafo[i][i] = 0;
-    
+
     for(int k = 0; k < nodos; k++)
         for(int i = 0; i < nodos; i++)
             for(int j = 0; j < nodos; j++){
@@ -20,7 +19,7 @@ void FloydWarshall(vector<vector<int>> &grafo, int nodos){
 }
 
 int main(){
-	
+
 	matriz[0][1] = 2;
 	matriz[1][0] = 2;
 	matriz[1][2] = 4;
@@ -37,13 +36,13 @@ int main(){
 	matriz[8][3] = 10;
 	matriz[9][4] = 1;
 	matriz[9][7] = 9;
-	
+
 	FloydWarshall(matriz, 10);
-	
+
 	for (int i = 0; i < 10; i++){
 		for (int j = 0; j < 10; j++) cout << matriz[i][j] << " ";
 		cout << "\n";
 	}
-	
+
 	return 0;
 }

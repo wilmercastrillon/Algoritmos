@@ -109,6 +109,10 @@
 			Arbol de Fenwick, estructura para el RSM(Range Sum Query)\\
 			Construccion O(n log n) \\Consulta O(log k)\\Update O(log n)
 			\cppfile[8-39]{estructuras_de_datos/arbol_binario_indexado.cpp}
+			\subsection{Sparse table}
+			Para RMQ (Range Minium Query) en arreglos estaticos\\
+			Construcción O(n log n)\\Consulta O(1)
+			\cppfile[6-33]{estructuras_de_datos/Sparse_table.cpp}
 			
 		\section{Grafos}
 			\subsection{Dijkstra}
@@ -122,7 +126,7 @@
 			\subsection{Floyd Warshall}
 			Ruta minima de toda la matriz, recomendable si n $\leq$ 100\\	
 			O($n^{3}$)
-			\cppfile[4-19]{grafos/floyd.cpp}
+			\cppfile[6-19]{grafos/floyd.cpp}
 			\subsection{Kosaraju}
 			Componentes fuertemente conexas grafos si y no dirigidos\\
 			O(2(n + m))
@@ -177,6 +181,10 @@
 			\cppfile[4-12]{otros/raiz_babilonica.cpp}
 			\subsection{Codigo gray}
 			\cppfile[5-14]{otros/codigo_gray.cpp}
+			\subsection{Lowest Common Ancestor}
+			Ancestro común mas bajo en un arbol, para u y v encontrar el nodo mas bajo que este por encima de
+			ambos. Requiere de implementar Range Minimum Query (sparse tables).
+			\cppfile[38-64]{otros/Lowest_Common_Ancestor.cpp}
 			
 		\section{Matematicas}
 			\subsection{MCD y MCM}

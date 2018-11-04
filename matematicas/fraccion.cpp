@@ -32,7 +32,7 @@ struct fraccion {
         return fraccion(num*b.num, den*b.den);
     }
     fraccion inversa() {
-        return fraccion(num, den);
+        return fraccion(den, num);
     }
     fraccion operator/(fraccion b) {//dividir
         return fraccion(num*b.den, b.num*den);
