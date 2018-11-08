@@ -19,10 +19,7 @@ struct union_find{
     }
 
 	void unir(int x, int y){
-		x = raiz(x);
-		y = raiz(y);
-		if(x == y) return;
-		padre[x] = y;
+		padre[raiz(x)] = raiz(y);
 	}
 };
 

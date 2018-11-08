@@ -91,11 +91,11 @@
 			\cppfile[16-33]{estructuras_de_datos/tablas_aditivas.cpp}
 			\subsection{Disjoint set union find}
 			Construccion O(n)\\asocia elementos en conjuntos de arboles.
-			\cppfile[6-53]{estructuras_de_datos/disjoint_set_union_find.cpp}
+			\cppfile[6-52]{estructuras_de_datos/disjoint_set_union_find.cpp}
 			\subsection{Union find con compresion de caminos}
 			asocia elementos de manera simple\\
 			metodo mismoGrupo es el mismo del union-find normal.
-			\cppfile[9-27]{estructuras_de_datos/union_find-compresion_de_caminos.cpp}
+			\cppfile[9-24]{estructuras_de_datos/union_find-compresion_de_caminos.cpp}
 			\subsection{Segment tree}
 			Ejemplo de RMQ (Range Minium Query)\\
 			Contruccion O(n)\\Consulta O(log n)\\Update O(log n)
@@ -183,8 +183,11 @@
 			\cppfile[5-14]{otros/codigo_gray.cpp}
 			\subsection{Lowest Common Ancestor}
 			Ancestro común mas bajo en un arbol, para u y v encontrar el nodo mas bajo que este por encima de
-			ambos. Requiere de implementar Range Minimum Query (sparse tables).
+			ambos.\\
+			Solucion con Range Minimum Query (sparse table).
 			\cppfile[38-64]{otros/Lowest_Common_Ancestor.cpp}
+			Solucion con construcción O(n log n) y consultas O(log n)
+			\cppfile[15-61]{otros/Lowest_Common_Ancestor_logN.cpp}
 			
 		\section{Matematicas}
 			\subsection{MCD y MCM}
@@ -663,7 +666,8 @@ $O(1)$ \> -\\
 			\vspace{3mm}
 			{\Large$\frac{(a + b - c) * (a + c - b) * (b  + c - a)} {a * b * c}$}
 			\vspace{3mm}
-			\\Si el resultado es mayor que 0.5, es posible formar el triangulo.
+			\\Si el resultado es mayor a 0.5 es un triángulo de calidad buena.
+			\\Es posible formar un triangulo si $a+b>c$ con $c>b>a$
 	
 			\vspace{8mm}
 			\textbf{Ecuacion de la recta que pasa por dos puntos:}\\

@@ -4,8 +4,7 @@
 using namespace std;
 
 struct union_find{
-	int padre[100];
-	int rango[100];
+	int padre[100], rango[100];
 	vector<int> grupo[100];
 
 	void iniciar(int n){

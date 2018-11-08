@@ -46,7 +46,7 @@ typedef pair<int, ii> piii;//peso, origen y destino
 #define mpiii(a, b, c) piii(a, ii(b, c))
 //insertar: grafo.push_back(mpiii(7, 0, 1))
 
-vector<piii> grafo;//lista de incidencia
+vector<piii> listaInc;//lista de incidencia
 union_find arbol;
 
 int kruskal(vector<piii> lista, int nodos, union_find &uf){
@@ -68,19 +68,19 @@ int kruskal(vector<piii> lista, int nodos, union_find &uf){
 
 int main(){
 
-	grafo.push_back(mpiii(7, 0, 1));
-	grafo.push_back(mpiii(5, 0, 3));
-	grafo.push_back(mpiii(8, 1, 2));
-	grafo.push_back(mpiii(7, 1, 4));
-	grafo.push_back(mpiii(9, 1, 3));
-	grafo.push_back(mpiii(5, 2, 4));
-	grafo.push_back(mpiii(15, 3, 4));
-	grafo.push_back(mpiii(6, 3, 5));
-	grafo.push_back(mpiii(8, 4, 5));
-	grafo.push_back(mpiii(9, 4, 6));
-	grafo.push_back(mpiii(11, 5, 6));
+	listaInc.push_back(mpiii(7, 0, 1));
+	listaInc.push_back(mpiii(5, 0, 3));
+	listaInc.push_back(mpiii(8, 1, 2));
+	listaInc.push_back(mpiii(7, 1, 4));
+	listaInc.push_back(mpiii(9, 1, 3));
+	listaInc.push_back(mpiii(5, 2, 4));
+	listaInc.push_back(mpiii(15, 3, 4));
+	listaInc.push_back(mpiii(6, 3, 5));
+	listaInc.push_back(mpiii(8, 4, 5));
+	listaInc.push_back(mpiii(9, 4, 6));
+	listaInc.push_back(mpiii(11, 5, 6));
 
-	cout << "peso " << kruskal(grafo, 7, arbol) << endl;
+	cout << "peso " << kruskal(listaInc, 7, arbol) << endl;
 
 	for(int i = 0; i < 7; i++) cout << i << " ";
 	cout << endl;
