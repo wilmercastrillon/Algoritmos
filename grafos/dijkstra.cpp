@@ -20,7 +20,7 @@ vi dijkstra(vvii &grafo, int nodo, int tam){
     ii par, par2;
 
     while(cola.size()){
-        par = cola.top();
+        par = cola.top();//peso, nodo
         cola.pop();
         peso = -par.first;
         nodo = par.second;

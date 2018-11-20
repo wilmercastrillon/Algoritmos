@@ -118,15 +118,15 @@
 			\subsection{Dijkstra}
 			Ruta minima
 			O((n + m)log n)
-			\cppfile[7-50]{grafos/dijkstra.cpp}
+			\cppfile[12-50]{grafos/dijkstra.cpp}
 			\subsection{Bellman-Ford}
 			Ruta minima con pesos negativos
 			O($n^{2}$)
-			\cppfile[5-37]{grafos/bellman-Ford.cpp}
+			\cppfile[12-33]{grafos/bellman-Ford.cpp}
 			\subsection{Floyd Warshall}
 			Ruta minima de toda la matriz, recomendable si n $\leq$ 100\\	
 			O($n^{3}$)
-			\cppfile[6-19]{grafos/floyd.cpp}
+			\cppfile[8-39]{grafos/floyd.cpp}
 			\subsection{Kosaraju}
 			Componentes fuertemente conexas grafos si y no dirigidos\\
 			O(2(n + m))
@@ -139,7 +139,7 @@
 			\subsection{Kruskal}
 			Arbol generador minimo(MST), se necesita de un union-find\\
 			O(m log n), sin contar el ordenamiento.
-			\cppfile[44-67]{grafos/kruskal.cpp}
+			\cppfile[48-67]{grafos/kruskal.cpp}
 			\subsection{Prim}
 			Arbol generador minimo (MST)\\
 			O(m log n) 
@@ -255,9 +255,9 @@
 			\subsection{Vector}
 			\cppfile[39-67]{geometria/vector.cpp}
 	
-	%Tomado de notebook c++ de la ufps
+	%Tomado de notebook c++ de la UFPS
 	\newpage
-	\section{Tips and formulas(ufps)}
+	\section{Tips and formulas(UFPS, 2017)}
 
 \subsection{ASCII Table}
 Caracteres ASCII con sus respectivos valores numéricos.
@@ -661,6 +661,9 @@ $O(1)$ \> -\\
 \end{tabbing}
 
 	\section{Extras}
+		\subsection{Template}
+			Plantilla de typedef, define, etc.
+			\cppfile[1-24]{otros/template.cpp}
 		\subsection{Formulas extra}
 			\textbf{formula de triangulos degenerados:}\\
 			\vspace{3mm}

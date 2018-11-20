@@ -42,14 +42,14 @@ struct union_find{
 };
 
 typedef pair<int, int> ii;
-typedef pair<int, ii> piii;//peso, origen y destino
-#define mpiii(a, b, c) piii(a, ii(b, c))
+#define mpiii(a, b, c) iii(a, ii(b, c))
 //insertar: grafo.push_back(mpiii(7, 0, 1))
 
-vector<piii> listaInc;//lista de incidencia
+typedef pair<int, ii> iii;//peso, origen y destino
+vector<iii> listaInc;//lista de incidencia
 union_find arbol;
 
-int kruskal(vector<piii> lista, int nodos, union_find &uf){
+int kruskal(vector<iii> lista, int nodos, union_find &uf){
 	sort(lista.begin(), lista.end());
 	uf.iniciar(nodos);
 	int acum = 0, ejes = 0, n = nodos - 1;
