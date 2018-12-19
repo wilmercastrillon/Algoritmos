@@ -12,7 +12,7 @@ typedef vector<int> vi;
 vector<iii> grafo; //lista de incidencia
 
 bool BellmanFord(vector<iii> &lista, int nodos, int inicio, vector<int> &dis){
-    dis.assign(nodos, inf);
+    dis.assign(nodos + 1, inf);
 	dis[inicio] = 0;
 	int aux;
 

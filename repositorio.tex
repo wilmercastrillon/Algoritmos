@@ -150,6 +150,9 @@
 			\subsection{Puntos de articulación y puentes}
 			O(n + m).
 			\cppfile[10-48]{grafos/puntos_de_articulacion_y_puentes.cpp}
+			\subsection{Flujo de redes}
+			Algoritmo de Edmonds karp.
+			\cppfile[13-46]{grafos/Edmonds_karp.cpp}
 			
 		\section{Programacion dinamica}
 			\subsection{Subconjuntos de un conjunto}
@@ -195,10 +198,10 @@
 			\cppfile[5-11]{matematicas/MCD_y_MCM.cpp}
 			\subsection{Exponenciacion binaria}
 			O(log n)
-			\cppfile[4-15]{matematicas/exponenciacion_binaria.cpp}
+			\cppfile[6-14]{matematicas/exponenciacion_binaria.cpp}
 			\subsection{Algoritmo extendido de euclides}
 			Encuentra dos numeros x e y tal que: MCD(a, b) = ax + by
-			\cppfile[5-24]{matematicas/algoritmo_extendido_de_euclides.cpp}
+			\cppfile[5-15]{matematicas/algoritmo_extendido_de_euclides.cpp}
 			\subsection{Inverso multiplicativo modular}
 			Encuentra un x tal que (a * x) es congruente a 1 con modulo p,
 				entonces:\\ (a * x) mod p = 1 mod p\\
@@ -208,7 +211,7 @@
 			\subsection{Phi de euler}
 			Devuelve la cantidad de coprimos de un numero n\\
 			O($\sqrt{n}$)
-			\cppfile[5-16]{matematicas/phi_de_euler.cpp}
+			\cppfile[5-15]{matematicas/phi_de_euler.cpp}
 			\subsection{Multiplicacion modular}
 			Encuentra (a*b) mod c, la operacion puede generar overflow
 				si se realiza directamente, el metodo mulmod evita el overflow usando un
@@ -227,7 +230,7 @@
 			(maximo común divisor), multiplicacion modular,	exponenciacion modular y el test de Rabin Miller.\\
 			O($\sqrt[4]{n}$)
 			\cppfile[54-92]{matematicas/rho_de_pollard.cpp}
-			\subsection{factorizacion con criba}
+			\subsection{Factorizacion con criba}
 			Factorizacion usando la criba, mas corto de escribir que rho de pollard, usar
 			para $n \leq 10^{12}$, guarda los factores en un mapa similar a rho de pollard.
 			\cppfile[10-54]{matematicas/factorizacion_criba.cpp}
@@ -235,6 +238,9 @@
 			\cppfile[4-197]{matematicas/biginteger.cpp}
 			\subsection{Fraccion}
 			\cppfile[9-47]{matematicas/fraccion.cpp}
+			\subsection{Matrices}
+			Matrices, exponenciación: $M^b$ en O($n^{3} log (b)$)
+			\cppfile[8-36]{matematicas/matrices.cpp}
 			
 		\section{Cadenas}
 			\subsection{Algoritmo de bordes}
@@ -571,7 +577,7 @@ Listado de secuencias mas comunes y como hallarlas.
 
 
 \multirow{2}{2cm}{Números tetraedrales}
-& 0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105, ...
+& 0, 1, 4, 10, 20, 35, 56, 84, 120, 165, 220, 286, 364, ...
 \\ \cline{2-2}
 & $f(n) = \displaystyle\frac{n*(n+1)*(n+2)}{6}$
 
@@ -663,7 +669,7 @@ $O(1)$ \> -\\
 	\section{Extras}
 		\subsection{Template}
 			Plantilla de typedef, define, etc.
-			\cppfile[1-24]{otros/template.cpp}
+			\cppfile[1-26]{otros/template.cpp}
 		\subsection{Formulas extra}
 			\textbf{formula de triangulos degenerados:}\\
 			\vspace{3mm}
@@ -688,6 +694,17 @@ $O(1)$ \> -\\
 			\textbf{Formula de numeros fibonacci:}\\
 			\vspace{3mm}
 			{\Large $f(n) = \frac{1}{\sqrt{5}} * [ (\frac{1 + \sqrt{5}}{2})^{n}  - (\frac{1 - \sqrt{5}}{2})^{n}]$ }
+			\vspace{3mm}
+			\\Formula con matrices:
+			{\large
+			$\begin{bmatrix}
+				1 & 1\\ 
+				1 & 0
+			\end{bmatrix}^{b} =
+			\begin{bmatrix}
+				fib(b+1) & fib(b) \\ 
+				fib(b) & fib(b-1)
+			\end{bmatrix}$}
 			
 			\vspace{8mm}
 			\textbf{Determinante de Gauss:}\\ 

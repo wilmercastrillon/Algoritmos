@@ -2,8 +2,6 @@
 
 using namespace std;
 
-#define forr(i,a,b) for(int i=(a); i<(b); i++)
-#define forn(i,n) forr(i,0,n)
 typedef long long int lli;
 
 lli gcd(lli a, lli b){
@@ -34,7 +32,7 @@ bool es_primo_prob (lli n, int a) {
 	lli x = expmod(a,d,n);
 	if ((x == 1) || (x+1 == n)) return true;
 
-	forn (i, s-1){
+	for(int i = 0; i < s-1; i++){
 		x = mulmod(x, x, n);
 		if (x == 1) return false;
 		if (x+1 == n) return true;
@@ -45,7 +43,7 @@ bool es_primo_prob (lli n, int a) {
 bool rabin (lli n){ //devuelve true si n es primo
 	if (n == 1)	return false;
 	const int ar[] = {2,3,5,7,11,13,17,19,23};
-	forn (j,9)
+	for(int j = 0; j < 9; j++)
 		if (!es_primo_prob(n,ar[j]))
 			return false;
 	return true;

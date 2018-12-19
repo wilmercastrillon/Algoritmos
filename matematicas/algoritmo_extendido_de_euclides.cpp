@@ -11,7 +11,7 @@ int gcd_ex (int a, int b, int &x, int &y) {
 	int d = gcd_ex (b%a, a, x1, y1);
 	x = y1 - (b / a) * x1;
 	y = x1;
-	return d;
+	return d;//Maximo comun divisor
 }
 
 int main(){

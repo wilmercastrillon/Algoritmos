@@ -48,9 +48,11 @@ struct fraccion {
 
 int main(){
 
-    fraccion c(2, 4);
-    c = c + fraccion(1,10);
-    cout << c.toString() << endl;
+    int q, w;
+    while(cin >> q >> w){
+        fraccion c(q, w);
+        cout << c.toString() << endl;
+    }
 
     return 0;
 }
