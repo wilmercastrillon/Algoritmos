@@ -7,8 +7,8 @@
 using namespace std;
 typedef long long int lli;
 
-int m= 1000010, m2= 1000000, primo[1000020];
-vector<lli> p;
+int m= 1000010, primo[1000020];
+vector<lli> p;  int lim = sqrt(m)+1;
 map<lli, int> mapa;
 
 void criba(){
@@ -18,7 +18,7 @@ void criba(){
         if(primo[i]) continue;
         p.push_back(i);
         primo[i] = i;
-        if(i > 1000) continue;
+        if(i > lim) continue;
 
         for(int j = i*i; j < m; j += i)
             primo[j] = i;

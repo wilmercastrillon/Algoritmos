@@ -118,41 +118,45 @@
 			\subsection{Dijkstra}
 			Ruta minima
 			O((n + m)log n)
-			\cppfile[12-50]{grafos/dijkstra.cpp}
+			\cppfile[12-48]{grafos/dijkstra.cpp}
 			\subsection{Bellman-Ford}
 			Ruta minima con pesos negativos
 			O($n^{2}$)
 			\cppfile[12-33]{grafos/bellman-Ford.cpp}
 			\subsection{Floyd Warshall}
-			Ruta minima de toda la matriz, recomendable si n $\leq$ 100\\	
+			Ruta minima de toda una matriz de adyacencia, recomendable si n $\leq$ 100\\	
 			O($n^{3}$)
 			\cppfile[8-39]{grafos/floyd.cpp}
-			\subsection{Kosaraju}
+			\subsection{kosaraju}
 			Componentes fuertemente conexas grafos si y no dirigidos\\
 			O(2(n + m))
-			\cppfile[9-44]{grafos/kosaraju.cpp}
+			\cppfile[9-36]{grafos/kosaraju.cpp}
 			\subsection{Tarjan}
 			Componentes fuertemente conexas grafos si y no dirigidos, requiere menos
-			espacio que Kosajaru\\
+			espacio que kosaraju\\
 			O(n + m)
 			\cppfile[9-39]{grafos/tarjan.cpp}
 			\subsection{Kruskal}
-			Arbol generador minimo(MST), se necesita de un union-find\\
+			Arbol generador minimo(MST) usando lista de aristas, se necesita de un union-find.
 			O(m log n), sin contar el ordenamiento.
 			\cppfile[48-67]{grafos/kruskal.cpp}
 			\subsection{Prim}
 			Arbol generador minimo (MST)\\
-			O(m log n) 
+			O(m log n)
 			\cppfile[10-34]{grafos/prim.cpp}
-			\subsection{Topological sort}
+			\subsection{Topological sort}%%%ORDENAMIENTO TOPOLOGICO
 			O(n + m), algoritmo de kahn.
 			\cppfile[7-30]{grafos/topological_sort_para_grafos_ciclicos.cpp}
 			\subsection{Puntos de articulación y puentes}
 			O(n + m).
 			\cppfile[10-48]{grafos/puntos_de_articulacion_y_puentes.cpp}
-			\subsection{Flujo de redes}
-			Algoritmo de Edmonds karp.
+			\subsection{Maximum flow}%%maximo flujo
+			Flujo maximo en un grafo. Algoritmo de Edmonds Karp
 			\cppfile[13-46]{grafos/Edmonds_karp.cpp}
+			\subsection{Min cost Max flow}
+			Flujo maximo manteniendo minimo costo.
+			\cppfile[6-59]{grafos/min_cost_max_flow.cpp}
+			
 			
 		\section{Programacion dinamica}
 			\subsection{Subconjuntos de un conjunto}
@@ -202,15 +206,9 @@
 			\subsection{Algoritmo extendido de euclides}
 			Encuentra dos numeros x e y tal que: MCD(a, b) = ax + by
 			\cppfile[5-15]{matematicas/algoritmo_extendido_de_euclides.cpp}
-			\subsection{Inverso multiplicativo modular}
-			Encuentra un x tal que (a * x) es congruente a 1 con modulo p,
-				entonces:\\ (a * x) mod p = 1 mod p\\
-				necesita del algoritmo extendido de euclides\\
-			O(log m)
-			\cppfile[17-27]{matematicas/inverso_multiplicativo_modular.cpp}
 			\subsection{Phi de euler}
 			Devuelve la cantidad de coprimos de un numero n\\
-			O($\sqrt{n}$)
+			O($\sqrt{n}$) 
 			\cppfile[5-15]{matematicas/phi_de_euler.cpp}
 			\subsection{Multiplicacion modular}
 			Encuentra (a*b) mod c, la operacion puede generar overflow
@@ -231,15 +229,15 @@
 			O($\sqrt[4]{n}$)
 			\cppfile[54-92]{matematicas/rho_de_pollard.cpp}
 			\subsection{Factorizacion con criba}
-			Factorizacion usando la criba, mas corto de escribir que rho de pollard, usar
-			para $n \leq 10^{12}$, guarda los factores en un mapa similar a rho de pollard.
+			Factorizacion usando la criba, usar para $n \leq 10^{12}$, guarda los factores en un mapa 
+			similar a rho de pollard.
 			\cppfile[10-54]{matematicas/factorizacion_criba.cpp}
-			\subsection{BigInteger c++}
-			\cppfile[4-197]{matematicas/biginteger.cpp}
+			%\subsection{BigInteger c++}
+			%\cppfile[4-197]{matematicas/biginteger.cpp}
 			\subsection{Fraccion}
 			\cppfile[9-47]{matematicas/fraccion.cpp}
 			\subsection{Matrices}
-			Matrices, exponenciación: $M^b$ en O($n^{3} log (b)$)
+			Exponenciación de matrices: $M^b$ en O($n^{3} log (b)$)
 			\cppfile[8-36]{matematicas/matrices.cpp}
 			
 		\section{Cadenas}
@@ -682,6 +680,16 @@ $O(1)$ \> -\\
 			\textbf{Ecuacion de la recta que pasa por dos puntos:}\\
 			\vspace{3mm}
 			{\Large $\frac{x - x_{1}}{x_{2} - x_{1}} = \frac{y - y_{1}}{y_{2} - y_{1}}$}
+			
+			\vspace{8mm}
+			\textbf{Ecuacion del plano que pasa por 3 puntos}\\
+			Al resolver la determinante, se tiene el plano que pasa por 3 puntos de la forma (x,y,z).\\
+			\vspace{3mm}
+			$\begin{vmatrix}
+				X-x_{1} &Y-y_{1} &Z-z_{1} \\ 
+				x_{2}-x_{1} &y_{2}-y_{1} &z_{2}-z_{1} \\ 
+				x_{3}-x_{1} &y_{3}-y_{1} &z_{3}-z_{1}
+			\end{vmatrix} = 0$
 
 			\vspace{8mm}
 			\textbf{Distancia de un punto a una recta:}\\

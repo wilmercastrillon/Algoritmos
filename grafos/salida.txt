@@ -1,0 +1,381 @@
+1 1 2 0
+15 0 1 0
+0 5 1 0
+0 6 1 0
+15 1 1 0
+1 5 1 0
+1 6 1 0
+1 7 1 0
+1 8 1 0
+1 9 1 0
+15 2 1 0
+2 6 1 0
+2 7 1 0
+2 8 1 0
+2 9 1 0
+15 3 1 0
+3 5 1 0
+3 6 1 0
+3 7 1 0
+3 8 1 0
+3 9 1 0
+15 4 1 0
+4 7 1 0
+5 16 1 0
+6 16 1 0
+7 16 1 0
+8 16 1 0
+9 16 1 0
+ciclo
+visitamos 15
+nos vamos a 2 | vecinos = 5
+nos vamos a 8 | vecinos = 5
+nos vamos a 20 | vecinos = 5
+nos vamos a 30 | vecinos = 5
+nos vamos a 42 | vecinos = 5
+visitamos 0
+nos vamos a 3 | vecinos = 3
+nos vamos a 4 | vecinos = 3
+nos vamos a 6 | vecinos = 3
+visitamos 1
+nos vamos a 0 | vecinos = 8
+nos vamos a 1 | vecinos = 8
+nos vamos a 9 | vecinos = 8
+nos vamos a 10 | vecinos = 8
+nos vamos a 12 | vecinos = 8
+nos vamos a 14 | vecinos = 8
+nos vamos a 16 | vecinos = 8
+nos vamos a 18 | vecinos = 8
+visitamos 2
+nos vamos a 21 | vecinos = 5
+nos vamos a 22 | vecinos = 5
+nos vamos a 24 | vecinos = 5
+nos vamos a 26 | vecinos = 5
+nos vamos a 28 | vecinos = 5
+visitamos 3
+nos vamos a 31 | vecinos = 6
+nos vamos a 32 | vecinos = 6
+nos vamos a 34 | vecinos = 6
+nos vamos a 36 | vecinos = 6
+nos vamos a 38 | vecinos = 6
+nos vamos a 40 | vecinos = 6
+visitamos 4
+nos vamos a 43 | vecinos = 2
+nos vamos a 44 | vecinos = 2
+visitamos 5
+nos vamos a 5 | vecinos = 4
+nos vamos a 11 | vecinos = 4
+nos vamos a 33 | vecinos = 4
+nos vamos a 46 | vecinos = 4
+visitamos 6
+nos vamos a 7 | vecinos = 5
+nos vamos a 13 | vecinos = 5
+nos vamos a 23 | vecinos = 5
+nos vamos a 35 | vecinos = 5
+nos vamos a 48 | vecinos = 5
+visitamos 7
+nos vamos a 15 | vecinos = 5
+nos vamos a 25 | vecinos = 5
+nos vamos a 37 | vecinos = 5
+nos vamos a 45 | vecinos = 5
+nos vamos a 50 | vecinos = 5
+visitamos 8
+nos vamos a 17 | vecinos = 4
+nos vamos a 27 | vecinos = 4
+nos vamos a 39 | vecinos = 4
+nos vamos a 52 | vecinos = 4
+visitamos 9
+nos vamos a 19 | vecinos = 4
+nos vamos a 29 | vecinos = 4
+nos vamos a 41 | vecinos = 4
+nos vamos a 54 | vecinos = 4
+visitamos 16
+nos vamos a 47 | vecinos = 5
+nos vamos a 49 | vecinos = 5
+nos vamos a 51 | vecinos = 5
+nos vamos a 53 | vecinos = 5
+nos vamos a 55 | vecinos = 5
+ciclo
+visitamos 15
+nos vamos a 2 | vecinos = 5
+nos vamos a 8 | vecinos = 5
+nos vamos a 20 | vecinos = 5
+nos vamos a 30 | vecinos = 5
+nos vamos a 42 | vecinos = 5
+visitamos 1
+nos vamos a 0 | vecinos = 8
+nos vamos a 1 | vecinos = 8
+nos vamos a 9 | vecinos = 8
+nos vamos a 10 | vecinos = 8
+nos vamos a 12 | vecinos = 8
+nos vamos a 14 | vecinos = 8
+nos vamos a 16 | vecinos = 8
+nos vamos a 18 | vecinos = 8
+visitamos 2
+nos vamos a 21 | vecinos = 5
+nos vamos a 22 | vecinos = 5
+nos vamos a 24 | vecinos = 5
+nos vamos a 26 | vecinos = 5
+nos vamos a 28 | vecinos = 5
+visitamos 3
+nos vamos a 31 | vecinos = 6
+nos vamos a 32 | vecinos = 6
+nos vamos a 34 | vecinos = 6
+nos vamos a 36 | vecinos = 6
+nos vamos a 38 | vecinos = 6
+nos vamos a 40 | vecinos = 6
+visitamos 4
+nos vamos a 43 | vecinos = 2
+nos vamos a 44 | vecinos = 2
+visitamos 5
+nos vamos a 5 | vecinos = 4
+nos vamos a 11 | vecinos = 4
+nos vamos a 33 | vecinos = 4
+nos vamos a 46 | vecinos = 4
+visitamos 6
+nos vamos a 7 | vecinos = 5
+nos vamos a 13 | vecinos = 5
+nos vamos a 23 | vecinos = 5
+nos vamos a 35 | vecinos = 5
+nos vamos a 48 | vecinos = 5
+visitamos 7
+nos vamos a 15 | vecinos = 5
+nos vamos a 25 | vecinos = 5
+nos vamos a 37 | vecinos = 5
+nos vamos a 45 | vecinos = 5
+nos vamos a 50 | vecinos = 5
+visitamos 8
+nos vamos a 17 | vecinos = 4
+nos vamos a 27 | vecinos = 4
+nos vamos a 39 | vecinos = 4
+nos vamos a 52 | vecinos = 4
+visitamos 9
+nos vamos a 19 | vecinos = 4
+nos vamos a 29 | vecinos = 4
+nos vamos a 41 | vecinos = 4
+nos vamos a 54 | vecinos = 4
+visitamos 0
+nos vamos a 3 | vecinos = 3
+nos vamos a 4 | vecinos = 3
+nos vamos a 6 | vecinos = 3
+visitamos 16
+nos vamos a 47 | vecinos = 5
+nos vamos a 49 | vecinos = 5
+nos vamos a 51 | vecinos = 5
+nos vamos a 53 | vecinos = 5
+nos vamos a 55 | vecinos = 5
+ciclo
+visitamos 15
+nos vamos a 2 | vecinos = 5
+nos vamos a 8 | vecinos = 5
+nos vamos a 20 | vecinos = 5
+nos vamos a 30 | vecinos = 5
+nos vamos a 42 | vecinos = 5
+visitamos 2
+nos vamos a 21 | vecinos = 5
+nos vamos a 22 | vecinos = 5
+nos vamos a 24 | vecinos = 5
+nos vamos a 26 | vecinos = 5
+nos vamos a 28 | vecinos = 5
+visitamos 3
+nos vamos a 31 | vecinos = 6
+nos vamos a 32 | vecinos = 6
+nos vamos a 34 | vecinos = 6
+nos vamos a 36 | vecinos = 6
+nos vamos a 38 | vecinos = 6
+nos vamos a 40 | vecinos = 6
+visitamos 4
+nos vamos a 43 | vecinos = 2
+nos vamos a 44 | vecinos = 2
+visitamos 6
+nos vamos a 7 | vecinos = 5
+nos vamos a 13 | vecinos = 5
+nos vamos a 23 | vecinos = 5
+nos vamos a 35 | vecinos = 5
+nos vamos a 48 | vecinos = 5
+visitamos 7
+nos vamos a 15 | vecinos = 5
+nos vamos a 25 | vecinos = 5
+nos vamos a 37 | vecinos = 5
+nos vamos a 45 | vecinos = 5
+nos vamos a 50 | vecinos = 5
+visitamos 8
+nos vamos a 17 | vecinos = 4
+nos vamos a 27 | vecinos = 4
+nos vamos a 39 | vecinos = 4
+nos vamos a 52 | vecinos = 4
+visitamos 9
+nos vamos a 19 | vecinos = 4
+nos vamos a 29 | vecinos = 4
+nos vamos a 41 | vecinos = 4
+nos vamos a 54 | vecinos = 4
+visitamos 5
+nos vamos a 5 | vecinos = 4
+nos vamos a 11 | vecinos = 4
+nos vamos a 33 | vecinos = 4
+nos vamos a 46 | vecinos = 4
+visitamos 1
+nos vamos a 0 | vecinos = 8
+nos vamos a 1 | vecinos = 8
+nos vamos a 9 | vecinos = 8
+nos vamos a 10 | vecinos = 8
+nos vamos a 12 | vecinos = 8
+nos vamos a 14 | vecinos = 8
+nos vamos a 16 | vecinos = 8
+nos vamos a 18 | vecinos = 8
+visitamos 16
+nos vamos a 47 | vecinos = 5
+nos vamos a 49 | vecinos = 5
+nos vamos a 51 | vecinos = 5
+nos vamos a 53 | vecinos = 5
+nos vamos a 55 | vecinos = 5
+visitamos 0
+nos vamos a 3 | vecinos = 3
+nos vamos a 4 | vecinos = 3
+nos vamos a 6 | vecinos = 3
+ciclo
+visitamos 15
+nos vamos a 2 | vecinos = 5
+nos vamos a 8 | vecinos = 5
+nos vamos a 20 | vecinos = 5
+nos vamos a 30 | vecinos = 5
+nos vamos a 42 | vecinos = 5
+visitamos 3
+nos vamos a 31 | vecinos = 6
+nos vamos a 32 | vecinos = 6
+nos vamos a 34 | vecinos = 6
+nos vamos a 36 | vecinos = 6
+nos vamos a 38 | vecinos = 6
+nos vamos a 40 | vecinos = 6
+visitamos 4
+nos vamos a 43 | vecinos = 2
+nos vamos a 44 | vecinos = 2
+visitamos 5
+nos vamos a 5 | vecinos = 4
+nos vamos a 11 | vecinos = 4
+nos vamos a 33 | vecinos = 4
+nos vamos a 46 | vecinos = 4
+visitamos 6
+nos vamos a 7 | vecinos = 5
+nos vamos a 13 | vecinos = 5
+nos vamos a 23 | vecinos = 5
+nos vamos a 35 | vecinos = 5
+nos vamos a 48 | vecinos = 5
+visitamos 7
+nos vamos a 15 | vecinos = 5
+nos vamos a 25 | vecinos = 5
+nos vamos a 37 | vecinos = 5
+nos vamos a 45 | vecinos = 5
+nos vamos a 50 | vecinos = 5
+visitamos 8
+nos vamos a 17 | vecinos = 4
+nos vamos a 27 | vecinos = 4
+nos vamos a 39 | vecinos = 4
+nos vamos a 52 | vecinos = 4
+visitamos 9
+nos vamos a 19 | vecinos = 4
+nos vamos a 29 | vecinos = 4
+nos vamos a 41 | vecinos = 4
+nos vamos a 54 | vecinos = 4
+visitamos 0
+nos vamos a 3 | vecinos = 3
+nos vamos a 4 | vecinos = 3
+nos vamos a 6 | vecinos = 3
+visitamos 1
+nos vamos a 0 | vecinos = 8
+nos vamos a 1 | vecinos = 8
+nos vamos a 9 | vecinos = 8
+nos vamos a 10 | vecinos = 8
+nos vamos a 12 | vecinos = 8
+nos vamos a 14 | vecinos = 8
+nos vamos a 16 | vecinos = 8
+nos vamos a 18 | vecinos = 8
+visitamos 2
+nos vamos a 21 | vecinos = 5
+nos vamos a 22 | vecinos = 5
+nos vamos a 24 | vecinos = 5
+nos vamos a 26 | vecinos = 5
+nos vamos a 28 | vecinos = 5
+visitamos 16
+nos vamos a 47 | vecinos = 5
+nos vamos a 49 | vecinos = 5
+nos vamos a 51 | vecinos = 5
+nos vamos a 53 | vecinos = 5
+nos vamos a 55 | vecinos = 5
+ciclo
+visitamos 15
+nos vamos a 2 | vecinos = 5
+nos vamos a 8 | vecinos = 5
+nos vamos a 20 | vecinos = 5
+nos vamos a 30 | vecinos = 5
+nos vamos a 42 | vecinos = 5
+visitamos 4
+nos vamos a 43 | vecinos = 2
+nos vamos a 44 | vecinos = 2
+visitamos 7
+nos vamos a 15 | vecinos = 5
+nos vamos a 25 | vecinos = 5
+nos vamos a 37 | vecinos = 5
+nos vamos a 45 | vecinos = 5
+nos vamos a 50 | vecinos = 5
+visitamos 2
+nos vamos a 21 | vecinos = 5
+nos vamos a 22 | vecinos = 5
+nos vamos a 24 | vecinos = 5
+nos vamos a 26 | vecinos = 5
+nos vamos a 28 | vecinos = 5
+visitamos 6
+nos vamos a 7 | vecinos = 5
+nos vamos a 13 | vecinos = 5
+nos vamos a 23 | vecinos = 5
+nos vamos a 35 | vecinos = 5
+nos vamos a 48 | vecinos = 5
+visitamos 8
+nos vamos a 17 | vecinos = 4
+nos vamos a 27 | vecinos = 4
+nos vamos a 39 | vecinos = 4
+nos vamos a 52 | vecinos = 4
+visitamos 9
+nos vamos a 19 | vecinos = 4
+nos vamos a 29 | vecinos = 4
+nos vamos a 41 | vecinos = 4
+nos vamos a 54 | vecinos = 4
+visitamos 1
+nos vamos a 0 | vecinos = 8
+nos vamos a 1 | vecinos = 8
+nos vamos a 9 | vecinos = 8
+nos vamos a 10 | vecinos = 8
+nos vamos a 12 | vecinos = 8
+nos vamos a 14 | vecinos = 8
+nos vamos a 16 | vecinos = 8
+nos vamos a 18 | vecinos = 8
+visitamos 3
+nos vamos a 31 | vecinos = 6
+nos vamos a 32 | vecinos = 6
+nos vamos a 34 | vecinos = 6
+nos vamos a 36 | vecinos = 6
+nos vamos a 38 | vecinos = 6
+nos vamos a 40 | vecinos = 6
+visitamos 16
+nos vamos a 47 | vecinos = 5
+nos vamos a 49 | vecinos = 5
+nos vamos a 51 | vecinos = 5
+nos vamos a 53 | vecinos = 5
+nos vamos a 55 | vecinos = 5
+visitamos 5
+nos vamos a 5 | vecinos = 4
+nos vamos a 11 | vecinos = 4
+nos vamos a 33 | vecinos = 4
+nos vamos a 46 | vecinos = 4
+visitamos 0
+nos vamos a 3 | vecinos = 3
+nos vamos a 4 | vecinos = 3
+nos vamos a 6 | vecinos = 3
+ciclo
+visitamos 15
+nos vamos a 2 | vecinos = 5
+nos vamos a 8 | vecinos = 5
+nos vamos a 20 | vecinos = 5
+nos vamos a 30 | vecinos = 5
+nos vamos a 42 | vecinos = 5
+min cost 0 | max flow 0

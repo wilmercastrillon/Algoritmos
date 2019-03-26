@@ -21,7 +21,7 @@ void build(){
     for (int j = 2; j <= col; j++)
         memo[1][j] = memo[1][j-1] + tab[0][j - 1];
 
-    for (int i = 2; i <= col; i++)
+    for (int i = 2; i <= fila; i++)
 		for (int j = 2; j <= col; j++)
             memo[i][j] = memo[i][j - 1] + memo[i - 1][j] +
                     tab[i - 1][j - 1] - memo[i - 1][j - 1];
@@ -49,3 +49,5 @@ int main(){
     cout << query(2, 2, 5, 5) << endl;
     return 0;
 }
+
+
