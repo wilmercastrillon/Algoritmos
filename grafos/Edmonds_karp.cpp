@@ -43,26 +43,31 @@ int EdmondsKarp(){
     return mf;
 }
 
+void addEdgeUndirected(int x, int y, int z){
+    grafo[x].push_back(y);  grafo[y].push_back(x);
+    matriz[x][y] += z;  matriz[y][x] += z;
+}
+void addEdgeDirected(int x, int y, int z){
+    grafo[x].push_back(y);  grafo[y].push_back(x);
+    matriz[x][y] += z;  matriz[y][x] += 0;
+}
+
 int main(){
     //freopen("salida.txt", "w", stdout);
-    int n, m, x, y, z, con = 1;
+    int n, m, x, y, z;
     while(scanf("%d", &n), n){
         memset(matriz, 0, sizeof(matriz));
         grafo.assign(n+1, vi(0));
 
         MAX = n;
         scanf("%d %d %d", &start, &target, &m);
-        start--;  target--;
 
         for(int i = 0; i < m; i++){
             scanf("%d %d %d", &x, &y, &z);
-            grafo[x-1].push_back(y-1);
-            grafo[y-1].push_back(x-1);
-            matriz[x-1][y-1] += z;
-            matriz[y-1][x-1] += z;
+            addEdgeUndirected(x, y, z);
         }
 
-        printf("Network %d\nThe bandwidth is %d.\n\n", con++, EdmondsKarp());
+        printf("Max Flow is %d\n", EdmondsKarp());
     }
 
     return 0;

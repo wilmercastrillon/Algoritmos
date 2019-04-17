@@ -139,7 +139,7 @@
 			\subsection{Kruskal}
 			Arbol generador minimo(MST) usando lista de aristas, se necesita de un union-find.
 			O(m log n), sin contar el ordenamiento.
-			\cppfile[48-67]{grafos/kruskal.cpp}
+			\cppfile[38-57]{grafos/kruskal.cpp}
 			\subsection{Prim}
 			Arbol generador minimo (MST)\\
 			O(m log n)
@@ -151,12 +151,16 @@
 			O(n + m).
 			\cppfile[10-48]{grafos/puntos_de_articulacion_y_puentes.cpp}
 			\subsection{Maximum flow}%%maximo flujo
-			Flujo maximo en un grafo. Algoritmo de Edmonds Karp
+			Flujo maximo en un grafo. Algoritmo de Edmonds Karp O(${VE}^{2}$)
 			\cppfile[13-46]{grafos/Edmonds_karp.cpp}
 			\subsection{Min cost Max flow}
 			Flujo maximo manteniendo minimo costo.
 			\cppfile[6-59]{grafos/min_cost_max_flow.cpp}
-			
+			\subsection{Ruta minima en un DAG}
+			O(V+2E)
+			\cppfile[12-44]{grafos/ruta_minima_DAG.cpp}
+			\subsection{Tour de Euler}
+			\cppfile[10-33]{grafos/tour_euleriano.cpp}
 			
 		\section{Programacion dinamica}
 			\subsection{Subconjuntos de un conjunto}

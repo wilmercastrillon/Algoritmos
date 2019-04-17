@@ -19,43 +19,45 @@
 \contentsline {subsection}{\numberline {2.9}Puntos de articulaci\IeC {\'o}n y puentes}{9}{subsection.2.9}% 
 \contentsline {subsection}{\numberline {2.10}Maximum flow}{9}{subsection.2.10}% 
 \contentsline {subsection}{\numberline {2.11}Min cost Max flow}{10}{subsection.2.11}% 
+\contentsline {subsection}{\numberline {2.12}Ruta minima en un DAG}{11}{subsection.2.12}% 
+\contentsline {subsection}{\numberline {2.13}Tour de Euler}{11}{subsection.2.13}% 
 \contentsline {section}{\numberline {3}Programacion dinamica}{11}{section.3}% 
 \contentsline {subsection}{\numberline {3.1}Subconjuntos de un conjunto}{11}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Problema de la mochila}{11}{subsection.3.2}% 
-\contentsline {subsection}{\numberline {3.3}Longest Increment Subsecuence}{11}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.2}Problema de la mochila}{12}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.3}Longest Increment Subsecuence}{12}{subsection.3.3}% 
 \contentsline {subsection}{\numberline {3.4}Max Range Sum}{12}{subsection.3.4}% 
-\contentsline {subsection}{\numberline {3.5}Subset Sum}{12}{subsection.3.5}% 
-\contentsline {subsection}{\numberline {3.6}Traveling salesman problem}{12}{subsection.3.6}% 
-\contentsline {section}{\numberline {4}Otros}{12}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Busqueda binaria}{12}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {3.5}Subset Sum}{13}{subsection.3.5}% 
+\contentsline {subsection}{\numberline {3.6}Traveling salesman problem}{13}{subsection.3.6}% 
+\contentsline {section}{\numberline {4}Otros}{13}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Busqueda binaria}{13}{subsection.4.1}% 
 \contentsline {subsection}{\numberline {4.2}Raiz babilonica}{13}{subsection.4.2}% 
-\contentsline {subsection}{\numberline {4.3}Codigo gray}{13}{subsection.4.3}% 
-\contentsline {subsection}{\numberline {4.4}Lowest Common Ancestor}{13}{subsection.4.4}% 
-\contentsline {section}{\numberline {5}Matematicas}{14}{section.5}% 
-\contentsline {subsection}{\numberline {5.1}MCD y MCM}{14}{subsection.5.1}% 
-\contentsline {subsection}{\numberline {5.2}Exponenciacion binaria}{14}{subsection.5.2}% 
-\contentsline {subsection}{\numberline {5.3}Algoritmo extendido de euclides}{14}{subsection.5.3}% 
+\contentsline {subsection}{\numberline {4.3}Codigo gray}{14}{subsection.4.3}% 
+\contentsline {subsection}{\numberline {4.4}Lowest Common Ancestor}{14}{subsection.4.4}% 
+\contentsline {section}{\numberline {5}Matematicas}{15}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}MCD y MCM}{15}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Exponenciacion binaria}{15}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.3}Algoritmo extendido de euclides}{15}{subsection.5.3}% 
 \contentsline {subsection}{\numberline {5.4}Phi de euler}{15}{subsection.5.4}% 
 \contentsline {subsection}{\numberline {5.5}Multiplicacion modular}{15}{subsection.5.5}% 
-\contentsline {subsection}{\numberline {5.6}Exponenciacion modular}{15}{subsection.5.6}% 
-\contentsline {subsection}{\numberline {5.7}Test de Rabin Miller}{15}{subsection.5.7}% 
+\contentsline {subsection}{\numberline {5.6}Exponenciacion modular}{16}{subsection.5.6}% 
+\contentsline {subsection}{\numberline {5.7}Test de Rabin Miller}{16}{subsection.5.7}% 
 \contentsline {subsection}{\numberline {5.8}Rho de pollard}{16}{subsection.5.8}% 
-\contentsline {subsection}{\numberline {5.9}Factorizacion con criba}{16}{subsection.5.9}% 
+\contentsline {subsection}{\numberline {5.9}Factorizacion con criba}{17}{subsection.5.9}% 
 \contentsline {subsection}{\numberline {5.10}Fraccion}{17}{subsection.5.10}% 
-\contentsline {subsection}{\numberline {5.11}Matrices}{17}{subsection.5.11}% 
+\contentsline {subsection}{\numberline {5.11}Matrices}{18}{subsection.5.11}% 
 \contentsline {section}{\numberline {6}Cadenas}{18}{section.6}% 
 \contentsline {subsection}{\numberline {6.1}Algoritmo de bordes}{18}{subsection.6.1}% 
-\contentsline {subsection}{\numberline {6.2}KMP}{18}{subsection.6.2}% 
-\contentsline {section}{\numberline {7}Geometria}{18}{section.7}% 
-\contentsline {subsection}{\numberline {7.1}Punto}{18}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {6.2}KMP}{19}{subsection.6.2}% 
+\contentsline {section}{\numberline {7}Geometria}{19}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Punto}{19}{subsection.7.1}% 
 \contentsline {subsection}{\numberline {7.2}Linea}{19}{subsection.7.2}% 
-\contentsline {subsection}{\numberline {7.3}Vector}{19}{subsection.7.3}% 
-\contentsline {section}{\numberline {8}Tips and formulas(UFPS, 2017)}{20}{section.8}% 
-\contentsline {subsection}{\numberline {8.1}ASCII Table}{20}{subsection.8.1}% 
-\contentsline {subsection}{\numberline {8.2}Formulas}{21}{subsection.8.2}% 
-\contentsline {subsection}{\numberline {8.3}Sequences}{23}{subsection.8.3}% 
+\contentsline {subsection}{\numberline {7.3}Vector}{20}{subsection.7.3}% 
+\contentsline {section}{\numberline {8}Tips and formulas(UFPS, 2017)}{21}{section.8}% 
+\contentsline {subsection}{\numberline {8.1}ASCII Table}{21}{subsection.8.1}% 
+\contentsline {subsection}{\numberline {8.2}Formulas}{22}{subsection.8.2}% 
+\contentsline {subsection}{\numberline {8.3}Sequences}{24}{subsection.8.3}% 
 \contentsline {subsection}{\numberline {8.4}Time Complexities}{25}{subsection.8.4}% 
 \contentsline {section}{\numberline {9}Extras}{25}{section.9}% 
 \contentsline {subsection}{\numberline {9.1}Template}{25}{subsection.9.1}% 
-\contentsline {subsection}{\numberline {9.2}Formulas extra}{25}{subsection.9.2}% 
-\contentsline {subsection}{\numberline {9.3}Secuencias}{26}{subsection.9.3}% 
+\contentsline {subsection}{\numberline {9.2}Formulas extra}{26}{subsection.9.2}% 
+\contentsline {subsection}{\numberline {9.3}Secuencias}{27}{subsection.9.3}% 

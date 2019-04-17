@@ -5,15 +5,12 @@
 using namespace std;
 
 struct union_find{
-	int padre[100];
-	int rango[100];
+    int padre[100];
 	int tam = 0;
 
 	void iniciar(int n){
-		for (int i = 0; i < n; i++)
-		{
+		for(int i = 0; i < n; i++) {
 			padre[i] = i;
-			rango[i] = 0;
 		}
 		tam = n;
 	}
@@ -26,14 +23,7 @@ struct union_find{
 	void unir(int x, int y){
 		x = raiz(x);
 		y = raiz(y);
-
-		if(rango[x] > rango[y]){
-			padre[y] = x;
-			return;
-		}
-
 		padre[x] = y;
-		if(rango[y] == rango[x]) rango[y]++;
 	}
 
 	bool MismoGrupo(int x, int y){
@@ -85,8 +75,6 @@ int main(){
 	for(int i = 0; i < 7; i++) cout << i << " ";
 	cout << endl;
 	for(int i = 0; i < 7; i++) cout << arbol.padre[i] << " ";
-	cout << endl;
-	for(int i = 0; i < 7; i++) cout << arbol.rango[i] << " ";
 	cout << endl;
 
 	return 0;
