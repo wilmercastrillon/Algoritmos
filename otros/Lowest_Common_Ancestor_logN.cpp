@@ -7,58 +7,51 @@
 #include <map>
 
 using namespace std;
-
 typedef vector<int> vi;
 typedef vector<vi> vvi;
-#define MAX 100010
+#define MAX 1000010
 
-int p[100], d[100], peso[100];//padre, deep, peso
-int spt[100][7];//spt[i][j] = (2^j)-th ancestro de i
-vvi grafo;//spt[MAX][(int) log_2(MAX) + 1]
+#define Log2 20//2^Log2 > MAX
+int padre[MAX], nivel[MAX], peso[MAX];//padre, deep, peso
+int spt[MAX][Log2];//spt[i][j] = (2^j)-th ancestro de i
+vvi grafo;
 
 void dfs(int nodo, int deep, int ant){
-    d[nodo] = deep;
-    p[nodo] = ant;
+    nivel[nodo] = deep;
+    padre[nodo] = ant;
     for(int i = 0; i < grafo[nodo].size(); i++){
-        if(d[grafo[nodo][i]] != -1) continue;
+        if(nivel[grafo[nodo][i]] != -1) continue;
         dfs(grafo[nodo][i], deep+1, nodo);
     }
 }
 
 void proceso(int n){//Llamar antes de LCA
-    memset(d, -1, sizeof(d));
+    memset(nivel, -1, sizeof(nivel));
     dfs(0, 0, -1);
-    memset(spt, -1, sizeof(spt));
-
-    for(int i = 0; i < n; i++){
-        spt[i][0] = p[i];
-//mayor[i][0] = peso[i];
-    }
-
-    for(int j = 1; 1 << j < n; j++)
     for(int i = 0; i < n; i++)
-        if(spt[i][j-1] != -1){
-            spt[i][j] = spt[spt[i][j-1]][j-1];
-//mayor[i][j] = max(mayor[i][j-1], mayor[spt[i][j-1]][j-1]);
+        spt[i][0] = padre[i];
+
+    for(int i = 1; i < Log2; i++)
+    for(int j = 0; j < n; j++)
+        if(spt[j][i-1] != -1){
+            spt[j][i] = spt[spt[j][i-1]][i-1];
         }
 }
 
 int LCA(int u, int v){
-    if(d[u] < d[v]) swap(u, v);//v debe estar arriba de u
+    if(nivel[u] > nivel[v]) swap(u, v);//v debe estar arriba de u
 
-    for(int i = 16; i >= 0; i--)//subimos a u
-        if(d[u] - (1<<i) >= d[v])
-            u = spt[u][i];
-
+    for(int i = 0; i < Log2; i++)//subimos a u
+        if((nivel[v] - nivel[u])>>i&1)
+            v = spt[v][i];
     if(u == v) return u;
 
-    for(int i = 16; i >= 0; i--)
+    for(int i = Log2-1; i >= 0; i--)
         if(spt[u][i] != spt[v][i]){
             u = spt[u][i];
             v = spt[v][i];
         }
-
-    return p[v];
+    return spt[u][0];
 }
 
 int main(){

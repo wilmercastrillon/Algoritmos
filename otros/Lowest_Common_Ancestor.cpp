@@ -4,10 +4,9 @@
 #include <string.h>
 
 using namespace std;
+int arr[100], spt[100][10] = {0};
 
 struct sparseTable{
-    int arr[100], spt[100][10] = {0};
-
     sparseTable(){}
 
     sparseTable(int n, int a[]){
@@ -56,10 +55,11 @@ void BuildRMQ(vvi &grafo){//llamar antes de LCA
     idx = 0;
     memset(h, -1, sizeof(h));
     dfs(0, 0, grafo);
-    table = sparseTable(grafo.size(), l);
+    table = sparseTable(grafo.size()<<1, l);
 }
 
 int LCA(int u, int v){//h[u] < h[v]
+    if(h[u] > h[v]) swap(u, v);
     return e[table.query(h[u], h[v])];
 }
 
@@ -71,7 +71,7 @@ int main(){
         for(int i = 0; i < m; i++){
             scanf("%d %d", &x, &y);
             grafo[x].push_back(y);
-            grafo[y].push_back(x);
+            //grafo[y].push_back(x);
         }
 
         //Query

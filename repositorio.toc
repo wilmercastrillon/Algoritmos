@@ -48,16 +48,17 @@
 \contentsline {section}{\numberline {6}Cadenas}{18}{section.6}% 
 \contentsline {subsection}{\numberline {6.1}Algoritmo de bordes}{18}{subsection.6.1}% 
 \contentsline {subsection}{\numberline {6.2}KMP}{19}{subsection.6.2}% 
+\contentsline {subsection}{\numberline {6.3}Tablas hash}{19}{subsection.6.3}% 
 \contentsline {section}{\numberline {7}Geometria}{19}{section.7}% 
 \contentsline {subsection}{\numberline {7.1}Punto}{19}{subsection.7.1}% 
-\contentsline {subsection}{\numberline {7.2}Linea}{19}{subsection.7.2}% 
+\contentsline {subsection}{\numberline {7.2}Linea}{20}{subsection.7.2}% 
 \contentsline {subsection}{\numberline {7.3}Vector}{20}{subsection.7.3}% 
 \contentsline {section}{\numberline {8}Tips and formulas(UFPS, 2017)}{21}{section.8}% 
 \contentsline {subsection}{\numberline {8.1}ASCII Table}{21}{subsection.8.1}% 
 \contentsline {subsection}{\numberline {8.2}Formulas}{22}{subsection.8.2}% 
 \contentsline {subsection}{\numberline {8.3}Sequences}{24}{subsection.8.3}% 
-\contentsline {subsection}{\numberline {8.4}Time Complexities}{25}{subsection.8.4}% 
-\contentsline {section}{\numberline {9}Extras}{25}{section.9}% 
-\contentsline {subsection}{\numberline {9.1}Template}{25}{subsection.9.1}% 
+\contentsline {subsection}{\numberline {8.4}Time Complexities}{26}{subsection.8.4}% 
+\contentsline {section}{\numberline {9}Extras}{26}{section.9}% 
+\contentsline {subsection}{\numberline {9.1}Template}{26}{subsection.9.1}% 
 \contentsline {subsection}{\numberline {9.2}Formulas extra}{26}{subsection.9.2}% 
 \contentsline {subsection}{\numberline {9.3}Secuencias}{27}{subsection.9.3}% 

@@ -1,15 +1,19 @@
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
+#define forr(i, n) for(int i = 0; i < n; i++)
 
 using namespace std;
 
 #define MAX 1000 //n
-#define Log2 10 //2^10 > 1000
+#define Log2 10 //2^10 > n
+int arr[MAX], spt[MAX][Log2];
 
 struct sparseTable{
-    int arr[MAX], spt[MAX][Log2] = {0};
+    sparseTable(){}
 
     sparseTable(int n, int a[]){
+        memset(spt, 0, sizeof(spt));
         for(int i = 0; i < n; i++){
             arr[i] = a[i];
             spt[i][0] = i;
@@ -33,8 +37,7 @@ struct sparseTable{
 };
 
 int main(){
-
-    int a[] = {0, 1, 2, 1, 2, 3, 2, 3, 2, 1, 2, 1, 0, 1, 2, 1, 2, 1};
+    int a[] = {5, 8, 9, 6, 2, 3, 5, 7, 8, 2};
     sparseTable st(18, a);
     //st.imp();
 
