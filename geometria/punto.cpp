@@ -15,6 +15,9 @@ double dot(vec a, vec b){
 double norm_sq(vec v){
     return v.x*v.x + v.y*v.y;
 }
+double cross(vec a, vec b){
+    return a.x*b.y - a.y*b.x;
+}
 
 struct punto{
     double x, y;
@@ -51,6 +54,9 @@ double angulo(punto a, punto o, punto b){//en radianes
     vec oa = toVec(o, a), ob = toVec(o, b);
     return acos(dot(oa, ob)/sqrt(norm_sq(oa)*norm_sq(ob)));
 }
+bool colineal(punto p, punto q, punto r){
+    return fabs(cross(toVec(p,q),toVec(p,r))) < eps;
+}//r esta en la misma linea que p-q
 
 int main(){
     punto a(0, 0), b(5, 4), c(3, 3);

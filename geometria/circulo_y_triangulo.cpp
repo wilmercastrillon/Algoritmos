@@ -48,7 +48,6 @@ double dentroDelCirculo(punto p, punto c, double r){
     double euc = dx*dx + dy*dy, rsq = r*r;
     return (euc < rsq)? 0 : (euc==rsq)? 1 : 2;
 }//0-dentro, 1-borde, 2-afuera
-double
 
 int main(){
     linea q(2, 1, 3), w(-4, 1, 5);

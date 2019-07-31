@@ -54,7 +54,7 @@ struct linea{
         }else{
             a = -((p1.y-p2.y) / (p1.x-p2.x));
             b = 1.0;
-            c = -((a-p1.x) / (p1.y));
+            c = -a*p1.x-p1.y;
         }
     }
 };
@@ -71,6 +71,17 @@ bool interseccion(linea l1, linea l2, punto &p){
     if(fabs(l1.b)>eps) p.y = -(l1.a*p.x + l1.c);
     else p.y = -(l2.a*p.x + l2.c);
     return true;
+}
+bool intersecSegmentos(linea l1, linea l2, punto &p){
+    punto pp, c;
+    if(interseccion(l1,l2,pp)){
+        if(distSegmento(pp,l1,c)<eps &&
+           distSegmento(pp,l2,c)<eps){
+            p.x = pp.x;  p.y = pp.y;
+            return true;
+        }
+    }
+    return false;
 }
 //distancia minima entre p y l
 double distLinea(punto p, linea l, punto &c){

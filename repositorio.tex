@@ -259,11 +259,20 @@
 		\section{Geometria}
 			\subsection{Punto}
 			\cppfile[19-53]{geometria/punto.cpp}
-			\subsection{Linea}
+			\subsection{Linea y segmento}
 			Linea de la forma $ax + by + c = 0$.
-			\cppfile[42-94]{geometria/linea.cpp}
+			\cppfile[42-105]{geometria/linea.cpp}
 			\subsection{Vector}
 			\cppfile[39-67]{geometria/vector.cpp}
+			\subsection{Convex Hull}
+			Polígono convexo con área mínima que cubre todos los puntos.\\
+			O(n log n)
+			\cppfile[48-84]{geometria/convex_hull.cpp}
+			\subsection{Punto en poligono}
+			Verifica si un punto esta dentro de un polígono.\\
+			O(n)
+			\cppfile[67-76]{geometria/poligono.cpp}
+			
 	
 	%Tomado de notebook c++ de la UFPS
 	\newpage
