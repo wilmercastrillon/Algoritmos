@@ -57,29 +57,24 @@ bool angleCmp(punto a, punto b){
 
 vector<punto> ConvexHull(vector<punto> p){
     pivote = punto(0,0);
-    int i, j, n = p.size();
+    int i, j, n = p.size(), k = 0;
     if(n <= 3){
         if(!(p[0]==p[n-1])) p.push_back(p[0]);
         return p;
     }
 
-    int p0 = 0;
-    for(int i = 0; i < n; i++)
-        if(p[i].y<p[p0].y || (p[i].y==p[p0].y && p[i].x>p[p0].x))
-            p0 = i;
-
-    punto temp = p[0]; p[0] = p[p0]; p[p0] = temp;
-    pivote = p[0];
-    sort(++p.begin(), p.end(), angleCmp);
-
-    vector<punto> s;
-    s.push_back(p[n-1]); s.push_back(p[0]); s.push_back(p[1]);
-    i = 2;
-    while(i < n){
-        j = s.size()-1;
-        if(ccw(s[j-1],s[j],p[i])) s.push_back(p[i++]);
-        else s.pop_back();
+    sort(p.begin(), p.end());
+    vector<punto> s(p.size()*2);
+    for(int i = 0; i < p.size(); i++){
+        while(k>=2 && !ccw(s[k-2],s[k-1],p[i])) k--;
+        s[k++] = p[i];
     }
+
+    for(int i=p.size()-2, t=k+1; i>=0; i--){
+        while(k>=t && !ccw(s[k-2],s[k-1],p[i])) k--;
+        s[k++] = p[i];
+    }
+    s.resize(k);
     return s;
 }
 

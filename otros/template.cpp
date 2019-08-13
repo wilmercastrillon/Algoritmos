@@ -24,3 +24,11 @@ int main(){//fast I/O con iostream
     cout << "hola mundo" << '\n';
     return 0;
 }
+
+/* Expandir pila de memoria C++ 11
+#include <sys/resource.h>
+rlimit rl;
+getrlimit(RLIMIT_STACK, &rl);
+rl.rlim_cur=1024L*1024L*256L;//256mb
+setrlimit(RLIMIT_STACK, &rl);
+*/

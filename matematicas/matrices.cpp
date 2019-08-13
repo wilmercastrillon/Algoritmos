@@ -7,7 +7,7 @@ typedef long long int lli;
 
 struct matrix{  lli mat[max][max];  };
 
-matrix matmul(matrix a, matrix b){//multiplicar
+matrix matmul(matrix &a, matrix &b){//multiplicar
     matrix ans;
     int i, j, k;
 

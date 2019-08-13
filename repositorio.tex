@@ -113,6 +113,9 @@
 			Para RMQ (Range Minium Query) en arreglos estaticos\\
 			Construcción O(n log n)\\Consulta O(1)
 			\cppfile[8-37]{estructuras_de_datos/Sparse_table.cpp}
+			\subsection{Set extendido}
+			Set indexado.
+			\cppfile[2-10]{estructuras_de_datos/set_extendido.cpp}
 			
 		\section{Grafos}
 			\subsection{Dijkstra}
@@ -152,7 +155,7 @@
 			\cppfile[10-48]{grafos/puntos_de_articulacion_y_puentes.cpp}
 			\subsection{Maximum flow}%%maximo flujo
 			Flujo maximo en un grafo. Algoritmo de Edmonds Karp O(${VE}^{2}$)
-			\cppfile[13-46]{grafos/Edmonds_karp.cpp}
+			\cppfile[12-53]{grafos/Edmonds_karp.cpp}
 			\subsection{Min cost Max flow}
 			Flujo maximo manteniendo minimo costo.
 			\cppfile[6-59]{grafos/min_cost_max_flow.cpp}
@@ -161,6 +164,13 @@
 			\cppfile[12-44]{grafos/ruta_minima_DAG.cpp}
 			\subsection{Tour de Euler}
 			\cppfile[10-33]{grafos/tour_euleriano.cpp}
+			\subsection{Lowest Common Ancestor}
+			Ancestro común mas bajo en un arbol, para u y v encontrar el nodo mas bajo que este por encima de
+			ambos.\\
+			Solucion con Range Minimum Query (sparse table).
+			\cppfile[38-64]{otros/Lowest_Common_Ancestor.cpp}
+			Solucion con construcción O(n log n) y consultas O(log n)
+			\cppfile[14-55]{otros/Lowest_Common_Ancestor_logN.cpp}
 			
 		\section{Programacion dinamica}
 			\subsection{Subconjuntos de un conjunto}
@@ -192,13 +202,6 @@
 			\cppfile[4-12]{otros/raiz_babilonica.cpp}
 			\subsection{Codigo gray}
 			\cppfile[5-14]{otros/codigo_gray.cpp}
-			\subsection{Lowest Common Ancestor}
-			Ancestro común mas bajo en un arbol, para u y v encontrar el nodo mas bajo que este por encima de
-			ambos.\\
-			Solucion con Range Minimum Query (sparse table).
-			\cppfile[38-64]{otros/Lowest_Common_Ancestor.cpp}
-			Solucion con construcción O(n log n) y consultas O(log n)
-			\cppfile[14-55]{otros/Lowest_Common_Ancestor_logN.cpp}
 			
 		\section{Matematicas}
 			\subsection{MCD y MCM}
@@ -243,6 +246,9 @@
 			\subsection{Matrices}
 			Exponenciación de matrices: $M^b$ en O($n^{3} log (b)$)
 			\cppfile[8-36]{matematicas/matrices.cpp}
+			\subsection{Logaritmo discreto}
+			Encuentra una solución para $a^{x} \equiv 1 (mod(p))$.\\ O($\sqrt{m} log (m)$)
+			\cppfile[7-25]{matematicas/logaritmo_discreto.cpp}
 			
 		\section{Cadenas}
 			\subsection{Algoritmo de bordes}
@@ -258,16 +264,16 @@
 			
 		\section{Geometria}
 			\subsection{Punto}
-			\cppfile[19-53]{geometria/punto.cpp}
+			\cppfile[22-59]{geometria/punto.cpp}
 			\subsection{Linea y segmento}
 			Linea de la forma $ax + by + c = 0$.
 			\cppfile[42-105]{geometria/linea.cpp}
 			\subsection{Vector}
 			\cppfile[39-67]{geometria/vector.cpp}
 			\subsection{Convex Hull}
-			Polígono convexo con área mínima que cubre todos los puntos.\\
+			Polígono convexo con perímetro mínimo que cubre todos los puntos.\\
 			O(n log n)
-			\cppfile[48-84]{geometria/convex_hull.cpp}
+			\cppfile[48-79]{geometria/convex_hull.cpp}
 			\subsection{Punto en poligono}
 			Verifica si un punto esta dentro de un polígono.\\
 			O(n)
@@ -682,93 +688,141 @@ $O(1)$ \> -\\
 	\section{Extras}
 		\subsection{Template}
 			Plantilla de typedef, define, etc.
-			\cppfile[1-26]{otros/template.cpp}
+			\cppfile[1-34]{otros/template.cpp}
 		\subsection{Formulas extra}
-			\textbf{formula de triangulos degenerados:}\\
-			\vspace{3mm}
-			{\Large$\frac{(a + b - c) * (a + c - b) * (b  + c - a)} {a * b * c}$}
-			\vspace{3mm}
-			\\Si el resultado es mayor a 0.5 es un triángulo de calidad buena.
-			\\Es posible formar un triangulo si $a+b>c$ con $c>b>a$
-	
-			\vspace{8mm}
-			\textbf{Ecuacion de la recta que pasa por dos puntos:}\\
-			\vspace{3mm}
-			{\Large $\frac{x - x_{1}}{x_{2} - x_{1}} = \frac{y - y_{1}}{y_{2} - y_{1}}$}
 			
-			\vspace{8mm}
-			\textbf{Ecuacion del plano que pasa por 3 puntos}\\
-			Al resolver la determinante, se tiene el plano que pasa por 3 puntos de la forma (x,y,z).\\
-			\vspace{3mm}
-			$\begin{vmatrix}
-				X-x_{1} &Y-y_{1} &Z-z_{1} \\ 
-				x_{2}-x_{1} &y_{2}-y_{1} &z_{2}-z_{1} \\ 
-				x_{3}-x_{1} &y_{3}-y_{1} &z_{3}-z_{1}
-			\end{vmatrix} = 0$
+			\begin{center}
+				\tablefirsthead{}
+				\tabletail{
+				\midrule 
+				\multicolumn{2}{r}{{Continúa en la siguiente columna}} \\}
+				\tablelasttail{}
+				{\renewcommand{\arraystretch}{1.4}
+				\begin{supertabular}{|p{2.2cm}|p{8.2cm}|}
+					\hline
+					\multicolumn{2}{|c|}{} \\
+					\multicolumn{2}{|c|}{Formulas extras} \\
+					\multicolumn{2}{|c|}{} \\ \hline
+					
+					Formula de triángulos degenerados & Si el resultado es mayor a 0.5 es un triángulo de calidad 
+					buena. Es posible formar un triangulo si $a+b>c$ con $c>b>a$.
+					
+					{\Large $\frac{(a + b - c) * (a + c - b) * (b  + c - a)} {a * b * c}$}				
+					\\ \hline
 
-			\vspace{8mm}
-			\textbf{Distancia de un punto a una recta:}\\
-			Teniendo una recta con formula de la forma: $ax + by + c$ la distancia minima
-			a un punto p de la forma $(px, py)$ la distancia minima esta dada por la formula:\\
-			\vspace{3mm}
-			{\Large $d = \frac{a*px + b*py + c}{\sqrt{a^{2} + b^{2}}}$}
-			
-			\vspace{8mm}
-			\textbf{Formula de numeros fibonacci:}\\
-			\vspace{3mm}
-			{\Large $f(n) = \frac{1}{\sqrt{5}} * [ (\frac{1 + \sqrt{5}}{2})^{n}  - (\frac{1 - \sqrt{5}}{2})^{n}]$ }
-			\vspace{3mm}
-			\\Formula con matrices:
-			{\large
-			$\begin{bmatrix}
-				1 & 1\\ 
-				1 & 0
-			\end{bmatrix}^{b} =
-			\begin{bmatrix}
-				fib(b+1) & fib(b) \\ 
-				fib(b) & fib(b-1)
-			\end{bmatrix}$}
-			
-			\vspace{8mm}
-			\textbf{Determinante de Gauss:}\\ 
-			Encontrar el area de un poligono en el plano cartesiano a partir de sus vertices\\
-			\vspace{3mm}		
-			
-			{\large$A = \frac{1}{2} $}
-			{\large $ \begin{bmatrix}
-				x_{1} & y_{1} \\ 
-				x_{2} & y_{2} \\ 
-				x_{3} & y_{3} \\ 
-				x_{1} & y_{1} 
-			\end{bmatrix}$ } \\ 
-			\vspace{3mm}
-			{\large $S = x_{1}y_{2} + x_{2}y_{3} +...+ x_{n}y_{1}$} \\ 
-			\vspace{3mm}
-			{\large $D = x_{2}y_{1} + x_{3}y_{2} +...+ x_{1}y_{n}$} \\ 
-			\vspace{3mm}
-			{\large $A = \frac{1}{2} |S - D|$}
-			
-			\vspace{8mm}
-			\textbf{Coeficientes binomiales:}\\
-			Encuentra $n$ combinado $k$, para construir el triangulo de pascal solo poner
-			en $n$ la fila y en $k$ la columna.\\
-			$C(n, k) = 	
-			\begin{cases}
-				0 & \text{si $k = 0, $ $ n = k$}\\
-				C(n-1,k-1)+C(n-1,k) & \text{c.c.}
-			\end{cases}
-			$\\
-			
-			\vspace{8mm}
-			\textbf{Numeros de catalan:}\\
-			Formula recursiva, encontrar numero de arboles binarios de n nodos, numero de formas de
-			emparejar parentesis.\\
-			$Cat(n) = 	
-			\begin{cases}
-				1 & \text{si $n = 0$}\\
-				\frac{2n*(2n-1) * Cat(n-1)}{(n+1)*n} & \text{c.c.}
-			\end{cases}
-			$\\
+					Ecuación de la recta que pasa por dos puntos & y = mx + b.
+					
+					{\Large $\frac{x - x_{1}}{x_{2} - x_{1}} = \frac{y - y_{1}}{y_{2} - y_{1}}$}
+					\\ \hline
+					
+					Ecuación del plano que pasa por 3 puntos & Al resolver la determinante, se tiene el plano que 
+					pasa por 3 puntos de la forma (x,y,z).
+					
+					$\begin{vmatrix}
+						X-x_{1} &Y-y_{1} &Z-z_{1} \\ 
+						x_{2}-x_{1} &y_{2}-y_{1} &z_{2}-z_{1} \\ 
+						x_{3}-x_{1} &y_{3}-y_{1} &z_{3}-z_{1}
+					\end{vmatrix} = 0$
+					\\ \hline
+					
+					Distancia de un punto a una recta & Teniendo una recta con formula de la forma: $ax + by + c$ 
+					la distancia mínima a un punto p de la forma $(px, py)$ la distancia minima esta dada por la 
+					formula.
+					
+					{\Large $d = \frac{a*px + b*py + c}{\sqrt{a^{2} + b^{2}}}$}
+					\\ \hline
+					
+					Formula de números fibonacci &
+					
+					\vspace{1mm}
+					{\Large $f(n) = \frac{1}{\sqrt{5}} * [ (\frac{1 + \sqrt{5}}{2})^{n}  - 
+						(\frac{1 - \sqrt{5}}{2})^{n}]$ }
+					\\ \hline
+					
+					Formula de fibonacci con matrices &
+					
+					{\large
+					$\begin{bmatrix}
+						1 & 1\\ 
+						1 & 0
+					\end{bmatrix}^{b} =
+					\begin{bmatrix}
+						fib(b+1) & fib(b) \\ 
+						fib(b) & fib(b-1)
+					\end{bmatrix}$}
+					\\ \hline
+					
+					Coeficientes binomiales & Encuentra $n$ combinado $k$. para construir el triangulo de pascal 
+					solo poner en $n$ la fila y en $k$ la columna.
+					
+					$C(n, k) = 	
+					\begin{cases}
+						0 & \text{k=0,n=k}\\
+						C(n-1,k-1)+C(n-1,k) & \text{c.c.}
+					\end{cases}
+					$
+					\\ \hline
+					
+					Números de catalán & Encontrar numero de arboles binarios de n nodos, numero 
+					de formas de emparejar paréntesis.
+					
+					{\large
+					$Cat(n) = 	
+					\begin{cases}
+						1 & \text{si $n = 0$}\\
+						\frac{2n*(2n-1) * Cat(n-1)}{(n+1)*n} & \text{c.c.}
+					\end{cases}
+					$}
+					\\ \hline
+					
+					Teorema de Erd\H{o}s–Gallai & Una secuencia de enteros $d_{1} \geq ... \geq d_{n}$ puede 
+					representar una secuencia de grados de un grafo si y solo si: para cada k en $1 \leq k \leq n$
+					
+					{\large
+					$\sum_{i=1}^{k} d_{i} \leq k(k+1)+\sum_{i=k+1}^{n} min(d_{i},k)$}
+					\\ \hline
+					
+					Determinante de Gauss & Encontrar el área de un polígono en el plano cartesiano a partir de 
+					sus vértices.
+					
+					{\large$A = \frac{1}{2} $}
+					{\large $ \begin{bmatrix}
+						x_{1} & y_{1} \\ 
+						x_{2} & y_{2} \\ 
+						x_{3} & y_{3} \\ 
+						x_{1} & y_{1} 
+					\end{bmatrix}$ }
+					
+					\vspace{1mm}
+					{\large $S = x_{1}y_{2} + x_{2}y_{3} +...+ x_{n}y_{1}$}
+					
+					\vspace{1mm}
+					{\large $D = x_{2}y_{1} + x_{3}y_{2} +...+ x_{1}y_{n}$} 
+					
+					\vspace{1mm}
+					{\large $A = \frac{1}{2} |S - D|$}
+					\\ \hline
+					
+					Progresión aritmética & Sea $d$ la diferencia y $a_{1}$ el numero inicial, entonces $a_{n} = 
+					a_{1}+(n-1)d$. y la sumatoria de los primeros n elementos es:
+					
+					\vspace{1mm}
+					{\Large$\sum_{i=1}^{n}a_{i} = n\frac{a_{1}+a_{n}}{2}$}
+					\\ \hline
+					
+					Progresión geométrica & Sea $r$ la razón y $a_{1}$ el numero inicial, entonces $a_{n} = 
+					a_{1}*r^{n-1}$ y la sumatoria de los primeros n elementos es:
+					
+					{\large
+					$\prod_{i=1}^{n} a_{i} = a_{1} * \frac{r^{n}-1}{r-1}$}
+					\\ \hline
+					%Agregar:
+					%a^phi(n) es congruente con 1 mod n
+					%los divisores de phi(n) son posibles soluciones para a^x congruente con 1 mod m
+				\end{supertabular}
+				}
+			\end{center}
+
 			
 		\subsection{Secuencias}
 		

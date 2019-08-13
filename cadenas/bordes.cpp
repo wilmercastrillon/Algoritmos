@@ -4,7 +4,7 @@ using namespace std;
 int bordes[1000];
 
 void algoritmoBordes(string subcad){
-    int i = 1, j = -1;
+    int i = 0, j = -1;
     bordes[0] = -1;
 
     while(i < subcad.size()) {
