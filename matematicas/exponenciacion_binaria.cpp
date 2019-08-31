@@ -3,7 +3,7 @@
 using namespace std;
 typedef long long int lli;
 
-lli exp_bin (lli a, lli n) {
+lli exp_bin(lli a, lli n) {
 	lli res = 1;
 	while (n) {
 		if (n & 1) res *= a;

@@ -12,8 +12,9 @@ int mcm(int a, int b) {
 
 int main(){
     int a, b;
-    scanf("%d %d", &a, &b);
-    printf("%d\n", mcm(a, b));
+    while(scanf("%d %d", &a, &b) != EOF){
+        printf("%d\n", mcd(a, b));
+    }
 
     return 0;
 }

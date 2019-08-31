@@ -17,11 +17,21 @@ void mostrar(int pos){
         pila.pop();
     }
 }
+
+void imp(int ar[], int v){
+    for(int i = 0; i < v; ++i){
+        printf("%3d",ar[i]);
+    }
+    printf("\n");
+}
+
 //Para decreciente invertir el signo de los numeros
 void LIS(){                     //en el arreglo.
     int tam = 0, pos, res = 0;
     for(int i = 0; i < n; i++){
         pos = lower_bound(aux, aux + tam, A[i]) - aux;
+        imp(aux,tam);
+        printf("pos = %d hasta %d, buscando %d\n", pos,tam, A[i]);
         //usar upper_bound para contar repetidos
         aux[pos] = A[i];
         indexAnt[pos] = i;
@@ -41,12 +51,10 @@ int LIS_dp(){
     int res = 0;
     vector<int> vec(8, 1);
 
-    for(int i = 0; i < 8; i++){
+    for(int i = 0; i < 8; i++)
         for(int j = i + 1; j < 8; j++)
             if(A[i] < A[j]) vec[j] = max(vec[j], vec[i] + 1);
         res = max(res, vec[i]);
-    }
-
     return res;
 }
 

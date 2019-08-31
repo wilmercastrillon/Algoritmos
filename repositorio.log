@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.15)  12 AUG 2019 22:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.15)  29 AUG 2019 13:52
 entering extended mode
 **./repositorio.tex
 (repositorio.tex
@@ -499,6 +499,15 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count139
 \@thisrulewidth=\dimen166
 )
+("C:\Users\wilmer-PC\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.st
+y"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count140
+\float@exts=\toks29
+\float@box=\box59
+\@float@everytoks=\toks30
+\@floatcapt=\box60
+)
 ("C:\Users\wilmer-PC\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstla
 ng1.sty"
 File: lstlang1.sty 2019/02/27 1.8b listings language file
@@ -516,22 +525,22 @@ LaTeX Info: Redefining \% on input line 24.
 )
 \openout1 = `repositorio.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-\AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring OFF on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+\AtBeginShipoutBox=\box61
+Package hyperref Info: Link coloring OFF on input line 75.
 
 ("C:\Users\wilmer-PC\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\namer
 ef.sty"
@@ -541,36 +550,36 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 titlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count140
+\c@section@level=\count141
 )
-LaTeX Info: Redefining \ref on input line 74.
-LaTeX Info: Redefining \pageref on input line 74.
-LaTeX Info: Redefining \nameref on input line 74.
+LaTeX Info: Redefining \ref on input line 75.
+LaTeX Info: Redefining \pageref on input line 75.
+LaTeX Info: Redefining \nameref on input line 75.
  (repositorio.out) (repositorio.out)
 \@outlinefile=\write3
 \openout3 = `repositorio.out'.
 
-LaTeX Info: Redefining \. on input line 74.
-LaTeX Info: Redefining \% on input line 74.
+LaTeX Info: Redefining \. on input line 75.
+LaTeX Info: Redefining \% on input line 75.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 74.
-\c@lstlisting=\count141
+(lastpage)             ! on input line 75.
+\c@lstlisting=\count142
 
 ("C:\Users\wilmer-PC\AppData\Local\Programs\MiKTeX 2.9\tex/context/base\supp-pd
 f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count142
+\scratchcounter=\count143
 \scratchdimen=\dimen167
-\scratchbox=\box60
-\nofMPsegments=\count143
-\nofMParguments=\count144
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count145
+\scratchbox=\box62
+\nofMPsegments=\count144
+\nofMParguments=\count145
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count146
 \MPscratchDim=\dimen168
-\MPnumerator=\count146
-\makeMPintoPDFobject=\count147
-\everyMPtoPDFconversion=\toks30
+\MPnumerator=\count147
+\makeMPintoPDFobject=\count148
+\everyMPtoPDFconversion=\toks32
 )
 ("C:\Users\wilmer-PC\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epsto
 pdf-base.sty"
@@ -621,22 +630,22 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 79.
+LaTeX Font Info:    Try loading font information for U+msa on input line 80.
 
 ("C:\Users\wilmer-PC\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.
 fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 79.
+LaTeX Font Info:    Try loading font information for U+msb on input line 80.
 
 ("C:\Users\wilmer-PC\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.
 fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<dijkstra.jpg, id=271, 120.45pt x 120.45pt>
+<dijkstra.jpg, id=279, 120.45pt x 120.45pt>
 File: dijkstra.jpg Graphic file (type jpg)
 <use dijkstra.jpg>
-Package pdftex.def Info: dijkstra.jpg  used on input line 81.
+Package pdftex.def Info: dijkstra.jpg  used on input line 82.
 (pdftex.def)             Requested size: 108.40398pt x 108.40398pt.
  (repositorio.toc
 LaTeX Info: Redefining \. on input line 1.
@@ -649,21 +658,27 @@ LaTeX Info: Redefining \% on input line 1.
 \openout4 = `repositorio.toc'.
 
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 91.
+nput line 92.
  (estructuras_de_datos/tablas_aditivas.cpp)
 (estructuras_de_datos/disjoint_set_union_find.cpp [2])
 (estructuras_de_datos/union_find-compresion_de_caminos.cpp)
 (estructuras_de_datos/segment_tree.cpp [3])
-(estructuras_de_datos/segment_tree_lazy_propagation.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(estructuras_de_datos/segment_tree_lazy_propagation.cpp
+Underfull \vbox (badness 1748) has occurred while \output is active []
 
  [4])
 (estructuras_de_datos/arbol_binario_indexado.cpp)
 (estructuras_de_datos/Sparse_table.cpp [5])
-(estructuras_de_datos/set_extendido.cpp) (grafos/dijkstra.cpp)
-(grafos/bellman-Ford.cpp [6]) (grafos/floyd.cpp) (grafos/kosaraju.cpp [7])
-(grafos/tarjan.cpp) (grafos/kruskal.cpp) (grafos/prim.cpp [8])
-(grafos/topological_sort_para_grafos_ciclicos.cpp)
+(estructuras_de_datos/set_extendido.cpp)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(grafos/dijkstra.cpp) [6] (grafos/bellman-Ford.cpp) (grafos/floyd.cpp)
+(grafos/kosaraju.cpp [7]) (grafos/tarjan.cpp) (grafos/kruskal.cpp)
+(grafos/prim.cpp [8]) (grafos/topological_sort_para_grafos_ciclicos.cpp)
 (grafos/puntos_de_articulacion_y_puentes.cpp [9]) (grafos/Edmonds_karp.cpp)
 (grafos/min_cost_max_flow.cpp [10]) (grafos/ruta_minima_DAG.cpp)
 (grafos/tour_euleriano.cpp [11]) (otros/Lowest_Common_Ancestor.cpp)
@@ -672,20 +687,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (programacion_dinamica/longest_increasing_subsequence.cpp)
 (programacion_dinamica/longest_increasing_subsequence.cpp [13])
 (programacion_dinamica/Max_Range_Sum.cpp) (programacion_dinamica/Subset_Sum.cpp
-) (programacion_dinamica/traveling_salesman_problem.cpp)
-(otros/busqueda_binaria.cpp [14]) (otros/raiz_babilonica.cpp)
-(otros/codigo_gray.cpp) (matematicas/MCD_y_MCM.cpp)
-(matematicas/exponenciacion_binaria.cpp)
-(matematicas/algoritmo_extendido_de_euclides.cpp) [15]
-(matematicas/phi_de_euler.cpp) (matematicas/multiplicacion_modular.cpp)
-(matematicas/exp_modular.cpp) (matematicas/test_de_rabin_miller.cpp [16])
-(matematicas/rho_de_pollard.cpp) (matematicas/factorizacion_criba.cpp [17])
-(matematicas/fraccion.cpp) (matematicas/matrices.cpp [18])
-(matematicas/logaritmo_discreto.cpp) (cadenas/bordes.cpp) (cadenas/kmp.cpp)
-(cadenas/Hashing.cpp [19]) (geometria/punto.cpp) (geometria/linea.cpp [20])
-(geometria/vector.cpp) (geometria/convex_hull.cpp [21]) (geometria/poligono.cpp
-) [22]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 346.
+) (programacion_dinamica/traveling_salesman_problem.cpp [14])
+(otros/busqueda_binaria.cpp) (otros/raiz_babilonica.cpp) (otros/codigo_gray.cpp
+) (matematicas/MCD_y_MCM.cpp) (matematicas/exponenciacion_binaria.cpp) [15]
+(matematicas/algoritmo_extendido_de_euclides.cpp) (matematicas/phi_de_euler.cpp
+) (matematicas/multiplicacion_modular.cpp) (matematicas/exp_modular.cpp)
+(matematicas/test_de_rabin_miller.cpp [16]) (matematicas/rho_de_pollard.cpp)
+(matematicas/factorizacion_criba.cpp [17]) (matematicas/fraccion.cpp)
+(matematicas/matrices.cpp [18]) (matematicas/logaritmo_discreto.cpp)
+(cadenas/bordes.cpp) (cadenas/kmp.cpp) (cadenas/Hashing.cpp [19])
+(cadenas/string_distance.cpp) (geometria/punto.cpp) (geometria/linea.cpp
+[20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
+(geometria/vector.cpp [21]) (geometria/convex_hull.cpp) (geometria/poligono.cpp
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 332.
 
 
 ("C:\Users\wilmer-PC\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd
@@ -693,174 +714,179 @@ LaTeX Font Info:    Try loading font information for OMS+cmr on input line 346.
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 346.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 332.
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--386
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 []\OT1/cmr/m/n/10 Combinacion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--386
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 \OT1/cmr/m/n/10 (Co-efi-cien-te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--392
+Underfull \hbox (badness 10000) in paragraph at lines 377--377
 []\OT1/cmr/m/n/10 Combinacion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--401
+Underfull \hbox (badness 10000) in paragraph at lines 386--386
 []\OT1/cmr/m/n/10 Permutacion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--407
+Underfull \hbox (badness 10000) in paragraph at lines 392--392
 []\OT1/cmr/m/n/10 Permutacion
  []
 
 
-Overfull \hbox (0.9597pt too wide) in paragraph at lines 412--412
+Overfull \hbox (0.9597pt too wide) in paragraph at lines 397--397
 []\OT1/cmr/m/n/10 Permutaciones
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 422--422
+Underfull \hbox (badness 10000) in paragraph at lines 407--407
 []\OT1/cmr/m/n/10 Distancia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--429
+Underfull \hbox (badness 10000) in paragraph at lines 414--414
 []\OT1/cmr/m/n/10 Longitud de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--430
+Underfull \hbox (badness 10000) in paragraph at lines 415--415
 [][]\OT1/cmr/m/n/10 Area sec-tor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--431
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
 [][]\OT1/cmr/m/n/10 Area co-ro-na
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--437
+Underfull \hbox (badness 10000) in paragraph at lines 423--423
 [][]\OT1/cmr/m/n/10 Area co-no-
  []
 
 
-Overfull \hbox (17.85358pt too wide) in paragraph at lines 420--437
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 438--438
+Underfull \hbox (badness 10000) in paragraph at lines 424--424
 [][]\OT1/cmr/m/n/10 Area co-no-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--438
+Underfull \hbox (badness 10000) in paragraph at lines 424--424
 \OT1/cmr/m/n/10 y el angu-lo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--439
+Underfull \hbox (badness 10000) in paragraph at lines 425--425
 [][]\OT1/cmr/m/n/10 Area co-no-
  []
 
 
-Underfull \hbox (badness 4024) in paragraph at lines 439--439
+Underfull \hbox (badness 4024) in paragraph at lines 425--425
 \OT1/cmr/m/n/10 cien-do los 3
  []
 
 
-Underfull \hbox (badness 7326) in paragraph at lines 440--440
+Underfull \hbox (badness 7326) in paragraph at lines 426--426
 [][]\OT1/cmr/m/n/10 Area de un
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--440
+Underfull \hbox (badness 10000) in paragraph at lines 426--426
 \OT1/cmr/m/n/10 triangu-lo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--440
+Underfull \hbox (badness 10000) in paragraph at lines 426--426
 \OT1/cmr/m/n/10 cir-cuns-cri-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--440
+Underfull \hbox (badness 10000) in paragraph at lines 426--426
 \OT1/cmr/m/n/10 to a una
  []
 
 
-Underfull \hbox (badness 7326) in paragraph at lines 441--441
+Underfull \hbox (badness 7326) in paragraph at lines 427--427
 [][]\OT1/cmr/m/n/10 Area de un
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 441--441
+Underfull \hbox (badness 1571) in paragraph at lines 427--427
 \OT1/cmr/m/n/10 triangu-lo ins-
  []
 
 
-Underfull \hbox (badness 7326) in paragraph at lines 442--442
+Underfull \hbox (badness 7326) in paragraph at lines 428--428
 [][]\OT1/cmr/m/n/10 Area de un
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--442
+Underfull \hbox (badness 10000) in paragraph at lines 428--428
 \OT1/cmr/m/n/10 trian-gu-lo
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 485--485
+Underfull \hbox (badness 10000) in paragraph at lines 471--471
 []\OT1/cmr/m/n/10 Propiedad
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 486--486
+Underfull \hbox (badness 10000) in paragraph at lines 472--472
 []\OT1/cmr/m/n/10 Propiedad
  []
 
 
-Underfull \hbox (badness 5726) in paragraph at lines 486--486
+Underfull \hbox (badness 5726) in paragraph at lines 472--472
 \OT1/cmr/m/n/10 aso-cia-ti-va en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--487
+Underfull \hbox (badness 10000) in paragraph at lines 473--473
 []\OT1/cmr/m/n/10 Propiedad
  []
 
 
-Underfull \hbox (badness 5726) in paragraph at lines 487--487
+Underfull \hbox (badness 5726) in paragraph at lines 473--473
 \OT1/cmr/m/n/10 aso-cia-ti-va en
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 515--516
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 503--504
 [][]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 523--524
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 511--512
 [][]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 529--530
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 517--518
 [][]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 537--538
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 525--526
 [][]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 544--545
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 532--533
+[][]| 
+ []
+
+
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 540--541
+[][]| 
+ []
+
+[25]
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 546--547
 [][]| 
  []
 
@@ -869,172 +895,166 @@ Overfull \hbox (5.69046pt too wide) in paragraph at lines 552--553
 [][]| 
  []
 
-[25]
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 558--559
+
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 559--560
 [][]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 564--565
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 565--566
 [][]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 571--572
+Overfull \vbox (2.40018pt too high) detected at line 572
+ []
+
+
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 572--573
 [][]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 577--578
+Overfull \vbox (2.40018pt too high) detected at line 579
+ []
+
+
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 579--580
 [][]| 
  []
 
 
-Overfull \vbox (2.40018pt too high) detected at line 584
- []
-
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 584--585
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 586--587
 [][]| 
  []
 
 
-Overfull \vbox (2.40018pt too high) detected at line 591
- []
-
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 591--592
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 594--595
 [][]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 598--599
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 602--603
 [][]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 606--607
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 610--611
 [][]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 614--615
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 618--619
 [][]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 622--623
+Overfull \vbox (2.40018pt too high) detected at line 624
+ []
+
+
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 624--625
 [][]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 630--631
+Overfull \vbox (2.40018pt too high) detected at line 633
+ []
+
+
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 633--634
 [][]| 
  []
 
 
-Overfull \vbox (2.40018pt too high) detected at line 636
+Overfull \vbox (14.40018pt too high) detected at line 643
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 636--637
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 643--644
 [][]| 
  []
 
-
-Overfull \vbox (2.40018pt too high) detected at line 645
- []
-
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 645--646
-[][]| 
- []
-
-
-Overfull \vbox (14.40018pt too high) detected at line 655
- []
-
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 655--656
-[][]| 
- []
-
-[26] (otros/template.cpp)
-Underfull \hbox (badness 10000) in paragraph at lines 707--707
+[26] (otros/template.cpp) (otros/template.cpp) [27]
+Underfull \hbox (badness 10000) in paragraph at lines 704--704
 []\OT1/cmr/m/n/10 Formula de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--707
+Underfull \hbox (badness 10000) in paragraph at lines 704--704
 \OT1/cmr/m/n/10 triangu-los
  []
 
-[27]
-Underfull \hbox (badness 7081) in paragraph at lines 718--718
+
+Underfull \hbox (badness 7081) in paragraph at lines 715--715
 []\OT1/cmr/m/n/10 Ecuacion del
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 728--728
+Underfull \hbox (badness 10000) in paragraph at lines 725--725
 []\OT1/cmr/m/n/10 Distancia de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 728--728
+Underfull \hbox (badness 10000) in paragraph at lines 725--725
 \OT1/cmr/m/n/10 un pun-to a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 735--735
+Underfull \hbox (badness 10000) in paragraph at lines 732--732
 []\OT1/cmr/m/n/10 Formula de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 735--735
+Underfull \hbox (badness 10000) in paragraph at lines 732--732
 \OT1/cmr/m/n/10 nume-ros
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 742--742
+Underfull \hbox (badness 10000) in paragraph at lines 739--739
 []\OT1/cmr/m/n/10 Formula de
  []
 
 
-Underfull \hbox (badness 3895) in paragraph at lines 742--742
+Underfull \hbox (badness 3895) in paragraph at lines 739--739
 \OT1/cmr/m/n/10 fi-bo-nac-ci con
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--755
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
 []\OT1/cmr/m/n/10 Coeficientes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 766--766
+Underfull \hbox (badness 10000) in paragraph at lines 763--763
 []\OT1/cmr/m/n/10 Nume-ros de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 778--778
+Underfull \hbox (badness 10000) in paragraph at lines 775--775
 []\OT1/cmr/m/n/10 Teorema de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 785--785
+Underfull \hbox (badness 10000) in paragraph at lines 782--782
 []\OT1/cmr/m/n/10 Determinante
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 806--806
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 803--803
 []\OT1/cmr/m/n/10 Progresion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 813--813
+Underfull \hbox (badness 10000) in paragraph at lines 810--810
 []\OT1/cmr/m/n/10 Progresion
  []
 
-[28] 
+
+Underfull \vbox (badness 1221) has occurred while \output is active []
+
+
+
 AED: lastpage setting LastPage
 
 Underfull \hbox (badness 10000) in paragraph at lines 875--882
@@ -1076,14 +1096,14 @@ LaTeX Info: Redefining \% on input line 24.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 882.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 882.
 Package rerunfilecheck Info: File `repositorio.out' has not changed.
-(rerunfilecheck)             Checksum: 0B8258BE8FDA9C63F58B6E6DCC3CDCB4;4310.
+(rerunfilecheck)             Checksum: 40C23AD42C43D848AF1661686344C448;4434.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 882.
  ) 
 Here is how much of TeX's memory you used:
- 12760 strings out of 492946
- 184280 string characters out of 3124490
- 741147 words of memory out of 3000000
- 14781 multiletter control sequences out of 15000+200000
+ 12862 strings out of 492946
+ 185916 string characters out of 3124490
+ 770481 words of memory out of 3000000
+ 14853 multiletter control sequences out of 15000+200000
  13217 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,21n,58p,378b,1996s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1110,9 +1130,9 @@ r8.pfb><C:/Users/wilmer-PC/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 onts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/wilmer-PC/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/wilmer-PC/App
 Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on repositorio.pdf (29 pages, 593280 bytes).
+Output written on repositorio.pdf (29 pages, 601555 bytes).
 PDF statistics:
- 2314 PDF objects out of 2487 (max. 8388607)
- 1556 named destinations out of 1728 (max. 500000)
- 542 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2346 PDF objects out of 2487 (max. 8388607)
+ 1577 named destinations out of 1728 (max. 500000)
+ 558 words of extra memory for PDF output out of 10000 (max. 10000000)
 

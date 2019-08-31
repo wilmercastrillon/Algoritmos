@@ -24,7 +24,7 @@ lli expmod (lli b, lli e, lli m){//O(log b)
 	return e%2? mulmod(b,q,m) : q;
 }
 
-bool es_primo_prob (lli n, int a) {
+bool es_primo_prob(lli n, int a) {
 	if (n == a) return true;
 	lli s = 0,d = n-1;
 	while (d % 2 == 0) s++,d/=2;

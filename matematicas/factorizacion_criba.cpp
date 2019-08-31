@@ -25,24 +25,18 @@ void criba(){
     }
 }
 
-
-void factCriba(lli n){
-    int l;
-    bool s;
-
+void factCriba(int n){
+    int l, pos;
     while(n != 1){
-        if(n > m2){//n mayor a logintud del array
-            l = sqrt(n) + 1;
-            s = false;
-            for(int i = 0; p[i] <= l; i++){
-                if(n % p[i] == 0){
-                    mapa[p[i]]++;
-                    s = true;
-                    n /= p[i];
+        if(n >= m){//n mayor a logintud del array
+            l = sqrt(n) + 1;  pos = -1;
+            while(p[++pos] <= l)
+                if(n%p[pos]==0){
+                    mapa[p[pos]]++;
+                    n /= p[pos];
                     break;
                 }
-            }
-            if(!s){
+            if(p[pos] > l){
                 mapa[n]++;
                 break;
             }

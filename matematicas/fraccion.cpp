@@ -2,8 +2,8 @@
 
 using namespace std;
 
-int MCD(int a, int b){
-    return  a? MCD(b %a, a): b;
+int mcd(int a, int b){
+    return  a? mcd(b %a, a): b;
 }
 
 struct fraccion {
@@ -11,13 +11,13 @@ struct fraccion {
 
     fraccion(int x, int y) {
         num = x; den = y;
-        if (den < 0){ num *= -1;  den *= -1; }
         if (num == 0) den = 1;
         else {
-            int dividir = MCD(num, den);
+            int dividir = mcd(num, den);
             num /= dividir;
             den /= dividir;
         }
+        if (den < 0){ num *= -1;  den *= -1; }
     }
 
     fraccion operator+(fraccion b) {//suma

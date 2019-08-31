@@ -4,8 +4,8 @@ using namespace std;
 
 typedef long long int lli;
 
-lli gcd(lli a, lli b){
-    return a?gcd(b %a, a):b;
+lli mcd(lli a, lli b){
+    return a? mcd(b %a, a):b;
 }
 
 lli mulmod (lli a, lli b, lli c) { //retorna (a*b) % c
@@ -57,15 +57,15 @@ lli rho(lli n){
         x = (mulmod( x , x , n ) + c)%n;
         y = (mulmod( y , y , n ) + c)%n;
         y = (mulmod( y , y , n ) + c)%n;
-        if( x - y >= 0 ) d = gcd( x - y , n );
-        else d = gcd( y - x , n );
+        if( x - y >= 0 ) d = mcd( x - y , n );
+        else d = mcd( y - x , n );
     }
     return d==n? rho(n):d;
 }
 
 map<lli, lli> prim;
 
-void factRho (lli n){ //O (lg n)^3. un solo numero
+void factRho(lli n){ //O (lg n)^3. un solo numero
 	if (n == 1) return;
 	if (rabin(n)){
 		prim[n]++;

@@ -19,6 +19,7 @@
 \usepackage{multirow}
 \usepackage{supertabular}
 \usepackage{booktabs}
+\usepackage{float}
 \geometry{verbose,landscape,letterpaper,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
 
 
@@ -180,10 +181,10 @@
 			\cppfile[8-23]{programacion_dinamica/knapsack.cpp}
 			\subsection{Longest Increment Subsecuence}
 			Subsecuencia creciente mas larga, solución corta con dp\\
-			O( (n*(n+1))/2 )
-			\cppfile[40-51]{programacion_dinamica/longest_increasing_subsequence.cpp}
+			O((n*(n+1))/2)
+			\cppfile[50-59]{programacion_dinamica/longest_increasing_subsequence.cpp}
 			Solución D{\&}C con gredy, O(n log n)
-			\cppfile[7-38]{programacion_dinamica/longest_increasing_subsequence.cpp}
+			\cppfile[7-48]{programacion_dinamica/longest_increasing_subsequence.cpp}
 			\subsection{Max Range Sum}
 			Algoritmo de Kadane, O(n)
 			\cppfile[6-22]{programacion_dinamica/Max_Range_Sum.cpp}
@@ -196,7 +197,7 @@
 		\section{Otros}
 			\subsection{Busqueda binaria}
 			O(log n)
-			\cppfile[7-22]{otros/busqueda_binaria.cpp}
+			\cppfile[7-19]{otros/busqueda_binaria.cpp}
 			\subsection{Raiz babilonica}
 			Encuentra la raiz cuadrada de un numero
 			\cppfile[4-12]{otros/raiz_babilonica.cpp}
@@ -229,16 +230,16 @@
 			\subsection{Test de Rabin Miller}
 			Devuelve si un numero es primo, requiere de implementar previamente GCD(maximo común divisor),
 			multiplicacion modular y exponenciacion modular.
-			\cppfile[29-52]{matematicas/test_de_rabin_miller.cpp}
+			\cppfile[27-50]{matematicas/test_de_rabin_miller.cpp}
 			\subsection{Rho de pollard}
 			Factorizacion rapida, usar para $n > 10^{12}$ , requiere de implementar previamente el GCD
 			(maximo común divisor), multiplicacion modular,	exponenciacion modular y el test de Rabin Miller.\\
 			O($\sqrt[4]{n}$)
-			\cppfile[54-92]{matematicas/rho_de_pollard.cpp}
+			\cppfile[52-77]{matematicas/rho_de_pollard.cpp}
 			\subsection{Factorizacion con criba}
 			Factorizacion usando la criba, usar para $n \leq 10^{12}$, guarda los factores en un mapa 
 			similar a rho de pollard.
-			\cppfile[10-54]{matematicas/factorizacion_criba.cpp}
+			\cppfile[10-48]{matematicas/factorizacion_criba.cpp}
 			%\subsection{BigInteger c++}
 			%\cppfile[4-197]{matematicas/biginteger.cpp}
 			\subsection{Fraccion}
@@ -261,6 +262,9 @@
 			\cppfile[18-29]{cadenas/kmp.cpp}
 			\subsection{Tablas hash}
 			\cppfile[5-16]{cadenas/Hashing.cpp}
+			\subsection{String alignment}
+			Mínima distancia entre dos string.\\O(s1*s2)
+			\cppfile[8-25]{cadenas/string_distance.cpp}
 			
 		\section{Geometria}
 			\subsection{Punto}
@@ -281,95 +285,75 @@
 			
 	
 	%Tomado de notebook c++ de la UFPS
-	\newpage
+	%\newpage
 	\section{Tips and formulas(UFPS, 2017)}
 
-\subsection{ASCII Table}
-Caracteres ASCII con sus respectivos valores numéricos.
+		\subsection{ASCII Table}
+			Caracteres ASCII con sus respectivos valores numéricos.
+		\begin{table}[H]
+			\begin{tabular}{|l|l|l|l|l|l|l|l|}
+				\hline \textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII}  &
+					\textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII} \\ \hline
+				0 & NUL & 8 & BS & 16 & DLE & 24 & CAN  \\ \hline
+				1 & SOH & 9 & TAB & 17 & DC1 & 25 & EM  \\ \hline
+				2 & STX & 10 & LF & 18 & DC2 & 26 & SUB  \\ \hline
+				3 & ETX & 11 & VT & 19 & DC3 & 27 & ESC  \\ \hline
+				4 & EOT & 12 & FF & 20 & DC4 & 28 & FS  \\ \hline
+				5 & ENQ & 13 & CR & 21 & NAK & 29 & GS  \\ \hline
+				6 & ACK & 14 & SO & 22 & SYN & 30 & RS  \\ \hline
+				7 & BEL & 15 & SI & 23 & ETB & 31 & US  \\ \hline
+			\end{tabular}
+		\end{table}
+		
+		\begin{table}[H]
+			\begin{tabular}{|l|l|l|l|l|l|l|l|}
+				\hline \textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII}  &
+					\textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII} \\ \hline
+				32 & space & 40 & ( & 48 & 0 & 56 & 8 \\ \hline
+				33 &  ! & 41 & ) & 49 & 1 & 57 & 9 \\ \hline
+				34 &  " & 42 & * & 50 & 2 & 58 & : \\ \hline
+				35 & \# & 43 & + & 51 & 3 & 59 & ; \\ \hline
+				36 & \$ & 44 & , & 52 & 4 & 60 & < \\ \hline
+				37 & \% & 45 & - & 53 & 5 & 61 & = \\ \hline
+				38 & \& & 46 & . & 54 & 6 & 62 & > \\ \hline
+				39 &  ' & 47 & / & 55 & 7 & 63 & ? \\ \hline
+			\end{tabular}
+		\end{table}
+		
+		
+		\begin{table}[H]
+			\begin{tabular}{|l|l|l|l|l|l|l|l|}
+				\hline \textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII}  &
+					\textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII} \\ \hline
+				64 & @ & 72 & H & 80 & P & 88 & X \\ \hline
+				65 & A & 73 & I & 81 & Q & 89 & Y \\ \hline
+				66 & B & 74 & J & 82 & R & 90 & Z \\ \hline
+				67 & C & 75 & K & 83 & S & 91 & [ \\ \hline
+				68 & D & 76 & L & 84 & T & 92 & \textbackslash \\ \hline
+				69 & E & 77 & M & 85 & U & 93 & ] \\ \hline
+				70 & F & 78 & N & 86 & V & 94 & \textasciicircum \\ \hline
+				71 & G & 79 & O & 87 & W & 95 & \_ \\ \hline
+			\end{tabular}
+		\end{table}
+		
+		\begin{table}[H]
+			\begin{tabular}{|l|l|l|l|l|l|l|l|}
+				\hline \textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII}  &
+					\textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII} \\ \hline
+				96 & ` & 104 & h & 112 & p & 120 & x \\ \hline
+				97 & a & 105 & i & 113 & q & 121 & y \\ \hline
+				98 & b & 106 & j & 114 & r & 122 & z \\ \hline
+				99 & c & 107 & k & 115 & s & 123 & \{ \\ \hline
+				100 & d & 108 & l & 116 & t & 124 & \textbar \\ \hline
+				101 & e & 109 & m & 117 & u & 125 & \} \\ \hline
+				102 & f & 110 & n & 118 & v & 126 & \textasciitilde \\ \hline
+				103 & g &  111 & o & 119 & w & 127 &  \\ \hline
+			\end{tabular}
+		\end{table}
+		
+		\newpage
 
 
-\begin{tabbing}
-\textbf{No.}\hspace{1cm} \=  \textbf{ASCII}\hspace{2cm} \= \textbf{No.}\hspace{1cm} \= \textbf{ASCII}\hspace{2cm}  \\ 
-0 \> NUL \> 16 \> DLE \\
-1 \> SOH \> 17 \> DC1 \\
-2 \> STX \> 18 \> DC2 \\
-3 \> ETX \> 19 \> DC3 \\
-4 \> EOT \> 20 \> DC4 \\
-5 \> ENQ \> 21 \> NAK \\
-6 \> ACK \> 22 \> SYN \\
-7 \> BEL \> 23 \> ETB \\
-8 \> BS \> 24 \> CAN \\
-9 \> TAB \> 25 \> EM \\
-10 \> LF \> 26 \> SUB \\
-11 \> VT \> 27 \> ESC \\
-12 \> FF \> 28 \> FS \\
-13 \> CR \> 29 \> GS \\
-14 \> SO \> 30 \> RS \\
-15 \> SI \> 31 \> US \\ 
-\end{tabbing}
-
-
-\begin{tabbing}
-\textbf{No.}\hspace{1cm} \=  \textbf{ASCII}\hspace{2cm} \= \textbf{No.}\hspace{1cm} \= \textbf{ASCII}\hspace{2cm}  \\ 
-32 \> (space) \> 48 \> 0 \\
-33 \> ! \> 49 \> 1 \\
-34 \> " \> 50 \> 2 \\
-35 \> \# \> 51 \> 3 \\
-36 \> \$ \> 52 \> 4 \\
-37 \> \% \> 53 \> 5 \\
-38 \> \& \> 54 \> 6 \\
-39 \> ' \> 55 \> 7 \\
-40 \> ( \> 56 \> 8 \\
-41 \> ) \> 57 \> 9 \\
-42 \> * \> 58 \> : \\
-43 \> + \> 59 \> ; \\
-44 \> , \> 60 \> < \\
-45 \> - \> 61 \> = \\
-46 \> . \> 62 \> > \\
-47 \> / \> 63 \> ? \\ 
-\end{tabbing}
-
-\begin{tabbing}
-\textbf{No.}\hspace{1cm} \=  \textbf{ASCII}\hspace{2cm} \= \textbf{No.}\hspace{1cm} \= \textbf{ASCII}\hspace{2cm}  \\ 
-64 \> @ \> 80 \> P \\
-65 \> A \> 81 \> Q \\
-66 \> B \> 82 \> R \\
-67 \> C \> 83 \> S \\
-68 \> D \> 84 \> T \\
-69 \> E \> 85 \> U \\
-70 \> F \> 86 \> V \\
-71 \> G \> 87 \> W \\
-72 \> H \> 88 \> X \\
-73 \> I \> 89 \> Y \\
-74 \> J \> 90 \> Z \\
-75 \> K \> 91 \> [ \\
-76 \> L \> 92 \> \textbackslash \\
-77 \> M \> 93 \> ] \\
-78 \> N \> 94 \> \textasciicircum \\
-79 \> O \> 95 \> \_ \\ 
-\end{tabbing}
-
-\begin{tabbing}
-\textbf{No.}\hspace{1cm} \=  \textbf{ASCII}\hspace{2cm} \= \textbf{No.}\hspace{1cm} \= \textbf{ASCII}\hspace{2cm}  \\ 
-96 \> ` \> 112 \> p \\
-97 \> a \> 113 \> q \\
-98 \> b \> 114 \> r \\
-99 \> c \> 115 \> s \\
-100 \> d \> 116 \> t \\
-101 \> e \> 117 \> u \\
-102 \> f \> 118 \> v \\
-103 \> g \> 119 \> w \\
-104 \> h \> 120 \> x \\
-105 \> i \> 121 \> y \\
-106 \> j \> 122 \> z \\
-107 \> k \> 123 \> \{ \\
-108 \> l \> 124 \> \textbar \\
-109 \> m \> 125 \> \} \\
-110 \> n \> 126 \> \textasciitilde \\
-111 \> o \> 127 \>  \\  
-\end{tabbing}
-
-\newpage
 \subsection{Formulas}
 \begin{center}
 \tablefirsthead{}
@@ -378,6 +362,7 @@ Caracteres ASCII con sus respectivos valores numéricos.
 \multicolumn{2}{r}{{Continúa en la siguiente columna}} \\}
 \tablelasttail{}
 {\renewcommand{\arraystretch}{1.4}
+
 \begin{supertabular}{|p{2.2cm}|p{8.2cm}|}
 \hline
 \multicolumn{2}{|c|}{} \\
@@ -423,7 +408,7 @@ Distancia Manhattan & $d_{M}(P_{1}, P_{2}) = |x_{2} - x_{1}| + |y_{2} - y_{1}|$ 
 \multicolumn{2}{|c|}{} \\
 \multicolumn{2}{|c|}{CIRCUNFERENCIA Y CÍRCULO} \\ 
 \multicolumn{2}{|c|}{} \\ \hline
-\multicolumn{2}{|p{12cm}|}{Considerando $r$ como el radio, $\alpha$ como el ángulo del arco o sector, y (R, r) como radio mayor y menor respectivamente.} \\ \hline
+\multicolumn{2}{|p{10cm}|}{Considerando $r$ como el radio, $\alpha$ como el ángulo del arco o sector, y (R, r) como radio mayor y menor respectivamente.} \\ \hline
 Área                   & $A = \pi * r^{2} $\\ \hline
 Longitud               & $L = 2*\pi*r$  \\ \hline
 Longitud de un arco    & $L = \displaystyle\frac{2*\pi*r*\alpha}{360}$  \\ \hline
@@ -433,7 +418,8 @@ Longitud de un arco    & $L = \displaystyle\frac{2*\pi*r*\alpha}{360}$  \\ \hlin
 \multicolumn{2}{|c|}{TRIÁNGULO} \\ 
 \multicolumn{2}{|c|}{} \\ \hline
 %--------------------------------------------------
-\multicolumn{2}{|p{11cm}|}{Considerando $b$ como la longitud de la base, $h$ como la altura, letras minúsculas como la longitud de los lados, letras mayúsculas como los ángulos, y $r$ como el radio de círcunferencias asociadas.} \\ \hline
+
+\multicolumn{2}{|p{10cm}|}{Considerando $b$ como la longitud de la base, $h$ como la altura, letras minúsculas como la longitud de los lados, letras mayúsculas como los ángulos, y $r$ como el radio de círcunferencias asociadas.} \\ \hline
 Área conociendo base y altura & $A = \displaystyle\frac{1}{2}b * h$ \\ \hline
 Área conociendo 2 lados y el ángulo que forman & $A = \displaystyle\frac{1}{2}b*a*sin(C)$ \\ \hline
 Área conociendo los 3 lados & $ A = \sqrt{p(p - a)(p - b)(p - c)}$ con $p = \displaystyle\frac{a + b + c}{2}$ \\ \hline
@@ -444,37 +430,37 @@ Longitud de un arco    & $L = \displaystyle\frac{2*\pi*r*\alpha}{360}$  \\ \hlin
 \multicolumn{2}{|c|}{RAZONES TRIGONOMÉTRICAS} \\
 \multicolumn{2}{|c|}{} \\ \hline
 %-----------------------------------------------------
-\multicolumn{2}{|p{11cm}|}{Considerando un triangulo rectángulo de lados $a, b$ y $c$, con vértices
+\multicolumn{2}{|p{10cm}|}{Considerando un triangulo rectángulo de lados $a, b$ y $c$, con vértices
 $A, B$ y $C$ (cada vértice opuesto al lado cuya letra minuscula coincide con el) y un ángulo $\alpha$ con
 centro en el vertice $A$. a y b son catetos, c es la hipotenusa:}
 \\ \hline
 %-----------------------------------------------------
-\multicolumn{2}{|p{11cm}|}{
+\multicolumn{2}{|p{10cm}|}{
 $sin(\alpha) = \displaystyle\frac{cateto\ opuesto}{hipotenusa} = \displaystyle\frac{a}{c}$ 
 
 } 
 \\ \hline
-\multicolumn{2}{|p{11cm}|}{
+\multicolumn{2}{|p{10cm}|}{
 $cos(\alpha) = \displaystyle\frac{cateto\ adyacente}{hipotenusa} = \frac{b}{c}$ 
 
 } 
 \\ \hline
-\multicolumn{2}{|p{11cm}|}{
+\multicolumn{2}{|p{10cm}|}{
 $tan(\alpha) = \displaystyle\frac{cateto\ opuesto}{cateto\ adyacente} = \frac{a}{b}$ 
 
 } 
 \\ \hline
-\multicolumn{2}{|p{11cm}|}{
+\multicolumn{2}{|p{10cm}|}{
 $sec(\alpha) = \displaystyle\frac{1}{cos(\alpha)} = \frac{c}{b}$ 
 
 }
 \\ \hline
-\multicolumn{2}{|p{11cm}|}{
+\multicolumn{2}{|p{10cm}|}{
 $csc(\alpha) = \displaystyle\frac{1}{sin(\alpha)} = \frac{c}{a}$ 
 
 } 
 \\ \hline
-\multicolumn{2}{|p{11cm}|}{
+\multicolumn{2}{|p{10cm}|}{
 $cot(\alpha) = \displaystyle\frac{1}{tan(\alpha)} = \frac{b}{a}$ 
 
 }
@@ -498,6 +484,8 @@ Número áureo & $\phi = \displaystyle\frac{1 + \sqrt{5}}{2} \approx 1.61803$
 \end{supertabular}
 }
 \end{center}
+
+
 \subsection{Sequences}
 Listado de secuencias mas comunes y como hallarlas.
 
@@ -685,10 +673,19 @@ $O(\log_{2}n)$ \> -\\
 $O(1)$ \> -\\ 
 \end{tabbing}
 
+
+%------ fin de la referencia ------------------------------
+
+
 	\section{Extras}
 		\subsection{Template}
 			Plantilla de typedef, define, etc.
-			\cppfile[1-34]{otros/template.cpp}
+			\cppfile[1-28]{otros/template.cpp}
+		
+		\subsection{Ayudas}
+			\cppfile[33-49]{otros/template.cpp}
+		
+		\newpage
 		\subsection{Formulas extra}
 			
 			\begin{center}
@@ -814,7 +811,7 @@ $O(1)$ \> -\\
 					a_{1}*r^{n-1}$ y la sumatoria de los primeros n elementos es:
 					
 					{\large
-					$\prod_{i=1}^{n} a_{i} = a_{1} * \frac{r^{n}-1}{r-1}$}
+					$\sum_{i=1}^{n}a_{i} = a_{1} * \frac{r^{n}-1}{r-1}$}
 					\\ \hline
 					%Agregar:
 					%a^phi(n) es congruente con 1 mod n
