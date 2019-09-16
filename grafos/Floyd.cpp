@@ -9,8 +9,7 @@ int cam[10][10], matriz[10][10];
 
 void imprimirCamino(int f, int c){
     if(cam[f][c] == f){
-        printf("%d", f);
-        return;
+        printf("%d", f);  return;
     }else{
         imprimirCamino(f, cam[f][c]);
         printf(" %d", cam[f][c]);
@@ -19,23 +18,21 @@ void imprimirCamino(int f, int c){
 
 void FloydWarshall(int nodos){
     int aux;
-    //for(int i = 0; i < nodos; i++) matriz[i][i] = 0;//sin caminos
-    for(int i = 0; i < nodos; i++){
+    //si no necesita caminos, solo hacer la diagonal cero
+    for(int i = 0; i < nodos; i++)
         for(int j = 0; j < nodos; j++){
             if(i == j) matriz[i][j] = 0;
             if(i != j && matriz[i][j] != inf) cam[i][j] = i;
         }
-    }
 
     for(int k = 0; k < nodos; k++)
-        for(int i = 0; i < nodos; i++)
-            for(int j = 0; j < nodos; j++){
-                aux = matriz[i][k] + matriz[k][j];
-                if(matriz[i][j] > aux){
-                    matriz[i][j] = aux;
-                    cam[i][j] = cam[k][j];
-                }
-            }
+    for(int i = 0; i < nodos; i++)
+    for(int j = 0; j < nodos; j++){
+        aux = matriz[i][k] + matriz[k][j];
+        if(matriz[i][j] > aux){
+            matriz[i][j] = aux;  cam[i][j] = cam[k][j];
+        }
+    }
 }
 
 int main(){

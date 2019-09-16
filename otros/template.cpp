@@ -14,7 +14,8 @@ typedef long long int lli;
 
 #define mpiii(a, b, c) iii(a, ii(b, c))
 #define inf 1000000000//10^9
-#define INFmemset 5436//inf para memeset
+#define INFmemset 5436//inf para memeset en enteros
+#define INFmemsetLL 3586//inf para memset en lli
 #define forr(i, n) for(int i = 0; i < n; ++i)
 #define forab(i, a, b) for(int i = a; i < b; ++i)
 

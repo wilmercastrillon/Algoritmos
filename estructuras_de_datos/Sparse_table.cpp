@@ -15,16 +15,14 @@ struct sparseTable{
     sparseTable(int n, int a[]){
         memset(spt, 0, sizeof(spt));
         for(int i = 0; i < n; i++){
-            arr[i] = a[i];
-            spt[i][0] = i;
+            arr[i] = a[i];  spt[i][0] = i;
         }
 
         for(int j = 1; (1<<j) <= n; j++){
-            for(int i=0; i+(1<<j)-1 < n; i++)
-                if(arr[spt[i][j-1]] < arr[spt[i+(1<<(j-1))][j-1]])
-                    spt[i][j] = spt[i][j-1];
-                else
-                    spt[i][j] = spt[i+(1<<(j-1))][j-1];
+        for(int i=0; i+(1<<j)-1 < n; i++)
+            if(arr[spt[i][j-1]] < arr[spt[i+(1<<(j-1))][j-1]])
+                spt[i][j] = spt[i][j-1];
+            else spt[i][j] = spt[i+(1<<(j-1))][j-1];
         }
     }
 

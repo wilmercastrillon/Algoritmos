@@ -10,7 +10,7 @@ typedef vector<int> vi;
 typedef vector<vi> vvi;
 
 int start, target, MAX=110, mf, f, matriz[110][110];
-vi p;  vvi grafo;
+vi p;  vvi grafo;//matriz inicialmente se debe llenar de ceros
 
 void augment(int v, int minEdge){
     if(v == start){ f = minEdge; return; }

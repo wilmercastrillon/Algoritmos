@@ -26,7 +26,7 @@ void EulerTour(lii i, int u){
                     break;
                 }
             }
-            //EulerTour(cyc.insert(i, ii(v.first, u)), v.first);
+            //inserta conexion (v.first,u)
             EulerTour(cyc.insert(i, u), v.first);
         }
     }

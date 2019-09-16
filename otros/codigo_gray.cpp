@@ -2,9 +2,7 @@
 
 using namespace std;
 
-int gray(int n) {
-	return n ^ (n >> 1);
-}
+int gray(int n) { return n ^ (n >> 1); }
 
 int num(int gray) {//invertir
 	int n = 0;

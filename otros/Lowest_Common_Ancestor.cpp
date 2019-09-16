@@ -10,6 +10,7 @@ struct sparseTable{
     sparseTable(){}
 
     sparseTable(int n, int a[]){
+        memset(spt, 0, sizeof(spt));
         for(int i = 0; i < n; i++){
             arr[i] = a[i];
             spt[i][0] = i;
@@ -46,14 +47,14 @@ void dfs(int nodo, int deep, vvi &grafo){
     for(int i = 0; i < grafo[nodo].size(); i++){
         if(h[grafo[nodo][i]] != -1) continue;
         dfs(grafo[nodo][i], deep+1, grafo);
-        e[idx] = nodo;
-        l[idx++] = deep;
+        e[idx] = nodo;  l[idx++] = deep;
     }
 }
 
 void BuildRMQ(vvi &grafo){//llamar antes de LCA
     idx = 0;
     memset(h, -1, sizeof(h));
+    memset(l, -1, sizeof(l));
     dfs(0, 0, grafo);
     table = sparseTable(grafo.size()<<1, l);
 }

@@ -7,20 +7,16 @@ typedef vector <vi> vvi;
 vector<int> res;//guarda la respuesta.
 vector<int> ent;//se debe llenar con la cantidad de
                 //aristas entrantes que tiene cada nodo.
-
 void topological_sort(vvi &lis, int tam){
     res.clear();
     queue<int> s;
-    for(int i = 1; i <= tam; i++){
+    for(int i = 1; i <= tam; i++)
         if(!ent[i]) s.push(i);
-    }
 
     int n, m;
     while(s.size()){
-        n = s.front();
-        s.pop();
+        n = s.front();  s.pop();
         res.push_back(n);
-
         for(int i = 0; i < lis[n].size(); i++){
             m = lis[n][i];
             ent[m]--;

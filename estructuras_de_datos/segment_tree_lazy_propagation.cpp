@@ -59,7 +59,7 @@ struct segment_tree{
 
         st[pos] = lazy[pos];
         if(izq != der){
-            lazy[mov_izq(pos)] = lazy[mov_der(pos)] = lazy[pos];
+            lazy[mov_izq(pos)]=lazy[mov_der(pos)]=lazy[pos];
         }
         lazy[pos] = -1;
     }
@@ -80,7 +80,7 @@ struct segment_tree{
     }
 
     int update(int i, int j, int nuevo){//metodo a invocar
-        return lazy_propagation(1, 0, n-1, i, j, nuevo);//propagar lazy
+        return lazy_propagation(1, 0, n-1, i, j, nuevo);
     }
 };
 

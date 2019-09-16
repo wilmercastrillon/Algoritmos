@@ -92,11 +92,11 @@
 			\cppfile[16-33]{estructuras_de_datos/tablas_aditivas.cpp}
 			\subsection{Disjoint set union find}
 			Construccion O(n)\\asocia elementos en conjuntos de arboles.
-			\cppfile[6-52]{estructuras_de_datos/disjoint_set_union_find.cpp}
+			\cppfile[6-47]{estructuras_de_datos/disjoint_set_union_find.cpp}
 			\subsection{Union find con compresion de caminos}
-			asocia elementos de manera simple\\
-			metodo mismoGrupo es el mismo del union-find normal.
-			\cppfile[9-24]{estructuras_de_datos/union_find-compresion_de_caminos.cpp}
+			Asocia elementos de manera simple\\
+			método "mismoGrupo" es el mismo del union-find normal.
+			\cppfile[9-22]{estructuras_de_datos/union_find-compresion_de_caminos.cpp}
 			\subsection{Segment tree}
 			Ejemplo de RMQ (Range Minium Query)\\
 			Contruccion O(n)\\Consulta O(log n)\\Update O(log n)
@@ -108,12 +108,12 @@
 			\cppfile[29-84]{estructuras_de_datos/segment_tree_lazy_propagation.cpp}
 			\subsection{Arbol binario indexado}
 			Arbol de Fenwick, estructura para el RSM(Range Sum Query)\\
-			Construccion O(n log n) \\Consulta O(log k)\\Update O(log n)
-			\cppfile[8-39]{estructuras_de_datos/arbol_binario_indexado.cpp}
+			Construcción O(n log n) \\Consulta O(log k)\\Update O(log n)
+			\cppfile[8-35]{estructuras_de_datos/arbol_binario_indexado.cpp}
 			\subsection{Sparse table}
 			Para RMQ (Range Minium Query) en arreglos estaticos\\
 			Construcción O(n log n)\\Consulta O(1)
-			\cppfile[8-37]{estructuras_de_datos/Sparse_table.cpp}
+			\cppfile[8-35]{estructuras_de_datos/Sparse_table.cpp}
 			\subsection{Set extendido}
 			Set indexado.
 			\cppfile[2-10]{estructuras_de_datos/set_extendido.cpp}
@@ -122,7 +122,7 @@
 			\subsection{Dijkstra}
 			Ruta minima
 			O((n + m)log n)
-			\cppfile[12-48]{grafos/dijkstra.cpp}
+			\cppfile[12-46]{grafos/dijkstra.cpp}
 			\subsection{Bellman-Ford}
 			Ruta minima con pesos negativos
 			O($n^{2}$)
@@ -130,7 +130,7 @@
 			\subsection{Floyd Warshall}
 			Ruta minima de toda una matriz de adyacencia, recomendable si n $\leq$ 100\\	
 			O($n^{3}$)
-			\cppfile[8-39]{grafos/floyd.cpp}
+			\cppfile[8-36]{grafos/floyd.cpp}
 			\subsection{kosaraju}
 			Componentes fuertemente conexas grafos si y no dirigidos\\
 			O(2(n + m))
@@ -150,7 +150,7 @@
 			\cppfile[10-34]{grafos/prim.cpp}
 			\subsection{Topological sort}%%%ORDENAMIENTO TOPOLOGICO
 			O(n + m), algoritmo de kahn.
-			\cppfile[7-30]{grafos/topological_sort_para_grafos_ciclicos.cpp}
+			\cppfile[7-26]{grafos/topological_sort_para_grafos_ciclicos.cpp}
 			\subsection{Puntos de articulación y puentes}
 			O(n + m).
 			\cppfile[10-48]{grafos/puntos_de_articulacion_y_puentes.cpp}
@@ -169,22 +169,22 @@
 			Ancestro común mas bajo en un arbol, para u y v encontrar el nodo mas bajo que este por encima de
 			ambos.\\
 			Solucion con Range Minimum Query (sparse table).
-			\cppfile[38-64]{otros/Lowest_Common_Ancestor.cpp}
+			\cppfile[38-65]{otros/Lowest_Common_Ancestor.cpp}
 			Solucion con construcción O(n log n) y consultas O(log n)
-			\cppfile[14-55]{otros/Lowest_Common_Ancestor_logN.cpp}
+			\cppfile[14-51]{otros/Lowest_Common_Ancestor_logN.cpp}
 			
 		\section{Programacion dinamica}
 			\subsection{Subconjuntos de un conjunto}
 			O($2^{n}$)
-			\cppfile[6-17]{programacion_dinamica/bitmask.cpp}
+			\cppfile[6-15]{programacion_dinamica/bitmask.cpp}
 			\subsection{Problema de la mochila}
 			\cppfile[8-23]{programacion_dinamica/knapsack.cpp}
 			\subsection{Longest Increment Subsecuence}
 			Subsecuencia creciente mas larga, solución corta con dp\\
 			O((n*(n+1))/2)
-			\cppfile[50-59]{programacion_dinamica/longest_increasing_subsequence.cpp}
+			\cppfile[48-57]{programacion_dinamica/longest_increasing_subsequence.cpp}
 			Solución D{\&}C con gredy, O(n log n)
-			\cppfile[7-48]{programacion_dinamica/longest_increasing_subsequence.cpp}
+			\cppfile[7-46]{programacion_dinamica/longest_increasing_subsequence.cpp}
 			\subsection{Max Range Sum}
 			Algoritmo de Kadane, O(n)
 			\cppfile[6-22]{programacion_dinamica/Max_Range_Sum.cpp}
@@ -202,22 +202,25 @@
 			Encuentra la raiz cuadrada de un numero
 			\cppfile[4-12]{otros/raiz_babilonica.cpp}
 			\subsection{Codigo gray}
-			\cppfile[5-14]{otros/codigo_gray.cpp}
+			\cppfile[5-12]{otros/codigo_gray.cpp}
 			
 		\section{Matematicas}
 			\subsection{MCD y MCM}
 			Maximo comun divisor(MCD) y minimo comun multiplo(MCM)
-			\cppfile[5-11]{matematicas/MCD_y_MCM.cpp}
+			\cppfile[5-6]{matematicas/MCD_y_MCM.cpp}
 			\subsection{Exponenciacion binaria}
 			O(log n)
-			\cppfile[6-14]{matematicas/exponenciacion_binaria.cpp}
+			\cppfile[6-13]{matematicas/exponenciacion_binaria.cpp}
 			\subsection{Algoritmo extendido de euclides}
 			Encuentra dos numeros x e y tal que: MCD(a, b) = ax + by
 			\cppfile[5-15]{matematicas/algoritmo_extendido_de_euclides.cpp}
+			\subsection{Ecuaciones diofanticas}
+			Resuelve ecuaciones de la forma aX+bY=c
+			\cppfile[20-38]{matematicas/ecuaciones_diofanticas.cpp}
 			\subsection{Phi de euler}
 			Devuelve la cantidad de coprimos de un numero n\\
 			O($\sqrt{n}$) 
-			\cppfile[5-15]{matematicas/phi_de_euler.cpp}
+			\cppfile[5-14]{matematicas/phi_de_euler.cpp}
 			\subsection{Multiplicacion modular}
 			Encuentra (a*b) mod c, la operacion puede generar overflow
 				si se realiza directamente, el metodo mulmod evita el overflow usando un
@@ -285,7 +288,7 @@
 			
 	
 	%Tomado de notebook c++ de la UFPS
-	%\newpage
+	\newpage
 	\section{Tips and formulas(UFPS, 2017)}
 
 		\subsection{ASCII Table}
@@ -351,7 +354,7 @@
 			\end{tabular}
 		\end{table}
 		
-		\newpage
+		%\newpage
 
 
 \subsection{Formulas}
@@ -680,10 +683,10 @@ $O(1)$ \> -\\
 	\section{Extras}
 		\subsection{Template}
 			Plantilla de typedef, define, etc.
-			\cppfile[1-28]{otros/template.cpp}
+			\cppfile[1-29]{otros/template.cpp}
 		
 		\subsection{Ayudas}
-			\cppfile[33-49]{otros/template.cpp}
+			\cppfile[34-50]{otros/template.cpp}
 		
 		\newpage
 		\subsection{Formulas extra}
@@ -749,6 +752,33 @@ $O(1)$ \> -\\
 					\end{bmatrix}$}
 					\\ \hline
 					
+					Progresión aritmética & Sea $d$ la diferencia y $a_{1}$ el numero inicial, entonces $a_{n} = 
+					a_{1}+(n-1)d$. y la sumatoria de los primeros n elementos es:
+					
+					\vspace{1mm}
+					{\Large$\sum_{i=1}^{n}a_{i} = n\frac{a_{1}+a_{n}}{2}$}
+					\\ \hline
+					
+					Progresión geométrica & Sea $r$ la razón y $a_{1}$ el numero inicial, entonces $a_{n} = 
+					a_{1}*r^{n-1}$ y la sumatoria de los primeros n elementos es:
+					
+					{\large
+					$\sum_{i=1}^{n}a_{i} = a_{1} * \frac{r^{n}-1}{r-1}$}
+					\\ \hline
+					
+					Teorema de Erd\H{o}s–Gallai & Una secuencia de enteros $d_{1} \geq ... \geq d_{n}$ puede 
+					representar una secuencia de grados de un grafo si y solo si: para cada k en $1 \leq k \leq n$
+					
+					{\large
+					$\sum_{i=1}^{k} d_{i} \leq k(k+1)+\sum_{i=k+1}^{n} min(d_{i},k)$}
+					\\ \hline
+					
+					Cantidad de divisores de un numero & con n = $p_{1}^{a_{1}}*p_{2}^{a_{2}}*...*p_{k}^{a_{k}}$ 
+					la cantidad sera:
+					
+					{\Large$\prod_{i=1}^{k} a_{i}+1$}
+					\\ \hline
+					
 					Coeficientes binomiales & Encuentra $n$ combinado $k$. para construir el triangulo de pascal 
 					solo poner en $n$ la fila y en $k$ la columna.
 					
@@ -772,11 +802,11 @@ $O(1)$ \> -\\
 					$}
 					\\ \hline
 					
-					Teorema de Erd\H{o}s–Gallai & Una secuencia de enteros $d_{1} \geq ... \geq d_{n}$ puede 
-					representar una secuencia de grados de un grafo si y solo si: para cada k en $1 \leq k \leq n$
+					Teorema de Pick & Sea $A$ el área de un polígono con puntos enteros, $B$ la cantidad de puntos 
+					enteros en el borde, $I$ la cantidad de puntos enteros interiores, entonces:
 					
-					{\large
-					$\sum_{i=1}^{k} d_{i} \leq k(k+1)+\sum_{i=k+1}^{n} min(d_{i},k)$}
+					$A = I + \frac{B}{2} - 1$
+					\vspace{1mm}
 					\\ \hline
 					
 					Determinante de Gauss & Encontrar el área de un polígono en el plano cartesiano a partir de 
@@ -800,22 +830,9 @@ $O(1)$ \> -\\
 					{\large $A = \frac{1}{2} |S - D|$}
 					\\ \hline
 					
-					Progresión aritmética & Sea $d$ la diferencia y $a_{1}$ el numero inicial, entonces $a_{n} = 
-					a_{1}+(n-1)d$. y la sumatoria de los primeros n elementos es:
-					
-					\vspace{1mm}
-					{\Large$\sum_{i=1}^{n}a_{i} = n\frac{a_{1}+a_{n}}{2}$}
-					\\ \hline
-					
-					Progresión geométrica & Sea $r$ la razón y $a_{1}$ el numero inicial, entonces $a_{n} = 
-					a_{1}*r^{n-1}$ y la sumatoria de los primeros n elementos es:
-					
-					{\large
-					$\sum_{i=1}^{n}a_{i} = a_{1} * \frac{r^{n}-1}{r-1}$}
-					\\ \hline
 					%Agregar:
 					%a^phi(n) es congruente con 1 mod n
-					%los divisores de phi(n) son posibles soluciones para a^x congruente con 1 mod m
+					%los divisores de phi(x) son posibles soluciones para a^x congruente con 1 mod m
 				\end{supertabular}
 				}
 			\end{center}

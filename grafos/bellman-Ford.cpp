@@ -11,25 +11,25 @@ typedef vector<int> vi;
 
 vector<iii> grafo; //lista de incidencia
 
-bool BellmanFord(vector<iii> &lista, int nodos, int inicio, vector<int> &dis){
+bool BellmanFord(vector<iii> &lista, int nodos, int inicio,
+        vector<int> &dis){
     dis.assign(nodos + 1, inf);
-	dis[inicio] = 0;
-	int aux;
+    dis[inicio] = 0;
+    int aux;
 
-	for (int i = 0; i < nodos; i++)
-		for (int j = 0; j < lista.size(); j++) {
-			aux = dis[lista[j].second.first] + lista[j].first;
-			if (dis[lista[j].second.second] > aux){
-				dis[lista[j].second.second] = aux;
-			}
-		}
+    for (int i = 0; i < nodos; i++)
+        for (int j = 0; j < lista.size(); j++) {
+            aux = dis[lista[j].second.first] + lista[j].first;
+            if(dis[lista[j].second.second] > aux)
+                dis[lista[j].second.second] = aux;
+        }
 
     for(int j = 0; j < lista.size(); j++){
         aux = dis[lista[j].second.first] + lista[j].first;
         if(dis[lista[j].second.second] > aux)
             return false;//existe ciclo!!!
     }
-	return true;
+    return true;
 }
 
 vector<vi> matriz(10);

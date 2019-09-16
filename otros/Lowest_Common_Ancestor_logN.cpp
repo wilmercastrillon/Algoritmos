@@ -17,8 +17,7 @@ int spt[MAX][Log2];//spt[i][j] = (2^j)-th ancestro de i
 vvi grafo;
 
 void dfs(int nodo, int deep, int ant){
-    nivel[nodo] = deep;
-    padre[nodo] = ant;
+    nivel[nodo] = deep;  padre[nodo] = ant;
     for(int i = 0; i < grafo[nodo].size(); i++){
         if(nivel[grafo[nodo][i]] != -1) continue;
         dfs(grafo[nodo][i], deep+1, nodo);
@@ -28,18 +27,16 @@ void dfs(int nodo, int deep, int ant){
 void proceso(int n){//Llamar antes de LCA
     memset(nivel, -1, sizeof(nivel));
     dfs(0, 0, -1);
-    for(int i = 0; i < n; i++)
-        spt[i][0] = padre[i];
+    for(int i = 0; i < n; i++) spt[i][0] = padre[i];
 
     for(int i = 1; i < Log2; i++)
     for(int j = 0; j < n; j++)
-        if(spt[j][i-1] != -1){
+        if(spt[j][i-1] != -1)
             spt[j][i] = spt[spt[j][i-1]][i-1];
-        }
 }
 
 int LCA(int u, int v){
-    if(nivel[u] > nivel[v]) swap(u, v);//v debe estar arriba de u
+    if(nivel[u] > nivel[v]) swap(u, v);
 
     for(int i = 0; i < Log2; i++)//subimos a u
         if((nivel[v] - nivel[u])>>i&1)
@@ -48,8 +45,7 @@ int LCA(int u, int v){
 
     for(int i = Log2-1; i >= 0; i--)
         if(spt[u][i] != spt[v][i]){
-            u = spt[u][i];
-            v = spt[v][i];
+            u = spt[u][i];  v = spt[v][i];
         }
     return spt[u][0];
 }

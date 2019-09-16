@@ -66,14 +66,14 @@ lli rho(lli n){
 map<lli, lli> prim;
 
 void factRho(lli n){ //O (lg n)^3. un solo numero
-	if (n == 1) return;
-	if (rabin(n)){
-		prim[n]++;
-		return;
-	}
-	lli factor = rho(n);
-	factRho(factor);
-	factRho(n/factor);
+    if (n == 1) return;
+    if (rabin(n)){
+        prim[n]++;
+        return;
+    }
+    lli factor = rho(n);
+    factRho(factor);
+    factRho(n/factor);
 }
 
 int main(){

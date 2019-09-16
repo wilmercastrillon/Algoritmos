@@ -16,14 +16,12 @@ vi dijkstra(vvii &grafo, int nodo, int tam){
     priority_queue<ii> cola;
     cola.push(ii(-0, nodo));
     vi dis(tam + 1, inf);  dis[nodo] = 0;
-    int peso, aux;
-    ii par, par2;
+    int peso, aux;  ii par, par2;
 
     while(cola.size()){
         par = cola.top();//peso, nodo
         cola.pop();
-        peso = -par.first;
-        nodo = par.second;
+        peso = -par.first;  nodo = par.second;
 
         for(int i = 0; i < grafo[nodo].size(); i++){
             par2 = grafo[nodo][i];

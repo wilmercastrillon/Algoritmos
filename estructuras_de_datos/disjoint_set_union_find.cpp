@@ -9,10 +9,8 @@ struct union_find{
 
 	void iniciar(int n){
 		for (int i = 0; i < n; i++) {
-			padre[i] = i;
-			rango[i] = 0;
-			grupo[i].clear();
-			grupo[i].push_back(i);
+			padre[i] = i;  rango[i] = 0;
+			grupo[i].clear();  grupo[i].push_back(i);
 		}
 	}
 
@@ -39,15 +37,12 @@ struct union_find{
 		if(rango[y] == rango[x]) rango[y]++;
 	}
 
-	bool MismoGrupo(int x, int y){
-		return raiz(x) == raiz(y);
-	}
+	bool MismoGrupo(int x, int y){return raiz(x) == raiz(y);}
 
 	void grupo_n(int n){
-	    cout << "elementos en el grupo de " << n << endl;
+	    cout << "#elementos en el grupo de " << n << endl;
 	    n = raiz(n);
-	    for(int i = 0; i < grupo[n].size(); i++) cout << grupo[n][i] << " ";
-	    cout << endl;
+	    for(int i = 0; i < grupo[n].size(); i++) cout << grupo[n][i] << '\n';
 	}
 };
 

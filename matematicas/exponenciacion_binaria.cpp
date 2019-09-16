@@ -4,13 +4,12 @@ using namespace std;
 typedef long long int lli;
 
 lli exp_bin(lli a, lli n) {
-	lli res = 1;
-	while (n) {
-		if (n & 1) res *= a;
-		a *= a;
-		n >>= 1;
-	}
-	return res;
+    lli res = 1;
+    while (n) {
+        if (n & 1) res *= a;
+        a *= a;  n >>= 1;
+    }
+    return res;
 }
 
 int main(){

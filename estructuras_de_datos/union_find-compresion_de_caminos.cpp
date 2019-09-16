@@ -7,20 +7,18 @@ typedef vector<int> vi;
 const int MAX = 100;
 
 struct union_find{
-	int padre[MAX];
+    int padre[MAX];
 
-	void iniciar(int n){
-		for (int i = 0; i < n; i++) padre[i] = i;
-	}
+    void iniciar(int n){
+        for (int i = 0; i < n; i++) padre[i] = i;
+    }
 
     int raiz(int x){
         if(x == padre[x]) return x;
         else return padre[x] = raiz(padre[x]);
     }
 
-	void unir(int x, int y){
-		padre[raiz(x)] = raiz(y);
-	}
+	void unir(int x, int y){padre[raiz(x)] = raiz(y);}
 };
 
 int main(){

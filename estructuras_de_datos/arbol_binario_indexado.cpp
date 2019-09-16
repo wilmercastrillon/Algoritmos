@@ -7,20 +7,16 @@ typedef vector<int> vi;
 
 struct FenwickTree{
     vi ft;
-
-    void construir(int n){//indexamos desde 1
-        ft.assign(n + 1, 0);
-    }
+    //indexamos desde 1
+    void construir(int n){ ft.assign(n + 1, 0); }
 
     void construir(vi &v){
         ft.assign(v.size() + 1, 0);
         for(int i = 1; i <= v.size(); i++)
             actualizar(i, v[i - 1]);
     }
-
-    int lsOne(int n){//bit menos significativo en 1
-        return n & (-n);
-    }
+    //bit menos significativo en 1
+    int lsOne(int n){ return n & (-n); }
 
     int rsq(int i){//suma de 1 hasta i
         int acum = 0;

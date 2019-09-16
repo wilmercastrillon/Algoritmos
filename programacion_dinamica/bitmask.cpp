@@ -7,11 +7,9 @@ void mask(int n, int ar[]){
     int l = 1 << n;
 
     for(int i = 0; i < l; i++){
-        for(int j = 0; j < n; j++){
-            if(i & (1 << j)){
+        for(int j = 0; j < n; j++)
+            if(i & (1 << j))
                 printf("%d ", ar[j]);
-            }
-        }
         printf("\n");
     }
 }

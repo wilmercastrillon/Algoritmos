@@ -2,13 +2,8 @@
 
 using namespace std;
 
-int mcd(int a, int b){//algoritmo de euclides
-    return  a? mcd(b %a, a): b;
-}
-
-int mcm(int a, int b) {
-	return a*b/mcd(a,b);
-}
+int mcd(int a,int b){return a? mcd(b%a,a): b;}
+int mcm(int a,int b){return a*(b/mcd(a,b));}
 
 int main(){
     int a, b;

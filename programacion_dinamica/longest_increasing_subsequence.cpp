@@ -19,9 +19,7 @@ void mostrar(int pos){
 }
 
 void imp(int ar[], int v){
-    for(int i = 0; i < v; ++i){
-        printf("%3d",ar[i]);
-    }
+    for(int i = 0; i < v; ++i) printf("%3d",ar[i]);
     printf("\n");
 }
 
