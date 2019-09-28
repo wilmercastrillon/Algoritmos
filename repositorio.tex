@@ -268,6 +268,14 @@
 			\subsection{String alignment}
 			Mínima distancia entre dos string.\\O(s1*s2)
 			\cppfile[8-25]{cadenas/string_distance.cpp}
+			\subsection{Arreglo de sufijos}
+			\cppfile[7-48]{cadenas/Arreglo_de_sufijos.cpp}
+			\subsection{Longest common prefix}
+			Requiere implementar arreglo de sufijos.
+			\cppfile[50-65]{cadenas/Arreglo_de_sufijos.cpp}
+			\subsection{Subcadena común mas larga}
+			Requiere implementar arreglo de sufijos y Longest common prefix.
+			\cppfile[67-89]{cadenas/Arreglo_de_sufijos.cpp}
 			
 		\section{Geometria}
 			\subsection{Punto}
@@ -288,7 +296,7 @@
 			
 	
 	%Tomado de notebook c++ de la UFPS
-	\newpage
+	%\newpage
 	\section{Tips and formulas(UFPS, 2017)}
 
 		\subsection{ASCII Table}
@@ -488,7 +496,7 @@ Número áureo & $\phi = \displaystyle\frac{1 + \sqrt{5}}{2} \approx 1.61803$
 }
 \end{center}
 
-
+\newpage
 \subsection{Sequences}
 Listado de secuencias mas comunes y como hallarlas.
 
@@ -688,7 +696,7 @@ $O(1)$ \> -\\
 		\subsection{Ayudas}
 			\cppfile[34-50]{otros/template.cpp}
 		
-		\newpage
+		%\newpage
 		\subsection{Formulas extra}
 			
 			\begin{center}
@@ -704,12 +712,13 @@ $O(1)$ \> -\\
 					\multicolumn{2}{|c|}{Formulas extras} \\
 					\multicolumn{2}{|c|}{} \\ \hline
 					
-					Formula de triángulos degenerados & Si el resultado es mayor a 0.5 es un triángulo de calidad 
-					buena. Es posible formar un triangulo si $a+b>c$ con $c>b>a$.
+					Formula de números fibonacci &
 					
-					{\Large $\frac{(a + b - c) * (a + c - b) * (b  + c - a)} {a * b * c}$}				
+					\vspace{1mm}
+					{\Large $f(n) = \frac{1}{\sqrt{5}} * [ (\frac{1 + \sqrt{5}}{2})^{n}  - 
+						(\frac{1 - \sqrt{5}}{2})^{n}]$ }
 					\\ \hline
-
+					
 					Ecuación de la recta que pasa por dos puntos & y = mx + b.
 					
 					{\Large $\frac{x - x_{1}}{x_{2} - x_{1}} = \frac{y - y_{1}}{y_{2} - y_{1}}$}
@@ -732,13 +741,12 @@ $O(1)$ \> -\\
 					{\Large $d = \frac{a*px + b*py + c}{\sqrt{a^{2} + b^{2}}}$}
 					\\ \hline
 					
-					Formula de números fibonacci &
+					Formula de triángulos degenerados & Si el resultado es mayor a 0.5 es un triángulo de calidad 
+					buena. Es posible formar un triangulo si $a+b>c$ con $c>b>a$.
 					
-					\vspace{1mm}
-					{\Large $f(n) = \frac{1}{\sqrt{5}} * [ (\frac{1 + \sqrt{5}}{2})^{n}  - 
-						(\frac{1 - \sqrt{5}}{2})^{n}]$ }
+					{\Large $\frac{(a + b - c) * (a + c - b) * (b  + c - a)} {a * b * c}$}				
 					\\ \hline
-					
+
 					Formula de fibonacci con matrices &
 					
 					{\large
