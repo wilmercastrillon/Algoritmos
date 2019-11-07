@@ -1,19 +1,19 @@
 #include <stdio.h>
-#define max 2
+#define maxn 2
 
 using namespace std;
 
 typedef long long int lli;
 
-struct matrix{  lli mat[max][max];  };
+struct matrix{  lli mat[maxn][maxn];  };
 
 matrix matmul(matrix &a, matrix &b){//multiplicar
     matrix ans;
     int i, j, k;
 
-    for(i = 0; i < max; i++)
-    for(j = 0; j < max; j++)
-        for(ans.mat[i][j] = k = 0; k < max; k++)
+    for(i = 0; i < maxn; i++)
+    for(j = 0; j < maxn; j++)
+        for(ans.mat[i][j] = k = 0; k < maxn; k++)
             ans.mat[i][j] += (a.mat[i][k] * b.mat[k][j]);
 
     return ans;
@@ -23,8 +23,8 @@ matrix matpow(matrix base, int p){//exp binaria
     matrix ans;
     int i, j;
 
-    for(i = 0; i < max; i++)
-        for(j = 0; j < max; j++)
+    for(i = 0; i < maxn; i++)
+        for(j = 0; j < maxn; j++)
             ans.mat[i][j] = (i == j);
 
     while(p){

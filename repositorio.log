@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.15)  27 SEP 2019 20:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.15)  25 OCT 2019 14:05
 entering extended mode
 **./repositorio.tex
 (repositorio.tex
@@ -696,7 +696,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (matematicas/factorizacion_criba.cpp) (matematicas/fraccion.cpp [17])
 (matematicas/matrices.cpp) (matematicas/logaritmo_discreto.cpp [18])
 (cadenas/bordes.cpp) (cadenas/kmp.cpp) (cadenas/Hashing.cpp)
-(cadenas/string_distance.cpp) [19] (cadenas/Arreglo_de_sufijos.cpp)
+(cadenas/string_distance.cpp [19]) (cadenas/Arreglo_de_sufijos.cpp)
 (cadenas/Arreglo_de_sufijos.cpp) (cadenas/Arreglo_de_sufijos.cpp [20])
 (geometria/punto.cpp) (geometria/linea.cpp [21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1112,10 +1112,10 @@ Package rerunfilecheck Info: File `repositorio.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 907.
  ) 
 Here is how much of TeX's memory you used:
- 13000 strings out of 492946
- 188079 string characters out of 3124490
+ 12995 strings out of 492946
+ 188020 string characters out of 3124490
  798481 words of memory out of 3000000
- 14909 multiletter control sequences out of 15000+200000
+ 14903 multiletter control sequences out of 15000+200000
  13217 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,21n,58p,378b,1992s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1142,9 +1142,9 @@ r8.pfb><C:/Users/wilmer-PC/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 onts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/wilmer-PC/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/wilmer-PC/App
 Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on repositorio.pdf (30 pages, 619500 bytes).
+Output written on repositorio.pdf (30 pages, 619799 bytes).
 PDF statistics:
- 2451 PDF objects out of 2487 (max. 8388607)
- 1649 named destinations out of 1728 (max. 500000)
+ 2452 PDF objects out of 2487 (max. 8388607)
+ 1650 named destinations out of 1728 (max. 500000)
  590 words of extra memory for PDF output out of 10000 (max. 10000000)
 

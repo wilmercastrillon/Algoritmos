@@ -8,9 +8,9 @@ typedef vector<int> vi;
 struct FenwickTree{
     vi ft;
     //indexamos desde 1
-    void construir(int n){ ft.assign(n + 1, 0); }
+    void iniciar(int n){ ft.assign(n + 1, 0); }
 
-    void construir(vi &v){
+    void iniciar(vi &v){
         ft.assign(v.size() + 1, 0);
         for(int i = 1; i <= v.size(); i++)
             actualizar(i, v[i - 1]);

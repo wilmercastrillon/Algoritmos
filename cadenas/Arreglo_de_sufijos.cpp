@@ -88,13 +88,43 @@ vector<string> LCS(){
     return res;
 }
 
+ii stringMatching(){
+    int lo=0, hi = len_cad-1, mid =lo;
+    while(lo < hi){
+        //printf("bs en %d\n", mid);
+        mid = (lo + hi)/2;
+        int res = strncmp(cad+sa[mid],subcad,len_subcad);
+        if(res >= 0) hi = mid;
+        else lo = mid + 1;
+    }
+
+    if(strncmp(cad+sa[lo],subcad,len_subcad) != 0)
+        return ii(-1,-1);
+        //return false;
+    //return true;
+    ii ans;  ans.first = lo;
+    lo = 0;  hi = len_cad-1;  mid = lo;
+
+    while(lo < hi){
+        mid = (lo + hi) / 2;
+        int res = strncmp(cad+sa[mid],subcad,len_subcad);
+        if(res > 0) hi = mid;
+        else lo = mid + 1;
+    }
+
+    if(strncmp(cad+sa[hi],subcad,len_subcad) != 0) hi--;
+    ans.second = hi;
+    return ans;
+}
+
 int main(){
 
     while(scanf("%s", &cad) != EOF){
         construir_SA();
+        LCP();
 
         forr(i,len_cad){
-            printf("%2d | SA %2d | %s\n", i, sa[i], cad+sa[i]);
+            printf("%2d | SA %2d | lcp %2d | %s\n", i, sa[i], lcp[i], cad+sa[i]);
         }
         printf("\n");
     }

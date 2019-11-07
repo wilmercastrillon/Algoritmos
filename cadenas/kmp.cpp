@@ -29,8 +29,8 @@ void kmp(string cad, string subcad){
 }
 
 int main(){
-    string s1 = "(((xox)o(xox))o((xox)o(xox)))";
-    string s2 =  "((xox)o(xox))";
+    string s1 = "0010020030040050060070080090000100200300400500600700800900";
+    string s2 = "00100200300400500600700800900";
     preCalcular(s2);
     kmp(s1, s2);
     return 0;
