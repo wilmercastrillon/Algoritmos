@@ -4,7 +4,7 @@ using namespace std;
 typedef long long int lli;
 #define mod 1000000000000LL;
 
-lli prime = 573573, tab[100005], pot[100005];
+lli prime = 131, tab[100005], pot[100005];
 string v;
 
 void hashing(){
@@ -18,11 +18,16 @@ lli query(int p1, int p2){//pot[i] = prime^i
     return tab[p2] - tab[p1]*pot[p2-p1];
 }
 
-lli compute_hash(string &s){//Hash
-    lli res = 0;
-    for(int i = 0; i < s.size(); i++)
-        res = ((res*prime)) + s[i];
-    return res;
+long long compute_hash(string const& s) {
+    const int p = 131;
+    const int m = 1e9 + 9;
+    long long hash_value = 0;
+    long long p_pow = 1;
+    for (char c : s) {
+        hash_value = (hash_value + (c + 0) * p_pow) % m;
+        p_pow = (p_pow * p) % m;
+    }
+    return hash_value;
 }
 
 void pre(){
@@ -35,7 +40,7 @@ void pre(){
 
 int main(){
     //pre();
-    string s1 = "hola mundo";
+    string s1 = "ab";
     printf("hash = %lld\n", compute_hash(s1));
     return 0;
 }

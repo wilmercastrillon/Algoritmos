@@ -5,7 +5,7 @@
 using namespace std;
 typedef vector<int> vi;
 
-bool dp[5][50];//fila cantidad de numeros
+bool dp[10][50];//fila cantidad de numeros
 //columas rango maximo a evaluar
 
 void pre(vi &num){
@@ -21,12 +21,18 @@ void pre(vi &num){
 
 int main(){
     vi n;
+    n.push_back(7);
+    n.push_back(7);
+    n.push_back(7);
+    n.push_back(7);
+    n.push_back(8);
     n.push_back(1);
-    n.push_back(3);
-    n.push_back(5);
+    n.push_back(1);
+    n.push_back(1);
+    n.push_back(6);
     pre(n);
 
-    int m = 9;
+    int m = 14;
     if(dp[n.size() - 1][m]) cout << "existe subconjunto\n";
     else cout << "no existe subconjunto\n";
 

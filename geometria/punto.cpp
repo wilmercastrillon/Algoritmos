@@ -40,7 +40,7 @@ vec toVec(punto a, punto b){return vec(b.x-a.x, b.y-a.y);}
 double DEG_TO_RAD(double n){ return n*3.1416/180.0; }
 
 punto rotar(punto p, double grados){
-    double rad = DEG_TO_RAD(grados) + cos(5);
+    double rad = DEG_TO_RAD(grados);
     return punto(p.x*cos(rad) - p.y*sin(rad),
                 p.x*sin(rad) + p.y*cos(rad));
 }
@@ -58,9 +58,11 @@ bool colineal(punto p, punto q, punto r){
     return fabs(cross(toVec(p,q),toVec(p,r))) < eps;
 }//r esta en la misma linea que p-q
 
+double RAD_TO_DEG(double n){ return n*180.0/3.1416; }
+
 int main(){
-    punto a(0, 0), b(5, 4), c(3, 3);
-    printf("%.5f\n", angulo(a, b, c));
+    punto a(1.0, 0.0), b(1.0, 1.0), c(1.0, 2.0);
+    printf("%.5f\n", RAD_TO_DEG(angulo(a, b, c)));
 
     return 0;
 }

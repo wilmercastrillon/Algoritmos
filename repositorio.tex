@@ -88,31 +88,30 @@
 	
 		\section{Estructuras de datos}
 			\subsection{Tablas aditivas}
-			Construccion O(n)
+			Construcción O(n), Consulta O(1)
 			\cppfile[16-33]{estructuras_de_datos/tablas_aditivas.cpp}
 			\subsection{Disjoint set union find}
-			Construccion O(n)\\asocia elementos en conjuntos de arboles.
-			\cppfile[6-47]{estructuras_de_datos/disjoint_set_union_find.cpp}
-			\subsection{Union find con compresion de caminos}
-			Asocia elementos de manera simple\\
-			método "mismoGrupo" es el mismo del union-find normal.
-			\cppfile[9-22]{estructuras_de_datos/union_find-compresion_de_caminos.cpp}
+			Asocia elementos en conjuntos de arboles.\\
+			Construcción O(n)
+			\cppfile[7-44]{estructuras_de_datos/disjoint_set_union_find.cpp}
+			%\subsection{Union find con compresion de caminos}
+			%Asocia elementos de manera simple.
+			%\cppfile[9-22]{estructuras_de_datos/union_find-compresion_de_caminos.cpp}
 			\subsection{Segment tree}
 			Ejemplo de RMQ (Range Minium Query)\\
-			Contruccion O(n)\\Consulta O(log n)\\Update O(log n)
+			Construcción O(n), Consulta O(log n), Update O(log n)
 			\cppfile[8-68]{estructuras_de_datos/segment_tree.cpp}%29-84
 			\subsection{Segment tree con lazy propagation}
-			Permite actualizar rangos del arbol en O(log n).\\
-			solo estan los metodos nuevos y los que hay que actualizar, 
-			lo demas es lo mismo del segment tree normal.
+			Permite actualizar rangos del árbol en O(log n).\\
+			solo están los métodos nuevos y los que hay que actualizar, lo demás es lo mismo del segment tree normal.
 			\cppfile[29-84]{estructuras_de_datos/segment_tree_lazy_propagation.cpp}
-			\subsection{Arbol binario indexado}
-			Arbol de Fenwick, estructura para el RSM(Range Sum Query)\\
-			Construcción O(n log n) \\Consulta O(log k)\\Update O(log n)
+			\subsection{Arbol de Fenwick}
+			Estructura para el RSM(Range Sum Query)\\
+			Construcción O(n log n), Consulta O(log k), Update O(log n)
 			\cppfile[8-35]{estructuras_de_datos/arbol_binario_indexado.cpp}
 			\subsection{Sparse table}
 			Para RMQ (Range Minium Query) en arreglos estaticos\\
-			Construcción O(n log n)\\Consulta O(1)
+			Construcción O(n log n), Consulta O(1)
 			\cppfile[8-35]{estructuras_de_datos/Sparse_table.cpp}
 			\subsection{Set extendido}
 			Set indexado.
@@ -230,6 +229,10 @@
 			\subsection{Exponenciacion modular}
 			Encuentra $(a^b)$ mod c, se nesecita implementar previamente multiplicacion modular.
 			\cppfile[16-20]{matematicas/exp_modular.cpp}
+			\subsection{Inverso modular}
+			Encontrar X talque $a*x \equiv 1\% m$, el primer metodo requiere algoritmo extendido de euclides y el 
+			segundo exponenciacion modular
+			\cppfile[34-43]{matematicas/inverso_multiplicativo_modular.cpp}
 			\subsection{Test de Rabin Miller}
 			Devuelve si un numero es primo, requiere de implementar previamente GCD(maximo común divisor),
 			multiplicacion modular y exponenciacion modular.
@@ -273,6 +276,9 @@
 			\subsection{Longest common prefix}
 			Requiere implementar arreglo de sufijos.
 			\cppfile[50-65]{cadenas/Arreglo_de_sufijos.cpp}
+			\subsection{String matching}
+			Requiere implementar arreglo de sufijos con la cadena principal.
+			\cppfile[92-114]{cadenas/Arreglo_de_sufijos.cpp}
 			\subsection{Subcadena común mas larga}
 			Requiere implementar arreglo de sufijos y Longest common prefix.
 			\cppfile[67-89]{cadenas/Arreglo_de_sufijos.cpp}
@@ -301,21 +307,7 @@
 
 		\subsection{ASCII Table}
 			Caracteres ASCII con sus respectivos valores numéricos.
-		\begin{table}[H]
-			\begin{tabular}{|l|l|l|l|l|l|l|l|}
-				\hline \textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII}  &
-					\textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII} \\ \hline
-				0 & NUL & 8 & BS & 16 & DLE & 24 & CAN  \\ \hline
-				1 & SOH & 9 & TAB & 17 & DC1 & 25 & EM  \\ \hline
-				2 & STX & 10 & LF & 18 & DC2 & 26 & SUB  \\ \hline
-				3 & ETX & 11 & VT & 19 & DC3 & 27 & ESC  \\ \hline
-				4 & EOT & 12 & FF & 20 & DC4 & 28 & FS  \\ \hline
-				5 & ENQ & 13 & CR & 21 & NAK & 29 & GS  \\ \hline
-				6 & ACK & 14 & SO & 22 & SYN & 30 & RS  \\ \hline
-				7 & BEL & 15 & SI & 23 & ETB & 31 & US  \\ \hline
-			\end{tabular}
-		\end{table}
-		
+
 		\begin{table}[H]
 			\begin{tabular}{|l|l|l|l|l|l|l|l|}
 				\hline \textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII}  &
@@ -375,128 +367,114 @@
 {\renewcommand{\arraystretch}{1.4}
 
 \begin{supertabular}{|p{2.2cm}|p{8.2cm}|}
-\hline
-\multicolumn{2}{|c|}{} \\
-\multicolumn{2}{|c|}{PERMUTACIÓN Y COMBINACIÓN} \\
-\multicolumn{2}{|c|}{} \\ \hline
-Combinación (Coeficiente Binomial) & Número de subconjuntos de k elementos escogidos de un conjunto con n elementos.
+	\hline
+	\multicolumn{2}{|c|}{} \\
+	\multicolumn{2}{|c|}{PERMUTACIÓN Y COMBINACIÓN} \\
+	\multicolumn{2}{|c|}{} \\ \hline
+	Combnación (Coeficiente Binomial) & Número de subconjuntos de k elementos escogidos de un conjunto con n elementos.
 
-$ \binom{n}{k} = \binom{n}{n-k} = \displaystyle\frac{n!}{k!(n-k)!} $ 
+		$ \binom{n}{k} = \binom{n}{n-k} = \displaystyle\frac{n!}{k!(n-k)!} $ 
+	\\ \hline
 
-\\ \hline
+	Combinación con repetición & Número de grupos formados por n elementos, partiendo de m tipos de elementos.
 
-Combinación con repetición & Número de grupos formados por n elementos, partiendo de m tipos de elementos.
+	$ CR_{m}^{n} = \binom{m+n-1}{n} = \displaystyle\frac{(m + n - 1)!}{n!(m-1)!} $
+	\\ \hline
+	Permutación & Número de formas de agrupar n elementos, donde importa el orden y sin repetir elementos
 
-$ CR_{m}^{n} = \binom{m+n-1}{n} = \displaystyle\frac{(m + n - 1)!}{n!(m-1)!} $
+	$ P_{n} = n! $
+	\\ \hline
+	Permutación múltiple & 
+	Elegir r elementos de n posibles con repetición 
 
-\\ \hline
-Permutación & Número de formas de agrupar n elementos, donde importa el orden y sin repetir elementos
-
-$ P_{n} = n! $
-\\ \hline
-Permutación múltiple & 
-Elegir r elementos de n posibles con repetición 
-
-
-$ n^{r} $
-\\ \hline
-Permutación con repetición & Se tienen n elementos donde el primer elemento se repite a veces , el segundo b veces , el tercero c veces, ...
-
-$ PR_{n}^{a,b,c...} = \displaystyle\frac{P_{n}}{a!b!c!...}$
-
-\\ \hline
-Permutaciones sin repetición & Núumero de formas de agrupar r elementos de n disponibles, sin repetir elementos
-
-
-$\displaystyle\frac{n!}{(n-r)!}$
-
-\\ \hline
-\multicolumn{2}{|c|}{} \\
-\multicolumn{2}{|c|}{DISTANCIAS} \\
-\multicolumn{2}{|c|}{} \\ \hline
-Distancia Euclideana & $d_{E}(P_{1},P_{2}) = \sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}}$ \\ \hline
-Distancia Manhattan & $d_{M}(P_{1}, P_{2}) = |x_{2} - x_{1}| + |y_{2} - y_{1}|$ \\ \hline
-\multicolumn{2}{|c|}{} \\
-\multicolumn{2}{|c|}{CIRCUNFERENCIA Y CÍRCULO} \\ 
-\multicolumn{2}{|c|}{} \\ \hline
-\multicolumn{2}{|p{10cm}|}{Considerando $r$ como el radio, $\alpha$ como el ángulo del arco o sector, y (R, r) como radio mayor y menor respectivamente.} \\ \hline
-Área                   & $A = \pi * r^{2} $\\ \hline
-Longitud               & $L = 2*\pi*r$  \\ \hline
-Longitud de un arco    & $L = \displaystyle\frac{2*\pi*r*\alpha}{360}$  \\ \hline
-Área sector circular   & $A = \displaystyle\frac{\pi * r^{2} * \alpha}{360}$ \\ \hline
-Área corona circular   & $A = \pi  (R^{2} - r^{2})$ \\ \hline
-\multicolumn{2}{|c|}{} \\
-\multicolumn{2}{|c|}{TRIÁNGULO} \\ 
-\multicolumn{2}{|c|}{} \\ \hline
-%--------------------------------------------------
-
-\multicolumn{2}{|p{10cm}|}{Considerando $b$ como la longitud de la base, $h$ como la altura, letras minúsculas como la longitud de los lados, letras mayúsculas como los ángulos, y $r$ como el radio de círcunferencias asociadas.} \\ \hline
-Área conociendo base y altura & $A = \displaystyle\frac{1}{2}b * h$ \\ \hline
-Área conociendo 2 lados y el ángulo que forman & $A = \displaystyle\frac{1}{2}b*a*sin(C)$ \\ \hline
-Área conociendo los 3 lados & $ A = \sqrt{p(p - a)(p - b)(p - c)}$ con $p = \displaystyle\frac{a + b + c}{2}$ \\ \hline
-Área de un triángulo circunscrito a una circunferencia & $A = \displaystyle\frac{abc}{4r}$ \\ \hline
-Área de un triángulo inscrito a una circunferencia & $A = r(\displaystyle\frac{a+b+c}{2})$ \\ \hline
-Área de un triangulo equilátero & $A = \displaystyle\frac{\sqrt{3}}{4}a^{2}$ \\ \hline
-\multicolumn{2}{|c|}{} \\
-\multicolumn{2}{|c|}{RAZONES TRIGONOMÉTRICAS} \\
-\multicolumn{2}{|c|}{} \\ \hline
-%-----------------------------------------------------
-\multicolumn{2}{|p{10cm}|}{Considerando un triangulo rectángulo de lados $a, b$ y $c$, con vértices
-$A, B$ y $C$ (cada vértice opuesto al lado cuya letra minuscula coincide con el) y un ángulo $\alpha$ con
-centro en el vertice $A$. a y b son catetos, c es la hipotenusa:}
-\\ \hline
-%-----------------------------------------------------
-\multicolumn{2}{|p{10cm}|}{
-$sin(\alpha) = \displaystyle\frac{cateto\ opuesto}{hipotenusa} = \displaystyle\frac{a}{c}$ 
-
-} 
-\\ \hline
-\multicolumn{2}{|p{10cm}|}{
-$cos(\alpha) = \displaystyle\frac{cateto\ adyacente}{hipotenusa} = \frac{b}{c}$ 
-
-} 
-\\ \hline
-\multicolumn{2}{|p{10cm}|}{
-$tan(\alpha) = \displaystyle\frac{cateto\ opuesto}{cateto\ adyacente} = \frac{a}{b}$ 
-
-} 
-\\ \hline
-\multicolumn{2}{|p{10cm}|}{
-$sec(\alpha) = \displaystyle\frac{1}{cos(\alpha)} = \frac{c}{b}$ 
-
-}
-\\ \hline
-\multicolumn{2}{|p{10cm}|}{
-$csc(\alpha) = \displaystyle\frac{1}{sin(\alpha)} = \frac{c}{a}$ 
-
-} 
-\\ \hline
-\multicolumn{2}{|p{10cm}|}{
-$cot(\alpha) = \displaystyle\frac{1}{tan(\alpha)} = \frac{b}{a}$ 
-
-}
-\\ \hline
-\multicolumn{2}{|c|}{} \\
-\multicolumn{2}{|c|}{PROPIEDADES DEL MÓDULO (RESIDUO)} \\
-\multicolumn{2}{|c|}{} \\ \hline
-Propiedad neutro & (a \% b) \% b = a \% b \\ \hline
-Propiedad asociativa en multiplicación &  (ab) \% c = ((a \% c)(b \% c)) \% c \\ \hline
-Propiedad asociativa en suma & (a + b) \% c = ((a \% c) + (b \% c)) \% c \\ \hline
-\multicolumn{2}{|c|}{} \\
-\multicolumn{2}{|c|}{CONSTANTES} \\
-\multicolumn{2}{|c|}{} \\ \hline
-Pi & $\pi = acos(-1) \approx 3.14159$ \\ \hline
-e & $e \approx 2.71828$ \\ \hline
-Número áureo & $\phi = \displaystyle\frac{1 + \sqrt{5}}{2} \approx 1.61803$ 
-
-\\ \hline
-
-
+	$ n^{r} $
+	\\ \hline
+	Permutación con repetición & Se tienen n elementos donde el primer elemento se repite a veces , el segundo b veces 
+	, el tercero c veces, ...
+	$ PR_{n}^{a,b,c...} = \displaystyle\frac{P_{n}}{a!b!c!...}$
+	\\ \hline
+	
+	Permutaciones sin repetición & Número de formas de agrupar r elementos de n disponibles, sin repetir elementos
+	$\displaystyle\frac{n!}{(n-r)!}$
+	\\ \hline
 \end{supertabular}
+
+\begin{supertabular}{|p{2.2cm}|p{8.2cm}|}
+	\hline
+	\multicolumn{2}{|c|}{} \\
+	\multicolumn{2}{|c|}{DISTANCIAS} \\
+	\multicolumn{2}{|c|}{} \\ \hline
+	Distancia Euclideana & $d_{E}(P_{1},P_{2}) = \sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}}$ \\ \hline
+	Distancia Manhattan & $d_{M}(P_{1}, P_{2}) = |x_{2} - x_{1}| + |y_{2} - y_{1}|$ \\ \hline 
+\end{supertabular}
+
+\begin{supertabular}{|p{2.0cm}|p{2.8cm}|p{2.0cm}|p{2.8cm}|}
+	\hline
+	\multicolumn{4}{|c|}{} \\
+	\multicolumn{4}{|c|}{CIRCUNFERENCIA Y CÍRCULO} \\ 
+	\multicolumn{4}{|c|}{} \\ \hline
+	\multicolumn{4}{|p{10cm}|}{Considerando $r$ como el radio, $\alpha$ como el ángulo del arco o sector, y (R, r) 
+		como radio mayor y menor respectivamente.} \\ \hline
+	Área                   & $A = \pi * r^{2} $ & Longitud & $L = 2*\pi*r$  \\ \hline
+	Longitud de un arco    & $L = \displaystyle\frac{2*\pi*r*\alpha}{360}$ & Área sector circular 
+		& $A = \displaystyle\frac{\pi * r^{2} * \alpha}{360}$ \\ \hline
+	Área corona circular   & $A = \pi  (R^{2} - r^{2})$ & & \\ \hline 
+\end{supertabular}
+
+\begin{supertabular}{|p{2.0cm}|p{2.8cm}|p{2.0cm}|p{2.8cm}|}
+	\hline
+	\multicolumn{4}{|c|}{} \\
+	\multicolumn{4}{|c|}{TRIÁNGULO} \\ 
+	\multicolumn{4}{|c|}{} \\ \hline
+
+	\multicolumn{4}{|p{10cm}|}{Considerando $b$ como la longitud de la base, $h$ como la altura, letras minúsculas 
+	como la longitud de los lados, letras mayúsculas como los ángulos, y $r$ como el radio de círcunferencias 
+	asociadas.} \\ \hline
+	
+	Área con base y altura & $A = \displaystyle\frac{1}{2}b * h$ &
+		Área con 2 lados y su ángulo & $A = \displaystyle\frac{1}{2}b*a*sin(C)$ \\ \hline
+	Área con los 3 lados & \multicolumn{3}{ |c|} {$ A = \sqrt{p(p - a)(p - b)(p - c)}$ con 
+		$p = \displaystyle\frac{a + b + c}{2}$ } \\ \hline
+	Triángulo circunscrito a circunferencia & $A = \displaystyle\frac{abc}{4r}$ &
+		Triángulo inscrito a circunferencia & $A = r(\displaystyle\frac{a+b+c}{2})$ \\ \hline
+	Triangulo equilátero & $A = \displaystyle\frac{\sqrt{3}}{4}a^{2}$ & & \\ \hline 
+\end{supertabular}
+
+\begin{supertabular}{|p{3.3cm}|p{3.3cm}|p{3.3cm}|}
+	\hline
+	\multicolumn{3}{|c|}{} \\
+	\multicolumn{3}{|c|}{RAZONES TRIGONOMÉTRICAS} \\
+	\multicolumn{3}{|c|}{} \\ \hline
+	
+	$sin(\alpha) = \displaystyle\frac{opuesto}{hipotenusa}$ 
+		& $cos(\alpha) = \displaystyle\frac{adyacente}{hipotenusa}$
+		& $tan(\alpha) = \displaystyle\frac{opuesto}{adyacente}$ \\ \hline
+		
+	$sec(\alpha) = \displaystyle\frac{1}{cos(\alpha)}$ 
+		& $csc(\alpha) = \displaystyle\frac{1}{sin(\alpha)}$
+		& $cot(\alpha) = \displaystyle\frac{1}{tan(\alpha)}$ \\ \hline
+\end{supertabular}
+
+\begin{supertabular}{|p{2.2cm}|p{8.2cm}|}
+	\hline
+	\multicolumn{2}{|c|}{} \\
+	\multicolumn{2}{|c|}{PROPIEDADES DEL MÓDULO (RESIDUO)} \\
+	\multicolumn{2}{|c|}{} \\ \hline
+	Neutra & (a \% b) \% b = a \% b \\ \hline
+	Asociativa en suma & (a + b) \% c = ((a \% c) + (b \% c)) \% c \\ \hline
+	Asociativa en multiplicación &  (a*b) \% c = ((a \% c)*(b \% c)) \% c \\ \hline
+	\multicolumn{2}{|c|}{} \\
+	\multicolumn{2}{|c|}{CONSTANTES} \\
+	\multicolumn{2}{|c|}{} \\ \hline
+	Pi & $\pi = acos(-1) \approx 3.14159$ \\ \hline
+	e & $e \approx 2.71828$ \\ \hline
+	Número áureo & $\phi = \displaystyle\frac{1 + \sqrt{5}}{2} \approx 1.61803$  \\ \hline
+\end{supertabular}
+
 }
 \end{center}
 
-\newpage
+
 \subsection{Sequences}
 Listado de secuencias mas comunes y como hallarlas.
 
@@ -517,12 +495,11 @@ Listado de secuencias mas comunes y como hallarlas.
 & $f(n) = n*(2*n^{2} - 1)$.
 \\ \hline
 
-
 \multirow{2}{2cm}
 {Euler totient}    
 & 1, 1, 2, 2, 4, 2, 6, 4, 6, 4, 10, 4, 12, 6,...            
 \\ \cline{2-2} 
-& $f(n) = $ Cantidad de números naturales $\leq n$ coprimos con n. 
+& $f(n) = $ Cantidad de números $\leq n$ coprimos con n. 
 \\ \hline
 
 \multirow{2}{2cm}{Números de Bell} 
@@ -531,13 +508,11 @@ Listado de secuencias mas comunes y como hallarlas.
 & Se inicia una matriz triangular con f[0][0] = f[1][0] = 1. La suma de estos dos se guarda en f[1][1] y se traslada a f[2][0]. Ahora se suman f[1][0] con f[2][0] y se guarda en f[2][1]. Luego se suman f[1][1] con f[2][1] y se guarda en f[2][2] trasladandose a f[3][0] y así sucesivamente. Los valores de la primera columna contienen la respuesta.
 \\ \hline
 
-
 \multirow{2}{2cm}
 {Números de Catalán} 
 & 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, ...
 \\ \cline{2-2}
 & $f(n)=\displaystyle\frac{(2n)!}{(n + 1)! n!}$
-
 \\ \hline
 
 \multirow{2}{2cm}{Números de Fermat}
@@ -577,14 +552,12 @@ Listado de secuencias mas comunes y como hallarlas.
 & 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, ...
 \\ \cline{2-2}
 &$ f(0) = 1; f(n) = \displaystyle\prod_{\textstyle k=1}^{\textstyle n}k$ para $n>0$.
-
 \\ \hline
 
 \multirow{2}{2cm}{Números piramidales cuadrados}
 & 0, 1, 5, 14, 30, 55, 91, 140, 204, 285, 385, 506, 650, ...
 \\ \cline{2-2}
 & $f(n) = \displaystyle\frac{n*(n+1)*(2*n+1)}{6}$
-
 \\ \hline
 
 \multirow{2}{2cm}{Números primos de Mersenne}
@@ -593,37 +566,29 @@ Listado de secuencias mas comunes y como hallarlas.
 & $f(n) = 2^{p(n)} - 1$ donde $p$ representa valores primos iniciando en $p(0)=2$.
 \\ \hline
 
-
 \multirow{2}{2cm}{Números tetraedrales}
 & 0, 1, 4, 10, 20, 35, 56, 84, 120, 165, 220, 286, 364, ...
 \\ \cline{2-2}
 & $f(n) = \displaystyle\frac{n*(n+1)*(n+2)}{6}$
-
 \\ \hline
-
 
 \multirow{2}{2cm}{Números triangulares}
 & 0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105, ...
 \\ \cline{2-2}
 & $f(n) = \displaystyle\frac{n(n+1)}{2}$
-
 \\ \hline
-
 
 \multirow{2}{2cm}{OEIS A000127}
 & 1, 2, 4, 8, 16, 31, 57, 99, 163, 256, 386, 562, ...
 \\ \cline{2-2}
 & $f(n) = \displaystyle\frac{(n^{4}-6n^{3}+23n^{2}-18{n}+24)}{24}$.
-
 \\ \hline
-
 
 \multirow{2}{2cm}{Secuencia de Narayana}
 & 1, 1, 1, 2, 3, 4, 6, 9, 13, 19, 28, 41, 60, 88, 129, ...
 \\ \cline{2-2}
 & $f(0) = f(1) = f(2) = 1; f(n) = f(n-1) + f(n-3)$ para todo $n>2$.
 \\ \hline
-
 
 \multirow{2}{2cm}
 {Secuencia de Silvestre} 
@@ -638,7 +603,6 @@ Listado de secuencias mas comunes y como hallarlas.
 & Equivale al triangular(n) + 1. Máxima número de piezas que se pueden formar al hacer n cortes a un disco. 
 
 $f(n) = \displaystyle\frac{n(n+1)}{2} + 1$
-
 \\ \hline
 
 \multirow{2}{2cm}{Suma de los divisores de un número}
@@ -646,9 +610,7 @@ $f(n) = \displaystyle\frac{n(n+1)}{2} + 1$
 \\ \cline{2-2}
 &Para todo $n>1$ cuya descomposición en factores primos es $n=\displaystyle p_{1}^{\textstyle a_{1}}\displaystyle p_{2}^{\textstyle a_{2}}...\displaystyle p_{k}^{\textstyle a_{k}}$ se tiene que:
 
-
 $f(n) = \displaystyle\frac{p_{1}^{a_{1} + 1} - 1}{p_{1} - 1} * \frac{p_{2}^{a_{2} + 1} - 1}{p_{2} - 1} * ... * \frac{p_{k}^{a_{k} + 1} - 1}{p_{k} - 1}$ 
-
 \\ \hline
 
 \multirow{2}{2cm}{Schroeder numbers (aporte propio)} 
@@ -657,7 +619,6 @@ $f(n) = \displaystyle\frac{p_{1}^{a_{1} + 1} - 1}{p_{1} - 1} * \frac{p_{2}^{a_{2
 & El número de formas de insertar paréntesis en una secuencia y el número de formas de partir un polígono convexo en polígonos más pequeños mediante la inserción de diagonales. f(1)=f(2)=1;
 
 $f(n) = \displaystyle\frac{3(2n-3)*f(n-1) - (n-3)*f(n-2)}{n}$
-
 \\ \hline
 
 \end{supertabular}
@@ -670,7 +631,6 @@ Aproximación del mayor número n de datos que pueden procesarse para cada una d
 \begin{tabbing}
 \textbf{Complexity}\hspace{4cm} \=  \textbf{n}\hspace{3cm}   \\ 
 $O(n!)$ \> 11\\ 
-$O(n^{5})$ \> 50\\ 
 $O(2^{n}*n^{2})$ \> 18\\ 
 $O(2^{n}*n)$ \> 22\\ 
 $O(n^{4})$ \> 100\\ 
@@ -694,7 +654,7 @@ $O(1)$ \> -\\
 			\cppfile[1-29]{otros/template.cpp}
 		
 		\subsection{Ayudas}
-			\cppfile[34-50]{otros/template.cpp}
+			\cppfile[34-62]{otros/template.cpp}
 		
 		%\newpage
 		\subsection{Formulas extra}

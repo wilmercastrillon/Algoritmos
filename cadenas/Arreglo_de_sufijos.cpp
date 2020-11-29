@@ -56,7 +56,7 @@ void LCP(){
             plcp[i] = 0;
             continue;
         }
-        while(cad[i+l]==cad[phi[i]+l]) l++;
+        while(cad[i+l]==cad[phi[i]+l] && cad[i+l]!='$') l++;
         plcp[i] = l;
         l = max(l-1,0);
     }
@@ -77,7 +77,8 @@ vector<string> LCS(){
             continue;
 
         aux = "";
-        for(int j=0; j<lcp[i]; ++j) aux.push_back(cad[sa[i]+j]);
+        for(int j=0; j<lcp[i]; ++j)
+            aux.push_back(cad[sa[i]+j]);
         if(lcp[i]>best){
             best = lcp[i];
             ss.clear();
@@ -88,31 +89,26 @@ vector<string> LCS(){
     return res;
 }
 
-ii stringMatching(){
-    int lo=0, hi = len_cad-1, mid =lo;
-    while(lo < hi){
-        //printf("bs en %d\n", mid);
-        mid = (lo + hi)/2;
-        int res = strncmp(cad+sa[mid],subcad,len_subcad);
-        if(res >= 0) hi = mid;
-        else lo = mid + 1;
-    }
-
-    if(strncmp(cad+sa[lo],subcad,len_subcad) != 0)
-        return ii(-1,-1);
-        //return false;
-    //return true;
-    ii ans;  ans.first = lo;
-    lo = 0;  hi = len_cad-1;  mid = lo;
-
-    while(lo < hi){
+ii stringMatching() {
+    len_subcad = strlen(subcad);
+    int lo = 0, hi = len_cad-1, mid = lo;
+    while (lo < hi) {
         mid = (lo + hi) / 2;
-        int res = strncmp(cad+sa[mid],subcad,len_subcad);
-        if(res > 0) hi = mid;
+        int res = strncmp(cad + sa[mid], subcad, len_subcad);
+        if (res >= 0) hi = mid;
         else lo = mid + 1;
     }
-
-    if(strncmp(cad+sa[hi],subcad,len_subcad) != 0) hi--;
+    if (strncmp(cad + sa[lo], subcad, len_subcad) != 0)
+        return ii(-1, -1);
+    ii ans; ans.first = lo;
+    lo = 0;  hi = len_cad - 1;  mid = lo;
+    while (lo < hi) {
+        mid = (lo + hi) / 2;
+        int res = strncmp(cad + sa[mid], subcad, len_subcad);
+        if (res > 0) hi = mid;
+        else lo = mid + 1;
+    }
+    if (strncmp(cad + sa[hi], subcad, len_subcad) != 0) hi--;
     ans.second = hi;
     return ans;
 }

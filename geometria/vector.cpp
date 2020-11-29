@@ -67,7 +67,7 @@ bool colineal(linea l, punto r){
 }//la linea l contiene el punto r
 
 int main(){
-    vec a(0, 3), b(4, 1);
+    vec a(0, 3), b(-4, 2);
     printf("%.5f\n", dot(a, b));
     return 0;
 }

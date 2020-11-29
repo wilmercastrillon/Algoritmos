@@ -48,6 +48,19 @@ x = __builtin_clz(n);//ceros a la izquierda de n
 x = __builtin_ffs(n);//primera posicion en 1
 x = __builtin_ctzll((lli) n);//para lli agregars ll al nombre
 x = (n&(-n));//least significant bit en 1
+
+//Expresiones Regulares
+string expresion = "(take|love|know|like)s*";
+string cadena = "likes knows";
+regex reg(expresion);
+bool match = regex_match(cadena,reg);//Existe?
+
+smatch matches;
+while(regex_search(cadena, matches, reg)){
+    cadena = matches.suffix();//Recorrer matches
+    cout << cadena << endl;
+}
+
 }
 
 

@@ -2,48 +2,45 @@
 #include <vector>
 
 using namespace std;
+const int MAX = 100;
 
 struct union_find{
-	int padre[100], rango[100];
-	vector<int> grupo[100];
+    int padre[MAX], rango[MAX];//Rango opcional
 
-	void iniciar(int n){
-		for (int i = 0; i < n; i++) {
-			padre[i] = i;  rango[i] = 0;
-			grupo[i].clear();  grupo[i].push_back(i);
-		}
-	}
+    void iniciar(int n){
+        for (int i = 0; i < n; i++){
+            padre[i] = i;  rango[i] = 0;
+        }
+    }
 
-	int raiz(int x){
-		if(padre[x] == x) return x;
-		return raiz(padre[x]);
-	}
+    int raiz(int x){
+        if(x == padre[x]) return x;
+        else return padre[x] = raiz(padre[x]);
+    }
 
-	void unir(int x, int y){
-		x = raiz(x);
-		y = raiz(y);
-		if(x == y) return;
+    void unir(int x, int y){
+        x = raiz(x);  y = raiz(y);
+        if(x == y) return;
 
-		if(rango[x] > rango[y]){
-			padre[y] = x;
-			grupo[x].insert(grupo[x].begin(), grupo[y].begin(), grupo[y].end());
-			grupo[y].clear();
-			return;
-		}
+        if(rango[x] > rango[y]){
+            padre[y] = x;
+            return;
+        }
+        padre[x] = y;
+        if(rango[y] == rango[x]) rango[y]++;
+    }
 
-		padre[x] = y;
-		grupo[y].insert(grupo[y].begin(), grupo[x].begin(), grupo[x].end());
-        grupo[x].clear();
-		if(rango[y] == rango[x]) rango[y]++;
-	}
+    bool MismoGrupo(int x, int y){return raiz(x) == raiz(y);}
 
-	bool MismoGrupo(int x, int y){return raiz(x) == raiz(y);}
-
-	void grupo_n(int n){
-	    cout << "#elementos en el grupo de " << n << endl;
-	    n = raiz(n);
-	    for(int i = 0; i < grupo[n].size(); i++) cout << grupo[n][i] << '\n';
-	}
+    //Usar este para compresion de caminos
+    int raiz_compresion(int x){
+        if(padre[x] == x) return x;
+        return raiz(padre[x]);
+    }
+    //Usar este para compresion de caminos
+    void unir_compresion(int x, int y){
+        padre[raiz(x)] = raiz(y);
+    }
 };
 
 int main(){
@@ -69,7 +66,7 @@ int main(){
 	cout << uf.padre[i] << " ";
 	cout << endl;
 
-	uf.grupo_n(5);
+	//uf.grupo_n(5);
 
 	if(uf.MismoGrupo(4, 1))
 		cout << "si" << endl;

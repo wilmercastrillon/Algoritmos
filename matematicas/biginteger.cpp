@@ -12,11 +12,12 @@ struct bigint{
     bigint(){ signo = true; }
     bigint(int n){
         num.clear();
-        signo = n >= 0; n = abs(n);
-        while(n){
+        signo = n >= 0;
+        n = abs(n);
+        do{
             num.push_back((n >= base)? n % base: n);
             n /= base;
-        }
+        }while(n);
     }
     bigint(string n){
         num.clear();
@@ -30,7 +31,7 @@ struct bigint{
     }
 
     void quitar_zeros_izq(){
-        while(num.size() && !num.back()) num.pop_back();
+        while(num.size() > 1 && !num.back()) num.pop_back();
     }
     void imprimir(){
         if(!signo && num.size()) printf("-");
@@ -39,8 +40,19 @@ struct bigint{
             printf("%09d", num[i]);
         printf("\n");
     }
+    void dividirDos(){
+        tdato carry = 0;
+        ulli aux;
+        for (int i = num.size() - 1; i >= 0; --i) {
+            aux = num[i] + carry * base;
+            num[i] = aux / 2;
+            carry = aux % 2;
+        }
+        quitar_zeros_izq();
+    }
 
-    bigint suma(bigint b){
+
+    bigint suma(bigint b) {
         ulli carry = 0, aux;
         int l = max(b.num.size(), num.size());
         bigint c;
@@ -54,13 +66,14 @@ struct bigint{
                 c.num.push_back(aux % base);
                 carry = aux / base;
             }else{
-                c.num.push_back(aux);  carry = 0;
+                c.num.push_back(aux);
+                carry = 0;
             }
         }
         return c;
     }
 
-    bigint resta(bigint b){//asumimos que b es menor
+    bigint resta(bigint b) {//asumimos que b es menor
         tdato carry = 0;//no debe ser unsigned
         bigint c;
 
@@ -68,14 +81,15 @@ struct bigint{
             c.num.push_back(num[i]);
             c.num[i] -= ((i < b.num.size())? b.num[i]: 0) + carry;
             if(c.num[i] < 0){
-                c.num[i] += base;  carry = 1;
+                c.num[i] += base;
+                carry = 1;
             }else carry = 0;
         }
         c.quitar_zeros_izq();
         return c;
     }
 
-    bigint multiplicar(bigint b){
+    bigint multiplicar(bigint b) {
         ulli aux = 0, carry;
         bigint c;
         c.num.assign(num.size() + b.num.size(), 0);
@@ -92,20 +106,15 @@ struct bigint{
         return c;
     }
 
-    void dividirDos(){
-        tdato carry = 0;
-        ulli aux;
-        for (int i = num.size() - 1; i >= 0; --i) {
-            aux = num[i] + carry * base;
-            num[i] = aux / 2;  carry = aux % 2;
+    bigint dividir(bigint b) {
+        if(comparar(b) < 0){
+            bigint cero(0);
+            return cero;
         }
-        quitar_zeros_izq();
-    }
-
-    bigint dividir(bigint b){//busqueda binaria
-        if(comparar(b) < 0) return bigint(0);
-        bigint may, men(0), med, m(1);
+        bigint may, men, med, m;
+        m = bigint(1);
         may = suma(m); may.signo = true;
+        men = bigint(0);
         int cmp;
 
         while(true){
@@ -115,10 +124,10 @@ struct bigint{
 
             cmp = comparar(m);
             if(cmp == 0) break;
-            else if(cmp < 0) may.num.assign(med.num.begin(),med.num.end());
+            else if(cmp < 0) may = bigint(med);
             else{
                 if(resta(m).comparar(b) < 0) break;
-                else men.num.assign(med.num.begin(),med.num.end());
+                else men = bigint(med);
             }
         }
         return med;
@@ -202,11 +211,7 @@ int main(){
     bigint a, b;
 
     while(cin >> n){
-        a = bigint(1);
-        for(int i = 1; i <= n; i++){
-            b = bigint(i);
-            a = a * b;
-        }
+        a = bigint(n);
         a.imprimir();    }
 
     return 0;

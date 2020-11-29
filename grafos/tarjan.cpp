@@ -47,7 +47,7 @@ int main(){
             scanf("%d %d", &x, &y);
             lista[x].push_back(y);
         }
-        solve();
+        tarjan();
     }
 
     return 0;
