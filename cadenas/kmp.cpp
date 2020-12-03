@@ -21,7 +21,7 @@ void kmp(string cad, string subcad){
         while(j >= 0 && cad[i] != subcad[j]) j = bordes[j];
         i++; j++;
         if(j == subcad.size()){
-            printf("%s esta en el indice %d de la cadena: %s\n",
+            printf("%s esta en indice %d de la cadena: %s\n",
                    subcad.c_str(), i - j, cad.c_str());
             j = bordes[j];
         }

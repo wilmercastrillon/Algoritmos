@@ -41,6 +41,9 @@ struct vec{
     vec(double _x, double _y){
         x = _x;  y = _y;
     }
+    vec operator - (const vec& q) const{
+        return vec(x-q.x, y-q.y);
+    }
 };
 
 vec toVec(punto a, punto b){

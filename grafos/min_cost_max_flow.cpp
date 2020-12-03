@@ -14,7 +14,6 @@ struct edge {
 vector<edge> aristas;  vector<int> grafo[MAXN];
 
 void add_edge(int u, int v, lli cap, lli cost) {
-    printf("ccostso = %lld\n", cost);
     grafo[u].push_back(aristas.size());
     aristas.push_back(edge{u,v,cap,0,cost});
     grafo[v].push_back(aristas.size());

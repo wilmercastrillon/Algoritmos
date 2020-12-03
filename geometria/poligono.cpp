@@ -11,6 +11,9 @@ struct vec{
     vec(double _x, double _y){
         x = _x;  y = _y;
     }
+    vec operator - (const vec& q) const{
+        return vec(x-q.x, y-q.y);
+    }
 };
 double cross(vec a, vec b){
     return a.x*b.y - a.y*b.x;
@@ -53,6 +56,16 @@ double angulo(punto a, punto o, punto b){//en radianes
     return acos(dot(oa, ob)/sqrt(norm_sq(oa)*norm_sq(ob)));
 }
 
+double AreaPoligono(vector<punto> &p){
+    double s = 0.0, d = 0.0;
+    int n = p.size();
+    forr(i, n){
+        s += p[i].x*p[(i+1)%n].y;
+        d += p[(i+1)%n].x*p[i].y;
+    }
+    return fabs(0.5*(s-d));
+}
+
 bool puntoLimite(punto p1, punto p2, punto q){
     if(colineal(p1,p2,q)){
         if((min(p1.x, p2.x)-q.x < eps) &&
@@ -64,6 +77,7 @@ bool puntoLimite(punto p1, punto p2, punto q){
     return false;
 }
 
+//Metodo general
 bool enPoligono(punto pt, vector<punto> &p){
     if(p.size() == 0) return false;
     double sum = 0.0;
@@ -73,6 +87,19 @@ bool enPoligono(punto pt, vector<punto> &p){
         else sum -= angulo(p[i-1],pt,p[i]);
     }
     return fabs(fabs(sum) - 2*PI) < eps;
+}
+//Metodo mas preciso para poligonos convexos
+double areaTriangulo(punto &pa, punto &pb, punto &pc){
+    vec a(pa.x,pa.y), b(pb.x,pb.y), c(pc.x,pc.y);
+    return (cross((c-a),(b-a)))/2.0;
+}
+bool enPoligonoConvexo(punto pt, vector<punto> &p) {
+    double area = AreaPoligono(p), sum = 0.0;
+    for(int i = 0; i < p.size()-1; i++) {
+        if(p[i] == pt) return true;
+        sum += fabs(areaTriangulo(p[i],pt,p[i+1]));
+    }
+    return fabs(area - sum) < eps;
 }
 
 int main(){
@@ -84,9 +111,13 @@ int main(){
             scanf("%d %d", &x, &y);
             a.push_back(punto(x, y));
         }
+        a.push_back(a[0]);
         punto p = punto(1.0, 0.0);
 
         if(enPoligono(p, a)) printf("Adentro\n");
+        else printf("Afuera\n");
+
+        if(enPoligonoConvexo(p, a)) printf("Adentro\n");
         else printf("Afuera\n");
     }
     return 0;
