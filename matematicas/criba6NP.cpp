@@ -34,7 +34,7 @@ void criba_6np(){
             ciclo(w, con);
         }
     }
-    printf("hasta %d\n", i);
+    //printf("hasta %d\n", i);
 
     for(; i < m; i += 6){
         if(primo[i - 1]) cont++;

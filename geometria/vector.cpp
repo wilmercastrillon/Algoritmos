@@ -64,10 +64,6 @@ double cross(vec a, vec b){
 bool ccw(punto p, punto q, punto r){
     return cross(toVec(p,q), toVec(p,r)) > 0;
 }
-bool colineal(linea l, punto r){
-    return fabs(cross(toVec(l.p1,l.p2),
-                    toVec(l.p1,r))) < eps;
-}//la linea l contiene el punto r
 
 int main(){
     vec a(0, 3), b(-4, 2);

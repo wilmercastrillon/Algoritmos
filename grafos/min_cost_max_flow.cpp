@@ -18,7 +18,7 @@ void add_edge(int u, int v, lli cap, lli cost) {
     aristas.push_back(edge{u,v,cap,0,cost});
     grafo[v].push_back(aristas.size());
     aristas.push_back(edge{v,u,0,0,-cost});
-}
+}//Agrega aristas unidireccionales
 
 void flow(int s, int t){
     memset(en_cola,0,sizeof(en_cola));

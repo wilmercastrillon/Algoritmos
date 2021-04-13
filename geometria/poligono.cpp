@@ -93,6 +93,7 @@ double areaTriangulo(punto &pa, punto &pb, punto &pc){
     vec a(pa.x,pa.y), b(pb.x,pb.y), c(pc.x,pc.y);
     return (cross((c-a),(b-a)))/2.0;
 }
+//considerar el caso de todos los puntos iguales o colineales
 bool enPoligonoConvexo(punto pt, vector<punto> &p) {
     double area = AreaPoligono(p), sum = 0.0;
     for(int i = 0; i < p.size()-1; i++) {

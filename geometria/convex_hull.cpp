@@ -41,7 +41,7 @@ double dist(punto p1, punto p2){
     return hypot(p1.x - p2.x, p1.y - p2.y);
 }
 bool ccw(punto p, punto q, punto r){
-    return cross(toVec(p,q), toVec(p,r)) > 0;
+    return cross(toVec(p,q), toVec(p,r)) > -eps;
 }
 
 

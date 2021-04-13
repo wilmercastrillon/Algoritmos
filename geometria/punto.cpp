@@ -39,7 +39,7 @@ struct punto{
 vec toVec(punto a, punto b){return vec(b.x-a.x, b.y-a.y);}
 double DEG_TO_RAD(double n){ return n*3.1416/180.0; }
 
-punto rotar(punto p, double grados){
+punto rotar(punto p, double grados){//en sentido antihorario
     double rad = DEG_TO_RAD(grados);
     return punto(p.x*cos(rad) - p.y*sin(rad),
                 p.x*sin(rad) + p.y*cos(rad));

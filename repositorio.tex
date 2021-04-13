@@ -172,7 +172,7 @@
 			Solucion con Range Minimum Query (sparse table).
 			\cppfile[38-65]{otros/Lowest_Common_Ancestor.cpp}
 			Solucion con construcción O(n log n) y consultas O(log n)
-			\cppfile[14-51]{otros/Lowest_Common_Ancestor_logN.cpp}
+			\cppfile[11-77]{otros/Lowest_Common_Ancestor_logN.cpp}
 			\subsection{Conectividad dinámica}
 			\cppfile[7-70]{grafos/conectividad_dinamica.cpp}			
 			
@@ -261,7 +261,7 @@
 			%\subsection{BigInteger c++}
 			%\cppfile[4-197]{matematicas/biginteger.cpp}
 			\subsection{Fraccion}
-			\cppfile[9-47]{matematicas/fraccion.cpp}
+			\cppfile[9-45]{matematicas/fraccion.cpp}
 			\subsection{Matrices}
 			Exponenciación de matrices: $M^b$ en O($n^{3} log (b)$)
 			\cppfile[8-36]{matematicas/matrices.cpp}
@@ -297,29 +297,35 @@
 		\section{Geometria}
 			\subsection{Punto}
 			\cppfile[22-59]{geometria/punto.cpp}
-
 			\subsection{Linea y segmento}
 			Linea de la forma $ax + by + c = 0$.
 			\cppfile[42-105]{geometria/linea.cpp}
 			\subsection{Vector}
-			\cppfile[39-70]{geometria/vector.cpp}
+			\cppfile[39-66]{geometria/vector.cpp}
 			\subsection{Convex Hull}
-			Polígono convexo con perímetro mínimo que cubre todos los puntos.\\
-			O(n log n)
+			Polígono convexo con perímetro mínimo que cubre todos los puntos, verificar que no hallan puntos 
+			repetidos, O(n log n)
 			\cppfile[48-79]{geometria/convex_hull.cpp}
+			\subsection{Área de un polígono}
+			Área de un polígono, resultado con coordenadas en sentido horario: positivo, anti-horario: negativo, 
+			y cero si están desordenados, O(n)
+			\cppfile[59-67]{geometria/poligono.cpp}
 			\subsection{Punto en poligono}
 			Verifica si un punto esta dentro de un polígono, O(n)
-			\cppfile[80-103]{geometria/poligono.cpp}
+			\cppfile[80-104]{geometria/poligono.cpp}
 			\subsection{Minimum covering circle}
-			Verifica si un punto esta dentro de un polígono, O(n)
+			Mínimo circulo que puede cubrir todos los puntos
 			\cppfile[20-60]{geometria/minimum_covering_circle.cpp}
+			\subsection{Nearest pair of points}
+			Mínima distancia entre dos puntos O(n)
+			\cppfile[18-67]{geometria/nearestPairPoints.cpp}
 	
 	%Basado en el notebook C++ de la UFPS 2017
 	\section{Formulas}
 
 		\subsection{Tabla ASCII}
 			Caracteres ASCII con sus respectivos valores numéricos.
-
+%		\begin{center}
 		\begin{table}[H]
 			\begin{tabular}{|l|l|l|l|l|l|l|l|}
 				\hline \textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII}  &
@@ -336,7 +342,7 @@
 		\end{table}
 		
 		
-		\begin{table}[H]
+%		\begin{table}[H]
 			\begin{tabular}{|l|l|l|l|l|l|l|l|}
 				\hline \textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII}  &
 					\textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII} \\ \hline
@@ -349,9 +355,9 @@
 				70 & F & 78 & N & 86 & V & 94 & \textasciicircum \\ \hline
 				71 & G & 79 & O & 87 & W & 95 & \_ \\ \hline
 			\end{tabular}
-		\end{table}
+%		\end{table}
 		
-		\begin{table}[H]
+%		\begin{table}[H]
 			\begin{tabular}{|l|l|l|l|l|l|l|l|}
 				\hline \textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII}  &
 					\textbf{No.} & \textbf{ASCII} & \textbf{No.} & \textbf{ASCII} \\ \hline
@@ -364,20 +370,21 @@
 				102 & f & 110 & n & 118 & v & 126 & \textasciitilde \\ \hline
 				103 & g &  111 & o & 119 & w & 127 &  \\ \hline
 			\end{tabular}
-		\end{table}
+%		\end{table}
+%		\end{center}
 		
 		%\newpage
 
 
 \subsection{Formulas generales}
 
-\begin{center}
+%\begin{center}
 %\tablefirsthead{}
-\tabletail{
-	\midrule 
-}
-\tablelasttail{}
-{\renewcommand{\arraystretch}{1.4}
+%\tabletail{
+%	\midrule 
+%}
+%\tablelasttail{}
+%{\renewcommand{\arraystretch}{1.4}
 
 
 %\begin{table}[H]
@@ -482,8 +489,8 @@
 	Cilindro & $V = PI*r^{2}*h$ & Esfera & $V = \frac{4}{3}*PI*r^{3}$  \\ \hline
 \end{tabular}
 
-}
-\end{center}
+%}
+%\end{center}
 
 
 \subsection{Sequences}
@@ -773,26 +780,22 @@ $O(1)$ \> -\\
 					\vspace{1mm}
 					\\ \hline
 					
-					Determinante de Gauss & Encontrar el área de un polígono en el plano cartesiano a partir de 
-					sus vértices.
-					
-					{\large$A = \frac{1}{2} $}
-					{\large $ \begin{bmatrix}
-						x_{1} & y_{1} \\ 
-						x_{2} & y_{2} \\ 
-						x_{n} & y_{n} \\ 
-						x_{1} & y_{1} 
-					\end{bmatrix}$ }
-					
-					\vspace{1mm}
-					{\large $S = x_{1}y_{2} + x_{2}y_{3} +...+ x_{n}y_{1}$}
-					
-					\vspace{1mm}
-					{\large $D = x_{2}y_{1} + x_{3}y_{2} +...+ x_{1}y_{n}$} 
-					
-					\vspace{1mm}
-					{\large $A = \frac{1}{2} |S - D|$}
-					\\ \hline
+					%Determinante de Gauss & Encontrar el área de un polígono en el plano cartesiano a partir de 
+					%sus vértices.
+					%{\large$A = \frac{1}{2} $}
+					%{\large $ \begin{bmatrix}
+					%	x_{1} & y_{1} \\ 
+					%	x_{2} & y_{2} \\ 
+					%	x_{n} & y_{n} \\ 
+					%	x_{1} & y_{1} 
+					%\end{bmatrix}$ }
+					%\vspace{1mm}
+					%{\large $S = x_{1}y_{2} + x_{2}y_{3} +...+ x_{n}y_{1}$}
+					%\vspace{1mm}
+					%{\large $D = x_{2}y_{1} + x_{3}y_{2} +...+ x_{1}y_{n}$} 
+					%\vspace{1mm}
+					%{\large $A = \frac{1}{2} |S - D|$}
+					%\\ \hline
 					
 					%Agregar:
 					%a^phi(n) es congruente con 1 mod n

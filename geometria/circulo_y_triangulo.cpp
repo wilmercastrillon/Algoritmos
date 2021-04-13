@@ -46,8 +46,18 @@ struct vec{
 double dentroDelCirculo(punto p, punto c, double r){
     double dx = p.x-c.x, dy = p.y-c.y;
     double euc = dx*dx + dy*dy, rsq = r*r;
-    return (euc < rsq)? 0 : (euc==rsq)? 1 : 2;
-}//0-dentro, 1-borde, 2-afuera
+    return (euc <= rsq);
+}
+
+bool circuloPasa2Puntos(point p1, point p2, double r, point &c) {
+    double d2 = (p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y);
+    double det = r * r / d2 - 0.25;
+    if (det < 0.0) return false;
+    double h = sqrt(det);
+    c.x = (p1.x + p2.x) * 0.5 + (p1.y - p2.y) * h;
+    c.y = (p1.y + p2.y) * 0.5 + (p2.x - p1.x) * h;
+    return true;
+}
 
 int main(){
     linea q(2, 1, 3), w(-4, 1, 5);

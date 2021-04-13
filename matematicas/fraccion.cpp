@@ -21,12 +21,10 @@ struct fraccion {
     }
 
     fraccion operator+(fraccion b) {//suma
-        return fraccion(num*b.den + b.num*den,
-                         den*b.den);
+        return fraccion(num*b.den + b.num*den, den*b.den);
     }
     fraccion operator-(fraccion b) {//resta
-        return fraccion(num*b.den - b.num*den,
-                         den*b.den);
+        return fraccion(num*b.den - b.num*den, den*b.den);
     }
     fraccion operator*(fraccion b) {//multiplicar
         return fraccion(num*b.num, den*b.den);

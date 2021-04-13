@@ -34,8 +34,8 @@ struct union_find{
 
     //Usar este para compresion de caminos
     int raiz_compresion(int x){
-        if(padre[x] == x) return x;
-        return raiz(padre[x]);
+        if(x == padre[x]) return x;
+        else return padre[x] = raiz(padre[x]);
     }
     //Usar este para compresion de caminos
     void unir_compresion(int x, int y){

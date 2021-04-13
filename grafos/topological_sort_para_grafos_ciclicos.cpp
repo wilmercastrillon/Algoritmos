@@ -10,7 +10,7 @@ vector<int> ent;//se debe llenar con la cantidad de
 void topological_sort(vvi &lis, int tam){
     res.clear();
     queue<int> s;
-    for(int i = 1; i <= tam; i++)
+    for(int i = 1; i < tam; i++)
         if(!ent[i]) s.push(i);
 
     int n, m;
@@ -39,7 +39,6 @@ int main(){
         }
 
         topological_sort(grafo, n);
-
         if(res.size() == n)//ordenamiento topologico
             for(int i = 0; i < res.size(); i++) printf("%d\n", res[i]);
         else
